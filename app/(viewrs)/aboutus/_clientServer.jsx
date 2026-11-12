@@ -1,0 +1,811 @@
+"use client"
+
+// app/about/AboutUsClient.jsx (Client Component - Static)
+
+import { useState } from 'react';
+import {
+  Target,
+  Award,
+  Heart,
+  Star,
+  ChevronRight,
+  Eye,
+  Shield,
+  Rocket,
+  Laptop,
+  Play,
+  Check,
+  MessageCircle,
+  Calendar,
+  Zap,
+} from 'lucide-react';
+import Link from 'next/link';
+import Image from 'next/image';
+
+function goToWatssap() {
+  window.open('https://wa.me/201222812404');
+}
+
+// ====== بيانات ستاتيك: مودرن كومبيوتر ======
+// البيانات المتاحة فعليًا: اسم المتجر، العنوان، ورقم الهاتف فقط.
+// ⚠️ ملحوظة مهمة: القصة/المحطات الزمنية/الإحصائيات/آراء العملاء/الماركات دي
+// محتوى نموذجي (placeholder) لعدم توفر تفاصيل حقيقية عنها - لازم تستبدلها
+// ببياناتك الحقيقية (تاريخ التأسيس، أرقام فعلية، آراء عملاء حقيقية) قبل النشر.
+const aboutData = {
+  hero: {
+    backgroundImage:
+      'https://images.unsplash.com/photo-1517430816045-df4b7de11d1d?w=1920&q=80',
+    additionalContent: {
+      welcomeMessage: 'أهلاً بيك في مودرن كومبيوتر',
+      primaryButton: { text: 'اعرف قصتنا' },
+      secondaryButton: { text: 'تصفح المنتجات' },
+    },
+    title: 'مودرن كومبيوتر',
+    subtitle: 'رواد التكنولوجيا في قلب أسوان',
+    description:
+      'من شارع البركة في أسوان، بنقدملك أحدث أجهزة الكمبيوتر واللابتوبات، وخدمات صيانة احترافية، وحلول أنظمة مراقبة موثوقة لحماية بيتك وشغلك.',
+  },
+
+  story: {
+    title: 'قصتنا',
+    image:
+      'https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=1200&q=80',
+    tabs: [
+      {
+        id: 'history',
+        title: 'قصتنا',
+        content: {
+          title: 'بداية الحكاية',
+          description:
+            'مودرن كومبيوتر بدأت بشغف حقيقي بعالم التكنولوجيا، بهدف تقديم خدمة مميزة لأهالي أسوان في مجال بيع وصيانة أجهزة الكمبيوتر واللابتوبات.',
+          milestones: [
+            {
+              color: 'purple',
+              text: 'انطلقنا من قلب أسوان بشغف حقيقي بعالم التكنولوجيا',
+            },
+            {
+              color: 'blue',
+              text: 'بدأنا ببيع وصيانة أجهزة الكمبيوتر واللابتوبات',
+            },
+            {
+              color: 'green',
+              text: 'توسعنا لنقدم حلول أنظمة المراقبة وحماية المنازل والأعمال',
+            },
+          ],
+        },
+      },
+      {
+        id: 'milestones',
+        title: 'محطات مهمة',
+        content: {
+          title: 'رحلتنا في أسوان',
+          timeline: [
+            {
+              year: 'البداية',
+              title: 'انطلاقة مودرن كومبيوتر',
+              description:
+                'افتتحنا متجرنا في شارع البركة بأسوان لخدمة عشاق التكنولوجيا',
+              color: 'purple',
+            },
+            {
+              year: 'التوسع',
+              title: 'إضافة خدمات الصيانة',
+              description:
+                'وسّعنا خدماتنا لتشمل صيانة شاملة للكمبيوترات واللابتوبات',
+              color: 'blue',
+            },
+            {
+              year: 'اليوم',
+              title: 'رواد في أسوان',
+              description:
+                'أصبحنا من الوجهات الموثوقة في أسوان لبيع وصيانة الأجهزة وأنظمة المراقبة',
+              color: 'green',
+            },
+          ],
+        },
+      },
+      {
+        id: 'future',
+        title: 'مستقبلنا',
+        content: {
+          title: 'إلى أين نتجه',
+          description:
+            'بنطمح نكمل التوسع في خدماتنا التقنية عشان نفضل الخيار الأول لعملائنا في أسوان.',
+          features: [
+            {
+              icon: 'rocket',
+              gradient: 'from-purple-100 to-blue-100',
+              title: 'توسيع نطاق الخدمة',
+            },
+            {
+              icon: 'shield',
+              gradient: 'from-blue-100 to-cyan-100',
+              title: 'حلول أمان أكثر تطورًا',
+            },
+            {
+              icon: 'laptop',
+              gradient: 'from-green-100 to-emerald-100',
+              title: 'أحدث الأجهزة والماركات',
+            },
+            {
+              icon: 'zap',
+              gradient: 'from-orange-100 to-red-100',
+              title: 'خدمة عملاء أقرب لينا',
+            },
+          ],
+        },
+      },
+    ],
+  },
+
+  mission: {
+    title: 'رسالتنا',
+    content:
+      'نوفر لعملائنا في أسوان أحدث أجهزة الكمبيوتر واللابتوبات مع خدمة صيانة احترافية وحلول مراقبة موثوقة، بجودة عالية وأسعار تنافسية.',
+  },
+
+  vision: {
+    title: 'رؤيتنا',
+    content:
+      'نطمح لنكون الوجهة الأولى للتكنولوجيا في أسوان وصعيد مصر، من خلال الاحترافية والابتكار المستمر في خدماتنا.',
+  },
+
+  sections: {
+    valuesSection: {
+      title: 'قيمنا الأساسية',
+      subtitle: 'المبادئ التي تقودنا نحو التميز والإبداع',
+    },
+    whyChooseUsSection: {
+      title: 'ليه تختار مودرن كومبيوتر',
+      subtitle: 'أسباب تخلي عملاءنا يثقوا فينا',
+    },
+    brandsSection: {
+      title: 'الماركات التي نتعامل معها',
+      subtitle: 'أفضل الماركات العالمية في مكان واحد',
+    },
+    achievementsSection: {
+      title: 'إنجازاتنا',
+      subtitle: 'أرقام تعكس ثقة عملائنا فينا',
+    },
+    reviewsSection: {
+      title: 'آراء عملائنا',
+      subtitle: 'إيه رأي اللي جربوا خدمتنا',
+    },
+    ctaSection: {
+      title: 'جاهز تبدأ معانا؟',
+      subtitle:
+        'زور مودرن كومبيوتر دلوقتي واكتشف أحدث المنتجات التقنية بأفضل الأسعار',
+      buttons: {
+        primary: { text: 'تصفح المنتجات' },
+        secondary: { text: 'تواصل معنا' },
+      },
+    },
+  },
+
+  values: [
+    {
+      id: 1,
+      icon: 'award',
+      title: 'الجودة',
+      description: 'نختار منتجاتنا بعناية لضمان أعلى مستوى من الجودة',
+    },
+    {
+      id: 2,
+      icon: 'shield',
+      title: 'الأمانة',
+      description: 'الصدق والشفافية في التعامل مع كل عميل',
+    },
+    {
+      id: 3,
+      icon: 'heart',
+      title: 'خدمة العملاء',
+      description: 'رضا العميل هو أولويتنا الأولى في كل خطوة',
+    },
+    {
+      id: 4,
+      icon: 'rocket',
+      title: 'الابتكار',
+      description: 'نواكب أحدث التقنيات لنقدم حلول أفضل دايمًا',
+    },
+  ],
+
+  whyChooseUs: [
+    {
+      id: 1,
+      icon: 'users',
+      gradient: 'from-purple-500 to-pink-500',
+      title: 'فريق فني متخصص',
+      description: 'خبرة حقيقية في صيانة وتركيب الأجهزة وأنظمة المراقبة',
+    },
+    {
+      id: 2,
+      icon: 'shield',
+      gradient: 'from-blue-500 to-cyan-500',
+      title: 'ضمان على المنتجات',
+      description: 'ضمان على كل الأجهزة وخدمات الصيانة اللي بنقدمها',
+    },
+    {
+      id: 3,
+      icon: 'clock',
+      gradient: 'from-green-500 to-emerald-500',
+      title: 'متابعة بعد البيع',
+      description: 'دعم فني مستمر حتى بعد إتمام عملية الشراء',
+    },
+  ],
+
+  // ⚠️ الماركات دي أمثلة شائعة لمتاجر الكمبيوتر - راجعها واستبدلها بالماركات اللي فعلاً بتتعامل معاها
+  brands: [
+    { name: 'HP', logo: null },
+    { name: 'Dell', logo: null },
+    { name: 'Lenovo', logo: null },
+    { name: 'ASUS', logo: null },
+    { name: 'Acer', logo: null },
+    { name: 'MSI', logo: null },
+    { name: 'Logitech', logo: null },
+    { name: 'Apple', logo: null },
+  ],
+
+  // ⚠️ أرقام نموذجية - استبدلها بإحصائيات حقيقية عن متجرك
+  achievements: [
+    { id: 1, icon: 'clock', number: '+5', label: 'سنوات خبرة' },
+    { id: 2, icon: 'users', number: '+1000', label: 'عميل سعيد' },
+    { id: 3, icon: 'laptop', number: '+2000', label: 'جهاز تم صيانته' },
+    { id: 4, icon: 'shield', number: '24/7', label: 'دعم فني' },
+  ],
+
+  // ⚠️ آراء نموذجية للتوضيح فقط - استبدلها بآراء عملاء حقيقيين قبل النشر
+  reviews: [
+    {
+      id: 1,
+      image:
+        'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=200&q=80',
+      name: 'أحمد محمود',
+      role: 'عميل',
+      rating: 5,
+      comment: 'خدمة ممتازة وسرعة في الصيانة، جهازي رجع زي الجديد.',
+    },
+    {
+      id: 2,
+      image:
+        'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=200&q=80',
+      name: 'مريم علي',
+      role: 'عميلة',
+      rating: 5,
+      comment: 'تعامل راقي وأسعار مناسبة، وفريق العمل بيشرح كل حاجة بصبر.',
+    },
+    {
+      id: 3,
+      image:
+        'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&q=80',
+      name: 'محمد سعيد',
+      role: 'صاحب محل',
+      rating: 5,
+      comment: 'ركبولي كاميرات مراقبة للمحل وكانوا محترفين جدًا في الشغل.',
+    },
+  ],
+
+  trustIndicators: [
+    { number: '+5', label: 'سنوات خبرة' },
+    { number: '+1000', label: 'عميل سعيد' },
+    { number: '24/7', label: 'دعم فني' },
+  ],
+};
+
+const AboutUsClient = () => {
+  const [activeValue, setActiveValue] = useState(0);
+  const [activeTab, setActiveTab] = useState('history');
+
+  const iconMap = {
+    users: Award,
+    target: Target,
+    award: Award,
+    heart: Heart,
+    shield: Shield,
+    rocket: Rocket,
+    laptop: Laptop,
+    play: Play,
+    check: Check,
+    clock: Star,
+    messageCircle: MessageCircle,
+    calendar: Calendar,
+    zap: Zap,
+  };
+
+  return (
+    <div className="min-h-screen bg-slate-50" dir="rtl">
+      {/* Enhanced Hero Section */}
+      <section className="relative h-screen overflow-hidden">
+        <div
+          className="absolute inset-0"
+          style={{
+            backgroundImage: `linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.6)), url(${aboutData.hero.backgroundImage})`,
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+          }}
+        >
+          <div className="absolute inset-0 bg-gradient-to-r from-purple-900/20 to-blue-900/20"></div>
+          <div className="flex items-center justify-center h-full relative">
+            <div className="text-center text-white max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+              <div className="mb-4 sm:mb-6 animate-fade-in-up">
+                <span className="inline-block bg-white/20 backdrop-blur-sm rounded-full px-4 sm:px-6 py-2 text-xs sm:text-sm font-medium">
+                  {aboutData.hero.additionalContent.welcomeMessage}
+                </span>
+              </div>
+              <h1 className="text-4xl sm:text-6xl md:text-8xl font-bold mb-4 sm:mb-6 animate-fade-in-up bg-gradient-to-r from-white to-blue-200 bg-clip-text text-transparent leading-tight">
+                {aboutData.hero.title}
+              </h1>
+              <p className="text-lg sm:text-2xl md:text-3xl mb-6 sm:mb-8 opacity-90 animate-fade-in-up animation-delay-200">
+                {aboutData.hero.subtitle}
+              </p>
+              <p className="text-base sm:text-lg md:text-xl max-w-3xl mx-auto opacity-80 animate-fade-in-up animation-delay-400 leading-relaxed px-2">
+                {aboutData.hero.description}
+              </p>
+
+              <div className="mt-8 sm:mt-12 flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center animate-fade-in-up animation-delay-600 px-4">
+                <Link href="#ourStory">
+                  <button className="group bg-gradient-to-r from-purple-600 to-blue-600 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-full font-bold hover:shadow-2xl transform hover:scale-105 transition-all duration-300 flex items-center justify-center w-full sm:w-auto">
+                    <Play className="w-4 sm:w-5 h-4 sm:h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+                    {aboutData.hero.additionalContent.primaryButton.text}
+                  </button>
+                </Link>
+                <Link href={'/laptop'}>
+                  <button className="border-2 border-white/50 backdrop-blur-sm text-white px-6 sm:px-8 py-3 sm:py-4 rounded-full font-bold hover:bg-white hover:text-gray-900 transform hover:scale-105 transition-all duration-300 w-full sm:w-auto">
+                    {aboutData.hero.additionalContent.secondaryButton.text}
+                  </button>
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="absolute bottom-6 sm:bottom-8 left-1/2 transform -translate-x-1/2 text-white animate-bounce">
+          <ChevronRight className="w-6 h-6 sm:w-8 sm:h-8 rotate-90" />
+        </div>
+      </section>
+
+      {/* Story Section with Tabs */}
+      <section id="ourStory" className="py-16 sm:py-24 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12 sm:mb-16">
+            <h2 className="text-3xl sm:text-5xl font-bold text-gray-900 mb-4 sm:mb-6">
+              {aboutData.story.title}
+            </h2>
+            <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto px-2">
+              اكتشف رحلتنا عبر الزمن وكيف أصبحنا الخيار الأول
+            </p>
+          </div>
+
+          <div className="flex flex-wrap justify-center mb-8 sm:mb-12 gap-2 sm:gap-4 px-2">
+            {aboutData.story.tabs.map((tab) => (
+              <button
+                key={tab.id}
+                onClick={() => setActiveTab(tab.id)}
+                className={`px-4 sm:px-8 py-2 sm:py-3 rounded-full font-bold transition-all duration-300 text-sm sm:text-base ${
+                  activeTab === tab.id
+                    ? 'bg-gradient-to-r from-purple-600 to-blue-600 text-white shadow-lg'
+                    : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
+                }`}
+              >
+                {tab.title}
+              </button>
+            ))}
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-8 sm:gap-16 items-center">
+            <div className="order-2 md:order-1 px-2">
+              {aboutData.story.tabs.map(
+                (tab) =>
+                  activeTab === tab.id && (
+                    <div key={tab.id} className="space-y-4 sm:space-y-6">
+                      <h3 className="text-2xl sm:text-3xl font-bold text-gray-900">
+                        {tab.content.title}
+                      </h3>
+                      {tab.id === 'history' && (
+                        <>
+                          <p className="text-base sm:text-lg text-gray-700 leading-relaxed">
+                            {tab.content.description}
+                          </p>
+                          <div className="space-y-3 sm:space-y-4">
+                            {tab.content.milestones.map((milestone, index) => (
+                              <div
+                                key={index}
+                                className="flex items-center gap-3 sm:gap-4"
+                              >
+                                <div
+                                  className={`w-3 h-3 bg-${milestone.color}-600 rounded-full flex-shrink-0`}
+                                ></div>
+                                <span className="text-sm sm:text-base text-gray-700">
+                                  {milestone.text}
+                                </span>
+                              </div>
+                            ))}
+                          </div>
+                        </>
+                      )}
+
+                      {tab.id === 'milestones' && (
+                        <div className="space-y-4 sm:space-y-6">
+                          {tab.content.timeline.map((item, index) => (
+                            <div
+                              key={index}
+                              className={`border-r-4 border-${item.color}-600 pr-4 sm:pr-6`}
+                            >
+                              <h4 className="text-lg sm:text-xl font-bold text-gray-900 mb-2">
+                                {item.year} - {item.title}
+                              </h4>
+                              <p className="text-sm sm:text-base text-gray-700">
+                                {item.description}
+                              </p>
+                            </div>
+                          ))}
+                        </div>
+                      )}
+
+                      {tab.id === 'future' && (
+                        <>
+                          <p className="text-base sm:text-lg text-gray-700 leading-relaxed">
+                            {tab.content.description}
+                          </p>
+                          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
+                            {tab.content.features.map((feature, index) => {
+                              const IconComponent =
+                                iconMap[feature.icon] || Zap;
+                              return (
+                                <div
+                                  key={index}
+                                  className={`bg-gradient-to-br ${feature.gradient} p-3 sm:p-4 rounded-2xl`}
+                                >
+                                  <IconComponent className="w-6 sm:w-8 h-6 sm:h-8 text-purple-600 mb-2" />
+                                  <h4 className="font-bold text-gray-900 text-sm sm:text-base">
+                                    {feature.title}
+                                  </h4>
+                                </div>
+                              );
+                            })}
+                          </div>
+                        </>
+                      )}
+
+                      <div className="mt-6 sm:mt-8">
+                        <div className="bg-gradient-to-r from-purple-600 to-blue-600 w-16 sm:w-24 h-1 rounded"></div>
+                      </div>
+                    </div>
+                  )
+              )}
+            </div>
+
+            <div className="order-1 md:order-2 relative group px-2 md:px-0">
+              <div className="relative overflow-hidden rounded-2xl sm:rounded-3xl h-64 sm:h-96">
+                <Image
+                  src={aboutData.story.image}
+                  alt="قصة مودرن كومبيوتر"
+                  fill
+                  className="object-cover group-hover:scale-110 transition-transform duration-700"
+                />
+                <div className="absolute inset-0 bg-gradient-to-br from-purple-600/20 to-blue-600/20"></div>
+                <div className="absolute bottom-4 sm:bottom-6 right-4 sm:right-6">
+                  <div className="bg-white/90 backdrop-blur-sm rounded-xl sm:rounded-2xl px-3 sm:px-6 py-2 sm:py-3">
+                    <div className="flex items-center gap-2">
+                      <Calendar className="w-4 sm:w-5 h-4 sm:h-5 text-purple-600" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Mission & Vision */}
+      <section className="py-16 sm:py-24 bg-gradient-to-br from-purple-50 via-blue-50 to-indigo-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid md:grid-cols-2 gap-8 sm:gap-12">
+            <div className="group bg-white rounded-2xl sm:rounded-3xl p-6 sm:p-12 shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-500 relative overflow-hidden">
+              <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-purple-500 to-pink-500"></div>
+              <div className="bg-gradient-to-br from-purple-500 to-pink-500 w-16 sm:w-20 h-16 sm:h-20 rounded-2xl sm:rounded-3xl flex items-center justify-center mb-6 sm:mb-8 group-hover:scale-110 transition-transform duration-300">
+                <Target className="w-8 sm:w-10 h-8 sm:h-10 text-white" />
+              </div>
+              <h3 className="text-2xl sm:text-4xl font-bold text-gray-900 mb-4 sm:mb-6">
+                {aboutData.mission.title}
+              </h3>
+              <p className="text-base sm:text-lg text-gray-700 leading-relaxed mb-4 sm:mb-6">
+                {aboutData.mission.content}
+              </p>
+            </div>
+
+            <div className="group bg-white rounded-2xl sm:rounded-3xl p-6 sm:p-12 shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-500 relative overflow-hidden">
+              <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-blue-500 to-cyan-500"></div>
+              <div className="bg-gradient-to-br from-blue-500 to-cyan-500 w-16 sm:w-20 h-16 sm:h-20 rounded-2xl sm:rounded-3xl flex items-center justify-center mb-6 sm:mb-8 group-hover:scale-110 transition-transform duration-300">
+                <Eye className="w-8 sm:w-10 h-8 sm:h-10 text-white" />
+              </div>
+              <h3 className="text-2xl sm:text-4xl font-bold text-gray-900 mb-4 sm:mb-6">
+                {aboutData.vision.title}
+              </h3>
+              <p className="text-base sm:text-lg text-gray-700 leading-relaxed mb-4 sm:mb-6">
+                {aboutData.vision.content}
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Values Section */}
+      <section className="py-16 sm:py-24 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12 sm:mb-20">
+            <h2 className="text-3xl sm:text-5xl font-bold text-gray-900 mb-4 sm:mb-6">
+              {aboutData.sections.valuesSection.title}
+            </h2>
+            <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto px-2">
+              {aboutData.sections.valuesSection.subtitle}
+            </p>
+            <div className="mt-6 sm:mt-8 flex justify-center">
+              <div className="bg-gradient-to-r from-purple-600 to-blue-600 w-20 sm:w-32 h-1 rounded"></div>
+            </div>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
+            {aboutData.values.map((value, index) => {
+              const IconComponent = iconMap[value.icon] || Heart;
+              return (
+                <div
+                  key={value.id}
+                  className="group cursor-pointer"
+                  onClick={() => setActiveValue(index)}
+                >
+                  <div
+                    className={`bg-gradient-to-br from-white to-gray-50 rounded-2xl sm:rounded-3xl p-6 sm:p-8 shadow-lg hover:shadow-2xl transform hover:-translate-y-4 transition-all duration-500 relative overflow-hidden ${
+                      activeValue === index ? 'ring-4 ring-purple-400 scale-105' : ''
+                    }`}
+                  >
+                    <div className="absolute inset-0 bg-gradient-to-br from-purple-600/5 to-blue-600/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+
+                    <div className="relative z-10">
+                      <div className="bg-gradient-to-br from-purple-500 to-blue-500 w-14 sm:w-18 h-14 sm:h-18 rounded-2xl sm:rounded-3xl flex items-center justify-center mb-4 sm:mb-6 group-hover:scale-110 group-hover:rotate-6 transition-all duration-300">
+                        <IconComponent className="w-7 sm:w-9 h-7 sm:h-9 text-white" />
+                      </div>
+
+                      <h3 className="text-lg sm:text-2xl font-bold text-gray-900 mb-3 sm:mb-4 group-hover:text-purple-600 transition-colors duration-300">
+                        {value.title}
+                      </h3>
+
+                      <p className="text-sm sm:text-base text-gray-600 leading-relaxed mb-3 sm:mb-4">
+                        {value.description}
+                      </p>
+
+                      <div className="flex items-center text-purple-600 opacity-0 group-hover:opacity-100 transform translate-y-2 group-hover:translate-y-0 transition-all duration-300">
+                        <Check className="w-3 sm:w-4 h-3 sm:h-4 ml-1" />
+                        <span className="text-xs sm:text-sm font-semibold">
+                          تطبق دائماً
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
+      {/* Why Choose Us Section */}
+      <section className="py-16 sm:py-24 bg-gradient-to-br from-gray-900 to-purple-900 text-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12 sm:mb-16">
+            <h2 className="text-3xl sm:text-5xl font-bold mb-4 sm:mb-6">
+              {aboutData.sections.whyChooseUsSection.title}
+            </h2>
+            <p className="text-lg sm:text-xl opacity-80 px-2">
+              {aboutData.sections.whyChooseUsSection.subtitle}
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
+            {aboutData.whyChooseUs.map((item) => {
+              const IconComponent = iconMap[item.icon] || Shield;
+              return (
+                <div key={item.id} className="text-center group">
+                  <div
+                    className={`bg-gradient-to-br ${item.gradient} w-16 sm:w-20 h-16 sm:h-20 rounded-full flex items-center justify-center mx-auto mb-4 sm:mb-6 group-hover:scale-110 transition-transform duration-300`}
+                  >
+                    <IconComponent className="w-8 sm:w-10 h-8 sm:h-10 text-white" />
+                  </div>
+                  <h3 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4">
+                    {item.title}
+                  </h3>
+                  <p className="text-gray-300 text-sm sm:text-base px-2">
+                    {item.description}
+                  </p>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
+      {/* Brands Section */}
+      <section className="py-16 sm:py-24 bg-gradient-to-br from-gray-50 to-gray-100">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12 sm:mb-16">
+            <h2 className="text-3xl sm:text-5xl font-bold text-gray-900 mb-3 sm:mb-4">
+              {aboutData.sections.brandsSection.title}
+            </h2>
+            <p className="text-lg sm:text-xl text-gray-600 px-2">
+              {aboutData.sections.brandsSection.subtitle}
+            </p>
+          </div>
+
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 sm:gap-8">
+            {aboutData.brands.map((brand, index) => (
+              <div key={index} className="group">
+                <div className="bg-white rounded-2xl sm:rounded-3xl p-4 sm:p-8 shadow-lg hover:shadow-2xl transform hover:scale-105 transition-all duration-300 h-24 sm:h-32 flex items-center justify-center relative overflow-hidden">
+                  <div className="absolute inset-0 bg-gradient-to-br from-purple-600/5 to-blue-600/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                  {brand.logo ? (
+                    <Image
+                      src={brand.logo}
+                      alt={brand.name}
+                      fill
+                      className="object-contain group-hover:scale-110 transition-transform duration-300"
+                    />
+                  ) : (
+                    <div className="text-lg sm:text-2xl font-bold text-gray-700 group-hover:text-purple-600 transition-colors text-center">
+                      {brand.name}
+                    </div>
+                  )}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Achievements Section */}
+      <section id="achievements-section" className="py-16 sm:py-24 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12 sm:mb-16">
+            <h2 className="text-3xl sm:text-5xl font-bold text-gray-900 mb-3 sm:mb-4">
+              {aboutData.sections.achievementsSection.title}
+            </h2>
+            <p className="text-lg sm:text-xl text-gray-600 px-2">
+              {aboutData.sections.achievementsSection.subtitle}
+            </p>
+          </div>
+
+          <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-4 sm:gap-8">
+            {aboutData.achievements.map((achievement) => {
+              const IconComponent = iconMap[achievement.icon] || Award;
+              return (
+                <div key={achievement.id} className="text-center group">
+                  <div className="bg-gradient-to-br from-purple-50 to-blue-50 rounded-2xl sm:rounded-3xl p-4 sm:p-8 shadow-lg group-hover:shadow-2xl transform group-hover:scale-105 transition-all duration-500 relative overflow-hidden">
+                    <div className="absolute inset-0 bg-gradient-to-br from-purple-600/10 to-blue-600/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+
+                    <div className="relative z-10">
+                      <div className="bg-gradient-to-br from-purple-500 to-blue-500 w-16 sm:w-20 h-16 sm:h-20 rounded-2xl sm:rounded-3xl flex items-center justify-center mx-auto mb-4 sm:mb-6 group-hover:scale-110 group-hover:rotate-12 transition-all duration-500">
+                        <IconComponent className="w-8 sm:w-10 h-8 sm:h-10 text-white" />
+                      </div>
+
+                      <div className="text-3xl sm:text-5xl font-bold bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent mb-2">
+                        {achievement.number}
+                      </div>
+
+                      <div className="text-gray-600 text-sm sm:text-lg font-semibold">
+                        {achievement.label}
+                      </div>
+
+                      <div className="mt-3 sm:mt-4 w-12 sm:w-16 h-1 bg-gradient-to-r from-purple-600 to-blue-600 rounded mx-auto opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    </div>
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
+      {/* Reviews Section */}
+      <section className="py-16 sm:py-24 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12 sm:mb-16">
+            <h2 className="text-3xl sm:text-5xl font-bold text-gray-900 mb-3 sm:mb-4">
+              {aboutData.sections.reviewsSection.title}
+            </h2>
+            <p className="text-lg sm:text-xl text-gray-600 px-2">
+              {aboutData.sections.reviewsSection.subtitle}
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
+            {aboutData.reviews.map((review) => (
+              <div
+                key={review.id}
+                className="bg-gradient-to-br from-white to-gray-50 rounded-2xl sm:rounded-3xl p-6 sm:p-8 shadow-lg hover:shadow-2xl transform hover:scale-105 transition-all duration-300"
+              >
+                <div className="flex items-center mb-4 sm:mb-6">
+                  <div className="relative w-12 sm:w-16 h-12 sm:h-16 rounded-full overflow-hidden ml-3 sm:ml-4">
+                    <Image
+                      src={review.image}
+                      alt={review.name}
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
+                  <div>
+                    <h4 className="font-bold text-gray-900 text-base sm:text-lg">
+                      {review.name}
+                    </h4>
+                    <p className="text-gray-600 text-sm">{review.role}</p>
+                  </div>
+                </div>
+
+                <div className="flex items-center mb-3 sm:mb-4">
+                  {[...Array(review.rating)].map((_, i) => (
+                    <Star
+                      key={i}
+                      className="w-4 sm:w-5 h-4 sm:h-5 text-yellow-400 fill-current"
+                    />
+                  ))}
+                </div>
+
+                <p className="text-gray-700 leading-relaxed italic text-sm sm:text-base">
+                  "{review.comment}"
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-16 sm:py-24 bg-gradient-to-r from-purple-600 via-blue-600 to-indigo-600 relative overflow-hidden">
+        <div className="absolute inset-0 bg-black/20"></div>
+        <div className="absolute inset-0">
+          <div className="absolute top-0 left-0 w-64 sm:w-96 h-64 sm:h-96 bg-white/10 rounded-full -translate-x-32 sm:-translate-x-48 -translate-y-32 sm:-translate-y-48 animate-pulse"></div>
+          <div className="absolute bottom-0 right-0 w-64 sm:w-96 h-64 sm:h-96 bg-white/10 rounded-full translate-x-32 sm:translate-x-48 translate-y-32 sm:translate-y-48 animate-pulse animation-delay-1000"></div>
+        </div>
+
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="text-center text-white">
+            <h2 className="text-4xl sm:text-6xl font-bold mb-4 sm:mb-6 bg-gradient-to-r from-white to-blue-200 bg-clip-text text-transparent">
+              {aboutData.sections.ctaSection.title}
+            </h2>
+            <p className="text-lg sm:text-2xl mb-6 sm:mb-8 opacity-90 max-w-3xl mx-auto leading-relaxed px-2">
+              {aboutData.sections.ctaSection.subtitle}
+            </p>
+
+            <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center mb-8 sm:mb-12 px-4">
+              <Link href={'/laptop'}>
+                <button className="group bg-white text-purple-600 px-8 sm:px-12 py-3 sm:py-4 rounded-full text-lg sm:text-xl font-bold hover:shadow-2xl transform hover:scale-105 transition-all duration-300 flex items-center justify-center w-full sm:w-auto">
+                  <Laptop className="w-5 sm:w-6 h-5 sm:h-6 ml-2 sm:ml-3 group-hover:scale-110 transition-transform" />
+                  {aboutData.sections.ctaSection.buttons.primary.text}
+                </button>
+              </Link>
+              <button
+                onClick={() => goToWatssap()}
+                className="group border-2 border-white/50 backdrop-blur-sm text-white px-8 sm:px-12 py-3 sm:py-4 rounded-full text-lg sm:text-xl font-bold hover:bg-white hover:text-purple-600 transform hover:scale-105 transition-all duration-300 flex items-center justify-center w-full sm:w-auto"
+              >
+                <MessageCircle className="w-5 sm:w-6 h-5 sm:h-6 ml-2 sm:ml-3 group-hover:scale-110 transition-transform" />
+                {aboutData.sections.ctaSection.buttons.secondary.text}
+              </button>
+            </div>
+
+            {/* Trust indicators */}
+            <div className="grid grid-cols-3 gap-4 sm:gap-8 max-w-2xl mx-auto text-center">
+              {aboutData.trustIndicators.map((indicator, index) => (
+                <div key={index}>
+                  <div className="text-2xl sm:text-3xl font-bold mb-1 sm:mb-2">
+                    {indicator.number}
+                  </div>
+                  <div className="text-xs sm:text-sm opacity-75">
+                    {indicator.label}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  );
+};
+
+export default AboutUsClient;
