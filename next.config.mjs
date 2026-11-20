@@ -1,5 +1,10 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  // يضمن إن فولدر data/ (ملفات JSON) يتحزم مع الـ serverless functions على Vercel
+  outputFileTracingIncludes: {
+    '/**': ['./data/**/*'],
+  },
+
   images: {
     remotePatterns: [
       { protocol: 'https', hostname: '**.fbcdn.net' },

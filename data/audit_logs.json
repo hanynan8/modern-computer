@@ -1,0 +1,31 @@
+[
+  {
+    "_id": "6abafba40e507bf78e392f5a",
+    "action": "auth.register",
+    "actorId": "6abafba40e507bf78e392f58",
+    "actorEmail": "hanynan8@gmail.com",
+    "actorName": "Hany Younan Nazer Younan",
+    "targetId": null,
+    "targetEmail": null,
+    "ip": "::1",
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36",
+    "createdAt": "2026-09-28T23:43:32.491Z",
+    "__v": 0
+  },
+  {
+    "_id": "6abafba90e507bf78e392f5f",
+    "action": "auth.login_success",
+    "actorId": "6abafba40e507bf78e392f58",
+    "actorEmail": "hanynan8@gmail.com",
+    "actorName": "Hany Younan Nazer Younan",
+    "targetId": null,
+    "targetEmail": null,
+    "details": {
+      "role": "user"
+    },
+    "ip": "::1",
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36",
+    "createdAt": "2026-09-28T23:43:37.631Z",
+    "__v": 0
+  }
+]

@@ -1,0 +1,43 @@
+[
+  {
+    "_id": "6abafada451e08178a1b3d7b",
+    "createdAt": "2026-09-28T23:40:10.860Z",
+    "updatedAt": "2026-09-28T23:40:10.860Z",
+    "brandLetter": "Q",
+    "links": [
+      {
+        "id": "home",
+        "href": "/"
+      },
+      {
+        "id": "services",
+        "href": "/services"
+      },
+      {
+        "id": "careers",
+        "href": "/careers"
+      }
+    ],
+    "i18n": {
+      "en": {
+        "brand": "Qualx",
+        "links": {
+          "home": "Home",
+          "services": "Services",
+          "careers": "Careers"
+        },
+        "quote": "Get a quote"
+      },
+      "ar": {
+        "brand": "Qualx",
+        "links": {
+          "home": "الرئيسية",
+          "services": "خدماتنا",
+          "careers": "وظائف"
+        },
+        "quote": "اطلب عرض سعر"
+      }
+    },
+    "__v": 0
+  }
+]
