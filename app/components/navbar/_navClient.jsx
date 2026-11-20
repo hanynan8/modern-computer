@@ -40,26 +40,12 @@ const renderLogoName = (name, sizeClasses = '') => (
   </span>
 );
 
-// بيانات الناف بار الثابتة (ستاتيك) - خاصة بمتجر "مودرن كومبيوتر" (Modern
-// Computer). لو حبيت تغيّر الاسم أو الروابط، عدّل هنا مباشرة.
-const NAVBAR_DATA = {
-  company: {
-    name: 'Modern Computer',
-  },
-  navLinks: [
-    { text: 'الرئيسية', href: '/' },
-    { text: 'المنتجات', href: '/laptop' },
-    { text: 'من نحن', href: '/aboutus' },
-    { text: 'فروعنا', href: '/location' },
-    { text: 'تواصل معنا', href: '/contact' },
-  ],
-};
-
-export default function Navbar() {
-  // بيانات الناف بار ستاتيك بالكامل - بتتجاهل أي navbarData جاي من برة
-  // (زي فيتش من قاعدة بيانات) عشان الاسم والروابط يفضلوا ثابتين زي
-  // المطلوب بالظبط.
-  const navbarData = NAVBAR_DATA;
+export default function Navbar({ navbarData: navbarProp }) {
+  // البيانات جاية من data/navbar.json (عن طريق navbar.jsx)
+  const navbarData = {
+    company: { name: '', ...(navbarProp?.company || {}) },
+    navLinks: Array.isArray(navbarProp?.navLinks) ? navbarProp.navLinks : [],
+  };
   const [mobileOpen, setMobileOpen] = useState(false);
   const [productsDropdownOpen, setProductsDropdownOpen] = useState(false);
   const [mobileProductsOpen, setMobileProductsOpen] = useState(false);
@@ -388,7 +374,7 @@ export default function Navbar() {
     };
   }, [session]);
 
-  const companyName = NAVBAR_DATA.company.name;
+  const companyName = navbarData.company.name;
 
   const closeSidebar = () => {
     setMobileOpen(false);

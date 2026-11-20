@@ -22,276 +22,14 @@ import {
 import Link from 'next/link';
 import Image from 'next/image';
 
-function goToWatssap() {
-  window.open('https://wa.me/201222812404');
+function goToWatssap(phone) {
+  const digits = String(phone || '').replace(/\D/g, '');
+  if (!digits) return;
+  window.open(`https://wa.me/${digits}`);
 }
 
-// ====== بيانات ستاتيك: مودرن كومبيوتر ======
-// البيانات المتاحة فعليًا: اسم المتجر، العنوان، ورقم الهاتف فقط.
-// ⚠️ ملحوظة مهمة: القصة/المحطات الزمنية/الإحصائيات/آراء العملاء/الماركات دي
-// محتوى نموذجي (placeholder) لعدم توفر تفاصيل حقيقية عنها - لازم تستبدلها
-// ببياناتك الحقيقية (تاريخ التأسيس، أرقام فعلية، آراء عملاء حقيقية) قبل النشر.
-const aboutData = {
-  hero: {
-    backgroundImage:
-      'https://images.unsplash.com/photo-1517430816045-df4b7de11d1d?w=1920&q=80',
-    additionalContent: {
-      welcomeMessage: 'أهلاً بيك في مودرن كومبيوتر',
-      primaryButton: { text: 'اعرف قصتنا' },
-      secondaryButton: { text: 'تصفح المنتجات' },
-    },
-    title: 'مودرن كومبيوتر',
-    subtitle: 'رواد التكنولوجيا في قلب أسوان',
-    description:
-      'من شارع البركة في أسوان، بنقدملك أحدث أجهزة الكمبيوتر واللابتوبات، وخدمات صيانة احترافية، وحلول أنظمة مراقبة موثوقة لحماية بيتك وشغلك.',
-  },
-
-  story: {
-    title: 'قصتنا',
-    image:
-      'https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=1200&q=80',
-    tabs: [
-      {
-        id: 'history',
-        title: 'قصتنا',
-        content: {
-          title: 'بداية الحكاية',
-          description:
-            'مودرن كومبيوتر بدأت بشغف حقيقي بعالم التكنولوجيا، بهدف تقديم خدمة مميزة لأهالي أسوان في مجال بيع وصيانة أجهزة الكمبيوتر واللابتوبات.',
-          milestones: [
-            {
-              color: 'purple',
-              text: 'انطلقنا من قلب أسوان بشغف حقيقي بعالم التكنولوجيا',
-            },
-            {
-              color: 'blue',
-              text: 'بدأنا ببيع وصيانة أجهزة الكمبيوتر واللابتوبات',
-            },
-            {
-              color: 'green',
-              text: 'توسعنا لنقدم حلول أنظمة المراقبة وحماية المنازل والأعمال',
-            },
-          ],
-        },
-      },
-      {
-        id: 'milestones',
-        title: 'محطات مهمة',
-        content: {
-          title: 'رحلتنا في أسوان',
-          timeline: [
-            {
-              year: 'البداية',
-              title: 'انطلاقة مودرن كومبيوتر',
-              description:
-                'افتتحنا متجرنا في شارع البركة بأسوان لخدمة عشاق التكنولوجيا',
-              color: 'purple',
-            },
-            {
-              year: 'التوسع',
-              title: 'إضافة خدمات الصيانة',
-              description:
-                'وسّعنا خدماتنا لتشمل صيانة شاملة للكمبيوترات واللابتوبات',
-              color: 'blue',
-            },
-            {
-              year: 'اليوم',
-              title: 'رواد في أسوان',
-              description:
-                'أصبحنا من الوجهات الموثوقة في أسوان لبيع وصيانة الأجهزة وأنظمة المراقبة',
-              color: 'green',
-            },
-          ],
-        },
-      },
-      {
-        id: 'future',
-        title: 'مستقبلنا',
-        content: {
-          title: 'إلى أين نتجه',
-          description:
-            'بنطمح نكمل التوسع في خدماتنا التقنية عشان نفضل الخيار الأول لعملائنا في أسوان.',
-          features: [
-            {
-              icon: 'rocket',
-              gradient: 'from-purple-100 to-blue-100',
-              title: 'توسيع نطاق الخدمة',
-            },
-            {
-              icon: 'shield',
-              gradient: 'from-blue-100 to-cyan-100',
-              title: 'حلول أمان أكثر تطورًا',
-            },
-            {
-              icon: 'laptop',
-              gradient: 'from-green-100 to-emerald-100',
-              title: 'أحدث الأجهزة والماركات',
-            },
-            {
-              icon: 'zap',
-              gradient: 'from-orange-100 to-red-100',
-              title: 'خدمة عملاء أقرب لينا',
-            },
-          ],
-        },
-      },
-    ],
-  },
-
-  mission: {
-    title: 'رسالتنا',
-    content:
-      'نوفر لعملائنا في أسوان أحدث أجهزة الكمبيوتر واللابتوبات مع خدمة صيانة احترافية وحلول مراقبة موثوقة، بجودة عالية وأسعار تنافسية.',
-  },
-
-  vision: {
-    title: 'رؤيتنا',
-    content:
-      'نطمح لنكون الوجهة الأولى للتكنولوجيا في أسوان وصعيد مصر، من خلال الاحترافية والابتكار المستمر في خدماتنا.',
-  },
-
-  sections: {
-    valuesSection: {
-      title: 'قيمنا الأساسية',
-      subtitle: 'المبادئ التي تقودنا نحو التميز والإبداع',
-    },
-    whyChooseUsSection: {
-      title: 'ليه تختار مودرن كومبيوتر',
-      subtitle: 'أسباب تخلي عملاءنا يثقوا فينا',
-    },
-    brandsSection: {
-      title: 'الماركات التي نتعامل معها',
-      subtitle: 'أفضل الماركات العالمية في مكان واحد',
-    },
-    achievementsSection: {
-      title: 'إنجازاتنا',
-      subtitle: 'أرقام تعكس ثقة عملائنا فينا',
-    },
-    reviewsSection: {
-      title: 'آراء عملائنا',
-      subtitle: 'إيه رأي اللي جربوا خدمتنا',
-    },
-    ctaSection: {
-      title: 'جاهز تبدأ معانا؟',
-      subtitle:
-        'زور مودرن كومبيوتر دلوقتي واكتشف أحدث المنتجات التقنية بأفضل الأسعار',
-      buttons: {
-        primary: { text: 'تصفح المنتجات' },
-        secondary: { text: 'تواصل معنا' },
-      },
-    },
-  },
-
-  values: [
-    {
-      id: 1,
-      icon: 'award',
-      title: 'الجودة',
-      description: 'نختار منتجاتنا بعناية لضمان أعلى مستوى من الجودة',
-    },
-    {
-      id: 2,
-      icon: 'shield',
-      title: 'الأمانة',
-      description: 'الصدق والشفافية في التعامل مع كل عميل',
-    },
-    {
-      id: 3,
-      icon: 'heart',
-      title: 'خدمة العملاء',
-      description: 'رضا العميل هو أولويتنا الأولى في كل خطوة',
-    },
-    {
-      id: 4,
-      icon: 'rocket',
-      title: 'الابتكار',
-      description: 'نواكب أحدث التقنيات لنقدم حلول أفضل دايمًا',
-    },
-  ],
-
-  whyChooseUs: [
-    {
-      id: 1,
-      icon: 'users',
-      gradient: 'from-purple-500 to-pink-500',
-      title: 'فريق فني متخصص',
-      description: 'خبرة حقيقية في صيانة وتركيب الأجهزة وأنظمة المراقبة',
-    },
-    {
-      id: 2,
-      icon: 'shield',
-      gradient: 'from-blue-500 to-cyan-500',
-      title: 'ضمان على المنتجات',
-      description: 'ضمان على كل الأجهزة وخدمات الصيانة اللي بنقدمها',
-    },
-    {
-      id: 3,
-      icon: 'clock',
-      gradient: 'from-green-500 to-emerald-500',
-      title: 'متابعة بعد البيع',
-      description: 'دعم فني مستمر حتى بعد إتمام عملية الشراء',
-    },
-  ],
-
-  // ⚠️ الماركات دي أمثلة شائعة لمتاجر الكمبيوتر - راجعها واستبدلها بالماركات اللي فعلاً بتتعامل معاها
-  brands: [
-    { name: 'HP', logo: null },
-    { name: 'Dell', logo: null },
-    { name: 'Lenovo', logo: null },
-    { name: 'ASUS', logo: null },
-    { name: 'Acer', logo: null },
-    { name: 'MSI', logo: null },
-    { name: 'Logitech', logo: null },
-    { name: 'Apple', logo: null },
-  ],
-
-  // ⚠️ أرقام نموذجية - استبدلها بإحصائيات حقيقية عن متجرك
-  achievements: [
-    { id: 1, icon: 'clock', number: '+5', label: 'سنوات خبرة' },
-    { id: 2, icon: 'users', number: '+1000', label: 'عميل سعيد' },
-    { id: 3, icon: 'laptop', number: '+2000', label: 'جهاز تم صيانته' },
-    { id: 4, icon: 'shield', number: '24/7', label: 'دعم فني' },
-  ],
-
-  // ⚠️ آراء نموذجية للتوضيح فقط - استبدلها بآراء عملاء حقيقيين قبل النشر
-  reviews: [
-    {
-      id: 1,
-      image:
-        'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=200&q=80',
-      name: 'أحمد محمود',
-      role: 'عميل',
-      rating: 5,
-      comment: 'خدمة ممتازة وسرعة في الصيانة، جهازي رجع زي الجديد.',
-    },
-    {
-      id: 2,
-      image:
-        'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=200&q=80',
-      name: 'مريم علي',
-      role: 'عميلة',
-      rating: 5,
-      comment: 'تعامل راقي وأسعار مناسبة، وفريق العمل بيشرح كل حاجة بصبر.',
-    },
-    {
-      id: 3,
-      image:
-        'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&q=80',
-      name: 'محمد سعيد',
-      role: 'صاحب محل',
-      rating: 5,
-      comment: 'ركبولي كاميرات مراقبة للمحل وكانوا محترفين جدًا في الشغل.',
-    },
-  ],
-
-  trustIndicators: [
-    { number: '+5', label: 'سنوات خبرة' },
-    { number: '+1000', label: 'عميل سعيد' },
-    { number: '24/7', label: 'دعم فني' },
-  ],
-};
-
-const AboutUsClient = () => {
+const AboutUsClient = ({ initialData, error, whatsappPhone }) => {
+  const aboutData = initialData;
   const [activeValue, setActiveValue] = useState(0);
   const [activeTab, setActiveTab] = useState('history');
 
@@ -310,6 +48,15 @@ const AboutUsClient = () => {
     calendar: Calendar,
     zap: Zap,
   };
+
+
+  if (!aboutData) {
+    return (
+      <div className="min-h-screen flex items-center justify-center bg-slate-50" dir="rtl">
+        <p className="text-xl text-gray-600">{error || 'لا توجد بيانات متاحة'}</p>
+      </div>
+    );
+  }
 
   return (
     <div className="min-h-screen bg-slate-50" dir="rtl">
@@ -478,7 +225,7 @@ const AboutUsClient = () => {
               <div className="relative overflow-hidden rounded-2xl sm:rounded-3xl h-64 sm:h-96">
                 <Image
                   src={aboutData.story.image}
-                  alt="قصة مودرن كومبيوتر"
+                  alt={aboutData.story.title}
                   fill
                   className="object-cover group-hover:scale-110 transition-transform duration-700"
                 />
@@ -780,7 +527,7 @@ const AboutUsClient = () => {
                 </button>
               </Link>
               <button
-                onClick={() => goToWatssap()}
+                onClick={() => goToWatssap(whatsappPhone)}
                 className="group border-2 border-white/50 backdrop-blur-sm text-white px-8 sm:px-12 py-3 sm:py-4 rounded-full text-lg sm:text-xl font-bold hover:bg-white hover:text-purple-600 transform hover:scale-105 transition-all duration-300 flex items-center justify-center w-full sm:w-auto"
               >
                 <MessageCircle className="w-5 sm:w-6 h-5 sm:h-6 ml-2 sm:ml-3 group-hover:scale-110 transition-transform" />

@@ -2,37 +2,41 @@
   {
     "_id": "6a48ee2c798ed50fc65da420",
     "company": {
-      "name": "المهندس لينك",
-      "subtitle": "شريكك التقني الموثوق",
-      "description": "نقدم أفضل الأجهزة التقنية والإكسسوارات بجودة عالية وأسعار منافسة.",
+      "name": "مودرن كومبيوتر",
+      "subtitle": "مودرن كومبيوتر – أسوان",
+      "description": "رواد التكنولوجيا في بيع وصيانة الكمبيوترات واللابتوبات، وحلول مبتكرة لأنظمة المراقبة وحماية الأعمال والمنازل.",
       "year": 2026
     },
     "socialLinks": [
       {
         "platform": "Facebook",
         "icon": "FaFacebook",
-        "url": "https://www.facebook.com/profile.php?id=100063669591673"
+        "url": "#"
       }
     ],
     "sections": [
       {
-        "title": "المنتجات",
+        "title": "روابط سريعة",
         "links": [
+          {
+            "text": "الصفحة الرئيسية",
+            "href": "/"
+          },
           {
             "text": "اللابتوبات",
             "href": "/laptop"
           },
           {
+            "text": "مكونات الكمبيوتر",
+            "href": "/component"
+          },
+          {
+            "text": "تجميعات PC",
+            "href": "/pc-builds"
+          },
+          {
             "text": "الاكسسوارات",
             "href": "/accessories"
-          },
-          {
-            "text": "الشاشات",
-            "href": "/monitors"
-          },
-          {
-            "text": "المكونات",
-            "href": "/component"
           }
         ]
       },
@@ -44,34 +48,23 @@
             "href": "/aboutus"
           },
           {
-            "text": "اتصل بنا",
+            "text": "تواصل معنا",
             "href": "/contact"
           },
           {
-            "text": "موقعنا",
+            "text": "موقعنا وفروعنا",
             "href": "/location"
           }
         ]
       },
       {
-        "title": "تواصل معنا",
+        "title": "بيانات التواصل",
         "content": {
-          "address": "أسوان - السوق الجديد - خلف باتا - شارع الصاغة - أعلى محل الصديقين للذهب",
-          "phone": "01111184023",
-          "email": "",
-          "workingHours": "يوميًا: 10 ص - 9 م"
+          "address": "شارع البركة، أمام محل أولاد موسى، أسوان",
+          "phone": "01222812404"
         }
       }
     ],
-    "bottomLinks": [
-      {
-        "text": "سياسة الخصوصية",
-        "href": "/privacy"
-      },
-      {
-        "text": "الشروط والأحكام",
-        "href": "/terms"
-      }
-    ]
+    "bottomLinks": []
   }
 ]

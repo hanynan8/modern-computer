@@ -11,7 +11,7 @@ export const revalidate = 60;
 
 const FALLBACK_FOOTER_DATA = {
   company: {
-    name: "اسم الشركة",
+    name: "",
     subtitle: "",
     description: "",
     year: new Date().getFullYear()

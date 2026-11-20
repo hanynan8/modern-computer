@@ -17,129 +17,15 @@ import {
 
 import Link from 'next/link';
 
-function goToWatssap() {
-  window.open('https://wa.me/201222812404');
+function goToWatssap(phone) {
+  const digits = String(phone || '').replace(/\D/g, '');
+  if (!digits) return;
+  window.open(`https://wa.me/${digits}`);
 }
 
-// ====== بيانات ستاتيك: مودرن كومبيوتر ======
-// البيانات المتاحة فعليًا: اسم المتجر، العنوان، ورقم الهاتف فقط.
-// ⚠️ ملحوظة: مواعيد العمل والأسئلة الشائعة نموذجية - راجعها واستبدلها ببياناتك الفعلية
-const contactData = {
-  pageTitle: 'تواصل معنا',
-  pageSubtitle: 'مودرن كومبيوتر في خدمتك دايمًا',
-
-  contactInfo: [
-    {
-      icon: 'Phone',
-      color: 'from-purple-500 to-blue-500',
-      title: 'اتصل بنا',
-      details: ['01222812404'],
-    },
-    {
-      icon: 'MapPin',
-      color: 'from-blue-500 to-cyan-500',
-      title: 'موقعنا',
-      details: ['شارع البركة، أمام محل أولاد موسى', 'أسوان'],
-    },
-    {
-      icon: 'Clock',
-      color: 'from-green-500 to-emerald-500',
-      title: 'مواعيد العمل',
-      details: ['السبت - الخميس: 10ص - 11م', 'الجمعة: 2م - 11م'],
-    },
-    {
-      icon: 'Facebook',
-      color: 'from-orange-500 to-red-500',
-      title: 'تابعنا',
-      details: ['مودرن كومبيوتر', 'على فيسبوك'],
-    },
-  ],
-
-  formLabels: {
-    formTitle: 'ابعتلنا رسالة',
-    formSubtitle: 'هنرد عليك في أسرع وقت ممكن',
-    successMessage: 'تم إرسال رسالتك بنجاح! هنتواصل معاك قريبًا',
-    fields: {
-      name: { label: 'الاسم بالكامل', placeholder: 'اكتب اسمك هنا' },
-      email: { label: 'البريد الإلكتروني', placeholder: 'example@email.com' },
-      phone: { label: 'رقم الهاتف', placeholder: '01xxxxxxxxx' },
-      type: {
-        label: 'نوع الاستفسار',
-        options: [
-          { value: 'general', label: 'استفسار عام' },
-          { value: 'maintenance', label: 'صيانة أجهزة' },
-          { value: 'purchase', label: 'استفسار عن منتج' },
-          { value: 'surveillance', label: 'أنظمة مراقبة' },
-        ],
-      },
-      subject: { label: 'الموضوع', placeholder: 'موضوع رسالتك' },
-      message: {
-        label: 'الرسالة',
-        placeholder: 'اكتب رسالتك هنا بالتفصيل...',
-      },
-    },
-    submitButton: { default: 'إرسال الرسالة', loading: 'جاري الإرسال...' },
-  },
-
-  contactMethods: [
-    {
-      icon: 'MessageCircle',
-      color: 'from-green-500 to-emerald-500',
-      title: 'واتساب',
-      description: 'تواصل معنا مباشرة عبر واتساب لأي استفسار',
-      buttonText: 'ابدأ المحادثة',
-    },
-    {
-      icon: 'Phone',
-      color: 'from-purple-500 to-blue-500',
-      title: 'اتصال هاتفي',
-      description: 'اتصل بينا مباشرة على رقم المتجر',
-      buttonText: 'اتصل الآن',
-    },
-    {
-      icon: 'Facebook',
-      color: 'from-blue-500 to-cyan-500',
-      title: 'فيسبوك',
-      description: 'تابع أحدث العروض والمنتجات على صفحتنا',
-      buttonText: 'زيارة الصفحة',
-    },
-  ],
-
-  faqSection: {
-    title: 'أسئلة شائعة',
-    subtitle: 'إجابات على أكتر الأسئلة اللي بتوصلنا',
-    items: [
-      {
-        question: 'هل بتقدموا خدمة الصيانة لكل أنواع اللابتوبات؟',
-        answer:
-          'أيوه، فريقنا الفني بيصلح كل أنواع وموديلات اللابتوبات والكمبيوترات المكتبية.',
-      },
-      {
-        question: 'هل عندكم أنظمة مراقبة للمنازل والمحلات؟',
-        answer:
-          'أيوه، بنوفر حلول كاميرات مراقبة متكاملة لحماية المنازل والأعمال في أسوان.',
-      },
-      {
-        question: 'هل التوصيل متاح داخل أسوان؟',
-        answer:
-          'أيوه، بنوفر خدمة توصيل للمنتجات داخل أسوان، تقدر تتواصل معانا لمعرفة التفاصيل.',
-      },
-      {
-        question: 'إزاي أقدر أتواصل معاكم لو عندي مشكلة في جهاز اشتريته؟',
-        answer:
-          'تقدر تتصل بينا أو تراسلنا على واتساب أو فيسبوك وهنساعدك فورًا.',
-      },
-    ],
-  },
-
-  socialSection: {
-    title: 'زور متجرنا',
-    subtitle: 'اكتشف أحدث المنتجات التقنية في مودرن كومبيوتر',
-    storeButton: 'تصفح المنتجات',
-  },
-};
-
-const ContactClient = () => {
+const ContactClient = ({ initialData, error }) => {
+  const contactData = initialData;
+  const whatsappPhone = contactData?.contactInfo?.find((i) => i.icon === 'Phone')?.details?.[0];
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -189,6 +75,15 @@ const ContactClient = () => {
       setTimeout(() => setShowSuccess(false), 5000);
     }, 2000);
   };
+
+
+  if (!contactData) {
+    return (
+      <div className="min-h-screen flex items-center justify-center bg-slate-50" dir="rtl">
+        <p className="text-xl text-gray-600">{error || 'لا توجد بيانات متاحة'}</p>
+      </div>
+    );
+  }
 
   return (
     <div className="min-h-screen bg-slate-50" dir="rtl">
@@ -411,7 +306,7 @@ const ContactClient = () => {
                             {method.description}
                           </p>
                           <button
-                            onClick={() => goToWatssap()}
+                            onClick={() => goToWatssap(whatsappPhone)}
                             className="text-purple-600 font-bold hover:text-purple-800 transition-colors duration-300"
                           >
                             {method.buttonText}

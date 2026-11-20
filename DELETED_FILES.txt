@@ -1,0 +1,9 @@
+app/(viewrs)/careers/page.jsx
+app/(viewrs)/services/[slug]/page.jsx
+app/(viewrs)/services/page.jsx
+app/components/navbar/_siteNavClient.jsx
+app/components/site/Icon.jsx
+app/components/site/LangSwitch.jsx
+data/careers.json
+data/services.json
+lib/site.js

@@ -536,7 +536,7 @@ const ComputerComponentsClient = ({ initialData, error }) => {
   const [itemsPerPage] = useState(20); // مناسب للموبايل
 
   // الحصول على رقم الواتساب من البيانات
-  const whatsappNumber = data?.settings?.whatsappNumber || '2001201061216';
+  const whatsappNumber = data?.settings?.whatsappNumber || '201222812404';
 
   // جلب عدد المنتجات (مأخوذة من Navbar)
   const fetchCartCount = async () => {

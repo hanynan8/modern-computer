@@ -6,68 +6,22 @@ import {
   FaPhone,
   FaEnvelope,
   FaMapMarkerAlt,
+  FaClock,
 } from 'react-icons/fa';
-
-// بيانات الفوتر الثابتة (ستاتيك) - خاصة بمتجر "مودرن كومبيوتر" (Modern
-// Computer). البيانات المتاحة فعليًا: اسم المتجر، العنوان، ورقم الهاتف فقط،
-// والباقي (الوصف، رابط فيسبوك) محتوى نموذجي (placeholder) لحد ما توفر
-// بيانات حقيقية. لو حبيت تغيّر أي بيانات، عدّل هنا مباشرة.
-//
-// ⚠️ ملحوظة: مسارات (href) صفحة "تواصل معنا" و"موقعنا وفروعنا" افتراضية
-// (/contact و /location). لو المسارات الفعلية في مشروعك مختلفة، عدّلها هنا.
-const FOOTER_DATA = {
-  company: {
-    name: 'مودرن كومبيوتر',
-    subtitle: 'مودرن كومبيوتر – أسوان',
-    description:
-      'رواد التكنولوجيا في بيع وصيانة الكمبيوترات واللابتوبات، وحلول مبتكرة لأنظمة المراقبة وحماية الأعمال والمنازل.',
-    year: new Date().getFullYear(),
-  },
-  socialLinks: [
-    {
-      // ⚠️ لا يوجد رابط فيسبوك متاح حاليًا - استبدل '#' برابط صفحة المتجر
-      // الحقيقية على فيسبوك لما تتوفر.
-      platform: 'Facebook',
-      icon: 'FaFacebook',
-      url: '#',
-    },
-  ],
-  sections: [
-    {
-      title: 'روابط سريعة',
-      links: [
-        { text: 'الصفحة الرئيسية', href: '/' },
-        { text: 'اللابتوبات', href: '/laptop' },
-        { text: 'مكونات الكمبيوتر', href: '/component' },
-        { text: 'تجميعات PC', href: '/pc-builds' },
-        { text: 'الاكسسوارات', href: '/accessories' },
-      ],
-    },
-    {
-      title: 'الشركة',
-      links: [
-        { text: 'من نحن', href: '/aboutus' },
-        { text: 'تواصل معنا', href: '/contact' },
-        { text: 'موقعنا وفروعنا', href: '/location' },
-      ],
-    },
-    {
-      title: 'بيانات التواصل',
-      content: {
-        address: 'شارع البركة، أمام محل أولاد موسى، أسوان',
-        phone: '01222812404',
-      },
-    },
-  ],
-  bottomLinks: [],
-};
 
 const iconComponents = {
   FaFacebook,
 };
 
-export default function Footer() {
-  const safe = FOOTER_DATA;
+export default function Footer({ footerData }) {
+  // البيانات جاية من data/footer.json (عن طريق footer.jsx)
+  const d = footerData || {};
+  const safe = {
+    company: { name: '', subtitle: '', description: '', year: new Date().getFullYear(), ...(d.company || {}) },
+    socialLinks: Array.isArray(d.socialLinks) ? d.socialLinks : [],
+    sections: Array.isArray(d.sections) ? d.sections : [],
+    bottomLinks: Array.isArray(d.bottomLinks) ? d.bottomLinks : [],
+  };
 
   return (
     <footer className="bg-gray-900 text-white">
@@ -139,6 +93,12 @@ export default function Footer() {
                       <a href={`tel:${section.content.phone}`} className="hover:text-white">
                         {section.content.phone}
                       </a>
+                    </div>
+                  )}
+                  {section.content?.workingHours && (
+                    <div className="flex items-center">
+                      <FaClock className="w-4 h-4 ml-2 text-sky-400" />
+                      <span>{section.content.workingHours}</span>
                     </div>
                   )}
                   {section.content?.email && (

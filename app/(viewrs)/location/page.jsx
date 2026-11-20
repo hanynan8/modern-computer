@@ -11,13 +11,13 @@ export const metadata = {
     'موقعنا', 'العنوان', 'اتصل بنا', 'مواعيد العمل', 'فروعنا', 'كيفية الوصول',
     'خريطة الموقع', 'طرق التواصل', 'أرقام الهاتف', 'البريد الإلكتروني'
   ],
-  authors: [{ name: 'Restaurant', url: 'https://restaurant-back-end.vercel.app' }],
+  authors: [{ name: 'مودرن كومبيوتر', url: 'https://lap-tech-five.vercel.app' }],
   openGraph: {
     type: 'website',
-    url: 'https://restaurant-back-end.vercel.app/location',
+    url: 'https://lap-tech-five.vercel.app/location',
     title: 'موقعنا',
     description: 'تعرف على مواقعنا وكيفية الوصول إلينا. ساعات العمل، العناوين، وطرق التواصل مع جميع فروعنا.',
-    siteName: 'Restaurant',
+    siteName: 'مودرن كومبيوتر',
   }
 };
 

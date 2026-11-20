@@ -47,8 +47,8 @@ const amiri = Amiri({
 // ----- METADATA (بدّل القيم هذه بالقيم الحقيقية لموقعك) -----
 export const metadata = {
   title: {
-    default: 'TechLap Elite | احدث الادوات التقنية',
-    template: '%s | TechLap Elite',
+    default: 'مودرن كومبيوتر | احدث الادوات التقنية',
+    template: '%s | مودرن كومبيوتر',
   },
   description:
     'اكتشف أحدث المنتجات التقنية، أجهزة الكمبيوتر، والإكسسوارات — مواصفات مفصلة، عروض يومية، وشحن سريع.',
@@ -68,7 +68,7 @@ export const metadata = {
     'تسوق',
     'عروض',
     'أجهزة للمبدعين',
-    'TechLap Elite',
+    'مودرن كومبيوتر',
     'لابتوبات الأعمال',
     'أحدث أجهزة الجيمينج',
     'لابتوبات للمونتاج',
@@ -82,23 +82,23 @@ export const metadata = {
     },
   ],
   creator: 'Hany Younan Nazer',
-  publisher: 'TechLap Elite',
+  publisher: 'مودرن كومبيوتر',
   metadataBase: new URL('https://lap-tech-five.vercel.app/'),
   openGraph: {
     title: {
-      default: 'TechLap Elite | احدث الادوات التقنية',
-      template: '%s | TechLap Elite',
+      default: 'مودرن كومبيوتر | احدث الادوات التقنية',
+      template: '%s | مودرن كومبيوتر',
     },
     description:
       'تسوّق أحدث الادوات التقنية وأفضل الإكسسوارات مع أسعار تنافسية وجودة عالية.',
     url: 'https://lap-tech-five.vercel.app/',
-    siteName: 'TechLap Elite',
+    siteName: 'مودرن كومبيوتر',
     images: [
       {
         url: 'https://images.unsplash.com/photo-1525547719571-a2d4ac8945e2?w=1200&h=630&fit=crop',
         width: 1200,
         height: 630,
-        alt: 'TechLap Elite - أحدث المنتجات',
+        alt: 'مودرن كومبيوتر - أحدث المنتجات',
       },
     ],
     locale: 'ar_EG',
@@ -132,12 +132,12 @@ const structuredData = {
     {
       '@type': 'Organization',
       '@id': 'https://lap-tech-five.vercel.app/#organization',
-      name: 'TechLap Elite',
+      name: 'مودرن كومبيوتر',
       url: 'https://lap-tech-five.vercel.app/',
       contactPoint: [
         {
           '@type': 'ContactPoint',
-          telephone: '+20-120-106-1216',
+          telephone: '+20-122-281-2404',
           contactType: 'customer service',
           areaServed: 'EG',
           availableLanguage: ['ar', 'en'],
@@ -148,7 +148,7 @@ const structuredData = {
       '@type': 'WebSite',
       '@id': 'https://lap-tech-five.vercel.app/#website',
       url: 'https://lap-tech-five.vercel.app/',
-      name: 'TechLap Elite',
+      name: 'مودرن كومبيوتر',
       publisher: { '@id': 'https://lap-tech-five.vercel.app/#organization' },
       potentialAction: {
         '@type': 'SearchAction',

@@ -15,105 +15,18 @@ import {
 
 import Link from 'next/link';
 
-function goToWatssap() {
-  window.open('https://wa.me/201222812404');
+function goToWatssap(phone) {
+  const digits = String(phone || '').replace(/\D/g, '');
+  if (!digits) return;
+  window.open(`https://wa.me/${digits}`);
 }
 
-// ====== بيانات ستاتيك: مودرن كومبيوتر ======
-// البيانات المتاحة فعليًا: اسم المتجر، العنوان، ورقم الهاتف فقط.
-const locationData = {
-  pageTitle: 'مودرن كومبيوتر',
-  pageSubtitle:
-    'رواد التكنولوجيا في بيع وصيانة الكمبيوترات واللابتوبات وأنظمة المراقبة بأسوان',
-
-  mainLocation: {
-    title: 'موقعنا في أسوان',
-    details: [
-      {
-        icon: 'MapPin',
-        color: 'from-purple-500 to-blue-500',
-        title: 'العنوان',
-        description: 'شارع البركة، أمام محل أولاد موسى، أسوان',
-      },
-      {
-        icon: 'Phone',
-        color: 'from-green-500 to-emerald-500',
-        title: 'رقم الهاتف',
-        description: '01222812404',
-      },
-      {
-        icon: 'Building',
-        color: 'from-orange-500 to-red-500',
-        title: 'نوع المتجر',
-        description: 'متجر كمبيوتر وإلكترونيات (Computer Store)',
-      },
-    ],
-  },
-
-  // ⚠️ ملحوظة: المواعيد دي نموذجية - راجعها واستبدلها بمواعيد العمل الحقيقية للمتجر
-  workingHours: {
-    title: 'مواعيد العمل',
-    schedule: [
-      { day: 'السبت - الخميس', hours: '10:00 ص - 11:00 م' },
-      { day: 'الجمعة', hours: '2:00 م - 11:00 م' },
-    ],
-  },
-
-  mapSection: {
-    title: 'موقعنا على الخريطة',
-    placeholder: {
-      title: 'مودرن كومبيوتر',
-      address: 'شارع البركة، أمام محل أولاد موسى، أسوان',
-    },
-    buttons: { directions: 'اتجاهات', share: 'مشاركة' },
-  },
-
-  quickContact: {
-    title: 'تواصل سريع',
-    methods: [
-      { icon: 'Phone', label: 'اتصل بنا', value: '01222812404' },
-      { icon: 'Mail', label: 'واتساب', value: 'تواصل معنا مباشرة' },
-      { icon: 'MapPin', label: 'العنوان', value: 'شارع البركة، أسوان' },
-    ],
-  },
-
-  features: {
-    title: 'ليه تختار مودرن كومبيوتر',
-    subtitle: 'خدمات متكاملة تخليك مطمن على جهازك وبياناتك',
-    items: [
-      {
-        icon: 'Shield',
-        color: 'from-purple-500 to-blue-500',
-        title: 'صيانة موثوقة',
-        description: 'صيانة كمبيوترات ولابتوبات بأيدي فنيين متخصصين',
-      },
-      {
-        icon: 'Camera',
-        color: 'from-blue-500 to-cyan-500',
-        title: 'أنظمة مراقبة',
-        description: 'حلول كاميرات مراقبة لحماية المنازل والمحلات',
-      },
-      {
-        icon: 'Users',
-        color: 'from-green-500 to-emerald-500',
-        title: 'خدمة عملاء مميزة',
-        description: 'فريق دايم جاهز يساعدك ويجاوب على استفساراتك',
-      },
-    ],
-  },
-
-  visitSection: {
-    title: 'زورنا في أسوان',
-    subtitle:
-      'مودرن كومبيوتر في انتظارك بكل الأجهزة والحلول التقنية اللي محتاجها',
-    buttons: { visit: 'زيارة الموقع', call: 'تواصل معنا' },
-  },
-};
-
-const MAPS_URL =
-  'https://www.google.com/maps/search/?api=1&query=مودرن+كومبيوتر+شارع+البركة+اسوان';
-
-const LocationPageClient = () => {
+const LocationPageClient = ({ initialData, error }) => {
+  const locationData = initialData;
+  const whatsappPhone = locationData?.mainLocation?.details?.find((d) => d.icon === 'Phone')?.description;
+  const MAPS_URL = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
+    `${locationData?.mapSection?.placeholder?.title || ''} ${locationData?.mapSection?.placeholder?.address || ''}`.trim()
+  )}`;
   // Icon mapping
   const iconMap = {
     MapPin,
@@ -126,6 +39,15 @@ const LocationPageClient = () => {
     Building,
     Camera,
   };
+
+
+  if (!locationData) {
+    return (
+      <div className="min-h-screen flex items-center justify-center bg-slate-50" dir="rtl">
+        <p className="text-xl text-gray-600">{error || 'لا توجد بيانات متاحة'}</p>
+      </div>
+    );
+  }
 
   return (
     <div className="min-h-screen bg-slate-50" dir="rtl">
@@ -270,6 +192,43 @@ const LocationPageClient = () => {
         </div>
       </section>
 
+      {/* Branches Section */}
+      {locationData.branches?.locations?.length > 0 && (
+        <section className="py-10 sm:py-20 bg-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-8 sm:mb-16">
+              <h2 className="text-3xl sm:text-5xl font-bold text-gray-900 mb-4">
+                {locationData.branches.title}
+              </h2>
+              <p className="text-lg sm:text-xl text-gray-600">
+                {locationData.branches.subtitle}
+              </p>
+            </div>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-8">
+              {locationData.branches.locations.map((branch, index) => (
+                <div
+                  key={index}
+                  className="bg-gradient-to-br from-purple-50 to-blue-50 rounded-2xl p-4 sm:p-8 shadow-lg"
+                >
+                  <div
+                    className={`bg-gradient-to-br ${branch.color} w-12 sm:w-16 h-12 sm:h-16 rounded-2xl flex items-center justify-center mb-4 sm:mb-6`}
+                  >
+                    <Building className="w-6 sm:w-8 h-6 sm:h-8 text-white" />
+                  </div>
+                  <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-3">{branch.name}</h3>
+                  <p className="text-gray-600 mb-2 flex items-center gap-2"><MapPin className="w-4 h-4 shrink-0" />{branch.address}</p>
+                  <p className="text-gray-600 mb-2 flex items-center gap-2"><Phone className="w-4 h-4 shrink-0" /><a href={`tel:${branch.phone}`} dir="ltr">{branch.phone}</a></p>
+                  <p className="text-gray-600 mb-4 flex items-center gap-2"><Clock className="w-4 h-4 shrink-0" />{branch.hours}</p>
+                  <Link href={MAPS_URL}>
+                    <span className="text-purple-600 font-bold hover:text-purple-800">{locationData.branches.viewButton}</span>
+                  </Link>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
       {/* Features Section */}
       <section className="py-10 sm:py-20 bg-gradient-to-br from-purple-50 to-blue-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -331,7 +290,7 @@ const LocationPageClient = () => {
               </button>
             </Link>
             <button
-              onClick={() => goToWatssap()}
+              onClick={() => goToWatssap(whatsappPhone)}
               className="bg-white/20 backdrop-blur-sm text-white px-8 sm:px-12 py-3 sm:py-4 rounded-full text-lg sm:text-xl font-bold hover:bg-white/30 transition-all duration-300"
             >
               {locationData.visitSection.buttons.call}

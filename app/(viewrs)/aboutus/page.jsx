@@ -8,14 +8,14 @@ import AboutUsClient from './_clientServer';
 
 export const metadata = {
   title: 'من نحن',
-  description: 'تعرف على قصة TechLap ورحلتنا في تقديم أفضل أجهزة الكمبيوتر المحمولة. اكتشف رؤيتنا ومهمتنا وقيمنا الأساسية.',
-  keywords: ['TechLap', 'من نحن', 'لابتوب', 'تكنولوجيا', 'أجهزة كمبيوتر', 'جيمينج', 'قصتنا', 'إنجازات مميزة', 'بداية الحلم', 'رؤية المستقبل', 'لماذا نحن مختلفون؟', 'إنجازاتنا بالأرقام', 'ابحث عن اللابتوب المثالي'],
+  description: 'تعرف على قصة مودرن كومبيوتر ورحلتنا في تقديم أفضل أجهزة الكمبيوتر المحمولة. اكتشف رؤيتنا ومهمتنا وقيمنا الأساسية.',
+  keywords: ['مودرن كومبيوتر', 'من نحن', 'لابتوب', 'تكنولوجيا', 'أجهزة كمبيوتر', 'جيمينج', 'قصتنا', 'إنجازات مميزة', 'بداية الحلم', 'رؤية المستقبل', 'لماذا نحن مختلفون؟', 'إنجازاتنا بالأرقام', 'ابحث عن اللابتوب المثالي'],
   openGraph: {
     type: 'website',
     url: 'https://lap-tech-five.vercel.app/aboutus',
     title: 'من نحن',
-    description: 'تعرف على قصة TechLap ورحلتنا في تقديم أفضل أجهزة الكمبيوتر المحمولة.',
-    siteName: 'TechLap',
+    description: 'تعرف على قصة مودرن كومبيوتر ورحلتنا في تقديم أفضل أجهزة الكمبيوتر المحمولة.',
+    siteName: 'مودرن كومبيوتر',
   }
 };
 
@@ -67,5 +67,13 @@ export default async function AboutUsPage() {
     error = err instanceof Error ? err.message : 'حدث خطأ في تحميل البيانات';
   }
 
-  return <AboutUsClient initialData={aboutData} error={error} />;
+  // رقم الواتساب بيتاخد من data/contact.json (أول رقم هاتف)
+  let whatsappPhone = null;
+  try {
+    const contact = await getCollectionData('contact');
+    const doc = Array.isArray(contact.data) ? contact.data[0] : contact.data;
+    whatsappPhone = doc?.contactInfo?.find((i) => i.icon === 'Phone')?.details?.[0] ?? null;
+  } catch {}
+
+  return <AboutUsClient initialData={aboutData} error={error} whatsappPhone={whatsappPhone} />;
 }

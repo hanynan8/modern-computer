@@ -1,53 +1,53 @@
 [
   {
     "_id": "6a48ee1a798ed50fc65da41c",
-    "pageTitle": "اتصل بنا",
-    "pageSubtitle": "نحن هنا لمساعدتك في أي وقت",
+    "pageTitle": "تواصل معنا",
+    "pageSubtitle": "مودرن كومبيوتر في خدمتك دايمًا",
     "contactInfo": [
       {
         "icon": "Phone",
         "color": "from-purple-500 to-blue-500",
-        "title": "الهاتف",
+        "title": "اتصل بنا",
         "details": [
-          "+20 120 106 1216",
-          "+20 100 000 0000"
-        ]
-      },
-      {
-        "icon": "Mail",
-        "color": "from-blue-500 to-cyan-500",
-        "title": "البريد الإلكتروني",
-        "details": [
-          "support@techlap.com",
-          "sales@techlap.com"
+          "01222812404"
         ]
       },
       {
         "icon": "MapPin",
-        "color": "from-green-500 to-emerald-500",
-        "title": "العنوان",
+        "color": "from-blue-500 to-cyan-500",
+        "title": "موقعنا",
         "details": [
-          "أسوان، مصر"
+          "شارع البركة، أمام محل أولاد موسى",
+          "أسوان"
         ]
       },
       {
         "icon": "Clock",
-        "color": "from-orange-500 to-red-500",
-        "title": "ساعات العمل",
+        "color": "from-green-500 to-emerald-500",
+        "title": "مواعيد العمل",
         "details": [
-          "السبت - الخميس: 9ص - 9م",
-          "الجمعة: مغلق"
+          "السبت - الخميس: 10ص - 11م",
+          "الجمعة: 2م - 11م"
+        ]
+      },
+      {
+        "icon": "Facebook",
+        "color": "from-orange-500 to-red-500",
+        "title": "تابعنا",
+        "details": [
+          "مودرن كومبيوتر",
+          "على فيسبوك"
         ]
       }
     ],
     "formLabels": {
-      "formTitle": "أرسل لنا رسالة",
-      "formSubtitle": "سنقوم بالرد عليك في أقرب وقت ممكن",
-      "successMessage": "تم إرسال رسالتك بنجاح! سنتواصل معك قريباً.",
+      "formTitle": "ابعتلنا رسالة",
+      "formSubtitle": "هنرد عليك في أسرع وقت ممكن",
+      "successMessage": "تم إرسال رسالتك بنجاح! هنتواصل معاك قريبًا",
       "fields": {
         "name": {
-          "label": "الاسم الكامل",
-          "placeholder": "أدخل اسمك"
+          "label": "الاسم بالكامل",
+          "placeholder": "اكتب اسمك هنا"
         },
         "email": {
           "label": "البريد الإلكتروني",
@@ -57,14 +57,6 @@
           "label": "رقم الهاتف",
           "placeholder": "01xxxxxxxxx"
         },
-        "subject": {
-          "label": "الموضوع",
-          "placeholder": "موضوع الرسالة"
-        },
-        "message": {
-          "label": "الرسالة",
-          "placeholder": "اكتب رسالتك هنا..."
-        },
         "type": {
           "label": "نوع الاستفسار",
           "options": [
@@ -73,18 +65,26 @@
               "label": "استفسار عام"
             },
             {
-              "value": "support",
-              "label": "دعم فني"
+              "value": "maintenance",
+              "label": "صيانة أجهزة"
             },
             {
-              "value": "sales",
-              "label": "مبيعات"
+              "value": "purchase",
+              "label": "استفسار عن منتج"
             },
             {
-              "value": "partnership",
-              "label": "شراكة"
+              "value": "surveillance",
+              "label": "أنظمة مراقبة"
             }
           ]
+        },
+        "subject": {
+          "label": "الموضوع",
+          "placeholder": "موضوع رسالتك"
+        },
+        "message": {
+          "label": "الرسالة",
+          "placeholder": "اكتب رسالتك هنا بالتفصيل..."
         }
       },
       "submitButton": {
@@ -97,35 +97,50 @@
         "icon": "MessageCircle",
         "color": "from-green-500 to-emerald-500",
         "title": "واتساب",
-        "description": "تواصل معنا مباشرة عبر واتساب للرد السريع",
+        "description": "تواصل معنا مباشرة عبر واتساب لأي استفسار",
         "buttonText": "ابدأ المحادثة"
       },
       {
-        "icon": "Headphones",
+        "icon": "Phone",
+        "color": "from-purple-500 to-blue-500",
+        "title": "اتصال هاتفي",
+        "description": "اتصل بينا مباشرة على رقم المتجر",
+        "buttonText": "اتصل الآن"
+      },
+      {
+        "icon": "Facebook",
         "color": "from-blue-500 to-cyan-500",
-        "title": "الدعم الفني",
-        "description": "فريق الدعم الفني جاهز لمساعدتك على مدار الساعة",
-        "buttonText": "تواصل مع الدعم"
+        "title": "فيسبوك",
+        "description": "تابع أحدث العروض والمنتجات على صفحتنا",
+        "buttonText": "زيارة الصفحة"
       }
     ],
     "faqSection": {
-      "title": "الأسئلة الشائعة",
-      "subtitle": "إجابات على أكثر الأسئلة شيوعاً",
+      "title": "أسئلة شائعة",
+      "subtitle": "إجابات على أكتر الأسئلة اللي بتوصلنا",
       "items": [
         {
-          "question": "ما هي مدة التوصيل؟",
-          "answer": "يستغرق التوصيل عادة من 2 إلى 5 أيام عمل حسب المحافظة."
+          "question": "هل بتقدموا خدمة الصيانة لكل أنواع اللابتوبات؟",
+          "answer": "أيوه، فريقنا الفني بيصلح كل أنواع وموديلات اللابتوبات والكمبيوترات المكتبية."
         },
         {
-          "question": "هل يوجد ضمان على المنتجات؟",
-          "answer": "نعم، جميع منتجاتنا أصلية وتأتي مع ضمان الوكيل المعتمد."
+          "question": "هل عندكم أنظمة مراقبة للمنازل والمحلات؟",
+          "answer": "أيوه، بنوفر حلول كاميرات مراقبة متكاملة لحماية المنازل والأعمال في أسوان."
+        },
+        {
+          "question": "هل التوصيل متاح داخل أسوان؟",
+          "answer": "أيوه، بنوفر خدمة توصيل للمنتجات داخل أسوان، تقدر تتواصل معانا لمعرفة التفاصيل."
+        },
+        {
+          "question": "إزاي أقدر أتواصل معاكم لو عندي مشكلة في جهاز اشتريته؟",
+          "answer": "تقدر تتصل بينا أو تراسلنا على واتساب أو فيسبوك وهنساعدك فورًا."
         }
       ]
     },
     "socialSection": {
-      "title": "تابعنا على وسائل التواصل",
-      "subtitle": "كن أول من يعرف عن أحدث العروض والمنتجات",
-      "storeButton": "تصفح المتجر"
+      "title": "زور متجرنا",
+      "subtitle": "اكتشف أحدث المنتجات التقنية في مودرن كومبيوتر",
+      "storeButton": "تصفح المنتجات"
     }
   }
 ]

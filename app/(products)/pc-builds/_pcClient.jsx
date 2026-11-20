@@ -447,7 +447,7 @@ const ComputerComponentsClient = ({ initialData, error }) => {
   const [currentPage, setCurrentPage] = useState(1);
   const [itemsPerPage] = useState(20);
 
-  const whatsappNumber = data?.settings?.whatsappNumber || '2001201061216';
+  const whatsappNumber = data?.settings?.whatsappNumber || '201222812404';
   const { data: session } = useSession();
 
   const fetchCartCount = async () => {

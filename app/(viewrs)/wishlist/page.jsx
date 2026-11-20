@@ -14,7 +14,7 @@ const CATEGORIES = [
   { key: 'component', href: 'component' },
   { key: 'monitors', href: 'monitors' },
   { key: 'other', href: 'other' },
-  { key: 'pc-builds', href: 'pc-builds' },
+  { key: 'pc-build', href: 'pc-builds' },
   { key: 'pos', href: 'pos' },
   { key: 'printers', href: 'printers' },
   { key: 'storage-devices', href: 'storage-devices' },

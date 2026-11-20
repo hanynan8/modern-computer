@@ -2,8 +2,7 @@
   {
     "_id": "6a7fec5616382474fd74ad2b",
     "company": {
-      "name": "المهندس لينك",
-      "logoGradient": "from-purple-600 to-blue-600"
+      "name": "Modern Computer"
     },
     "navLinks": [
       {
@@ -12,18 +11,18 @@
       },
       {
         "text": "المنتجات",
-        "href": "#"
+        "href": "/laptop"
       },
       {
         "text": "من نحن",
         "href": "/aboutus"
       },
       {
-        "text": "موقعنا",
+        "text": "فروعنا",
         "href": "/location"
       },
       {
-        "text": "اتصل بنا",
+        "text": "تواصل معنا",
         "href": "/contact"
       }
     ]

@@ -517,7 +517,7 @@ const ComputerComponentsClient = ({ initialData, error }) => {
   const [itemsPerPage] = useState(20); // مناسب للموبايل
 
   // الحصول على رقم الواتساب من البيانات
-  const whatsappNumber = data?.settings?.whatsappNumber || '2001201061216';
+  const whatsappNumber = data?.settings?.whatsappNumber || '201222812404';
 
   // جلب عدد المنتجات (مأخوذة من Navbar)
   const fetchCartCount = async () => {
@@ -1134,7 +1134,7 @@ const ComputerComponentsClient = ({ initialData, error }) => {
           </p>
           <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
             <button
-              onClick={() => goToWatssap("2001201061216")}
+              onClick={() => goToWatssap("201222812404")}
               className="bg-white text-purple-600 px-6 sm:px-8 py-3 rounded-full font-bold hover:shadow-lg transform hover:scale-105 transition-all duration-300 text-sm sm:text-base"
             >
               استشارة مجانية
