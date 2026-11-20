@@ -1,0 +1,125 @@
+[
+  {
+    "_id": "6a48ee39798ed50fc65da423",
+    "pageTitle": "وسائط التخزين",
+    "pageSubtitle": "اكتشف أفضل حلول التخزين من أقراص صلبة، SSD، فلاش ميموري وأكثر",
+    "categories": [
+      {
+        "id": "all",
+        "name": "جميع المنتجات",
+        "icon": "hard-drive",
+        "color": "from-purple-600 to-blue-600"
+      },
+      {
+        "id": "ssd",
+        "name": "أقراص SSD",
+        "icon": "database",
+        "color": "from-blue-500 to-indigo-600"
+      },
+      {
+        "id": "hdd",
+        "name": "أقراص HDD",
+        "icon": "hard-drive",
+        "color": "from-gray-600 to-gray-800"
+      },
+      {
+        "id": "usb",
+        "name": "فلاش ميموري",
+        "icon": "usb",
+        "color": "from-green-500 to-emerald-600"
+      },
+      {
+        "id": "memory-card",
+        "name": "بطاقات الذاكرة",
+        "icon": "credit-card",
+        "color": "from-orange-500 to-red-500"
+      }
+    ],
+    "filters": {
+      "sortOptions": [
+        {
+          "value": "name",
+          "label": "الاسم"
+        },
+        {
+          "value": "price-low",
+          "label": "السعر: من الأقل للأعلى"
+        },
+        {
+          "value": "price-high",
+          "label": "السعر: من الأعلى للأقل"
+        },
+        {
+          "value": "rating",
+          "label": "التقييم"
+        },
+        {
+          "value": "capacity",
+          "label": "السعة: من الأكبر للأصغر"
+        },
+        {
+          "value": "newest",
+          "label": "الأحدث"
+        }
+      ]
+    },
+    "products": [
+      {
+        "id": 801,
+        "name": "قرص SSD NVMe 1TB",
+        "category": "ssd",
+        "price": 3290,
+        "currency": "ج.م",
+        "originalPrice": 3790,
+        "discount": 13,
+        "rating": 4.8,
+        "image": "https://images.unsplash.com/photo-1591488320449-011701bb6704?w=400",
+        "badge": "الأسرع",
+        "gallery": [
+          "https://images.unsplash.com/photo-1591488320449-011701bb6704?w=800"
+        ],
+        "specs": {
+          "السعة": "1TB",
+          "الواجهة": "PCIe Gen4 NVMe",
+          "سرعة القراءة": "7000 MB/s",
+          "سرعة الكتابة": "6500 MB/s"
+        },
+        "detailedSpecs": {
+          "features": [
+            "تقنية DRAM Cache",
+            "حماية من الحرارة الزائدة"
+          ],
+          "packageContents": [
+            "قرص SSD",
+            "دليل التركيب السريع"
+          ],
+          "recommendedUse": [
+            "ألعاب الفيديو",
+            "مونتاج الفيديو",
+            "تشغيل نظام التشغيل"
+          ]
+        }
+      },
+      {
+        "id": 802,
+        "name": "فلاش ميموري 128GB USB 3.2",
+        "category": "usb",
+        "price": 490,
+        "currency": "ج.م",
+        "rating": 4.3,
+        "image": "https://images.unsplash.com/photo-1618410320928-25228d811631?w=400",
+        "specs": {
+          "السعة": "128GB",
+          "الواجهة": "USB 3.2 Gen 1",
+          "سرعة القراءة": "150 MB/s"
+        },
+        "detailedSpecs": {
+          "features": [
+            "تصميم معدني مقاوم للصدمات",
+            "حلقة تعليق"
+          ]
+        }
+      }
+    ]
+  }
+]

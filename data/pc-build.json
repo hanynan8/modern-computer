@@ -1,0 +1,805 @@
+[
+  {
+    "_id": "6a48ee68798ed50fc65da42d",
+    "pageTitle": "تجميعات الكمبيوتر",
+    "pageSubtitle": "اختر من تجميعاتنا المتخصصة للألعاب، العمل، والاستخدام المنزلي بأفضل الأسعار والمواصفات",
+    "categories": [
+      {
+        "id": "all",
+        "name": "جميع التجميعات",
+        "icon": "cpu",
+        "color": "from-purple-600 to-blue-600"
+      },
+      {
+        "id": "gaming",
+        "name": "تجميعات الألعاب",
+        "icon": "gamepad2",
+        "color": "from-red-500 to-pink-600"
+      },
+      {
+        "id": "workstation",
+        "name": "محطات العمل",
+        "icon": "monitor",
+        "color": "from-blue-600 to-indigo-600"
+      },
+      {
+        "id": "budget",
+        "name": "اقتصادية",
+        "icon": "zap",
+        "color": "from-green-500 to-blue-600"
+      },
+      {
+        "id": "premium",
+        "name": "متميزة",
+        "icon": "star",
+        "color": "from-yellow-500 to-orange-600"
+      },
+      {
+        "id": "office",
+        "name": "مكتبية",
+        "icon": "hard-drive",
+        "color": "from-gray-500 to-gray-700"
+      }
+    ],
+    "filters": {
+      "sortOptions": [
+        {
+          "value": "name",
+          "label": "الاسم"
+        },
+        {
+          "value": "price-low",
+          "label": "السعر: من الأقل للأعلى"
+        },
+        {
+          "value": "price-high",
+          "label": "السعر: من الأعلى للأقل"
+        },
+        {
+          "value": "rating",
+          "label": "التقييم"
+        },
+        {
+          "value": "performance",
+          "label": "الأداء"
+        },
+        {
+          "value": "power-efficiency",
+          "label": "كفاءة الطاقة"
+        },
+        {
+          "value": "popularity",
+          "label": "الأكثر شعبية"
+        }
+      ],
+      "priceRanges": [
+        {
+          "min": 0,
+          "max": 10000,
+          "label": "أقل من 10,000 جنيه"
+        },
+        {
+          "min": 10000,
+          "max": 25000,
+          "label": "10,000 - 25,000 جنيه"
+        },
+        {
+          "min": 25000,
+          "max": 50000,
+          "label": "25,000 - 50,000 جنيه"
+        },
+        {
+          "min": 50000,
+          "max": 100000,
+          "label": "50,000 - 100,000 جنيه"
+        }
+      ]
+    },
+    "products": [
+      {
+        "id": 501,
+        "name": "تجميعة Gaming Ultimate RTX 4070",
+        "category": "gaming",
+        "price": 68990,
+        "currency": "ج.م",
+        "originalPrice": 75990,
+        "discount": 9,
+        "rating": 4.9,
+        "reviewsCount": 87,
+        "image": "https://images.unsplash.com/photo-1587831990711-23ca6441447b?w=400",
+        "badge": "الأفضل مبيعاً",
+        "specs": {
+          "processor": "Intel Core i7-14700K",
+          "graphics": "RTX 4070 12GB",
+          "memory": "32GB DDR5",
+          "storage": "1TB NVMe SSD",
+          "motherboard": "Z790",
+          "psu": "750W Gold",
+          "case": "ATX Mid Tower RGB",
+          "cooling": "AIO 240mm"
+        },
+        "components": [
+          "معالج Intel Core i7-14700K",
+          "كارت رسوميات RTX 4070 12GB",
+          "ذاكرة 32GB DDR5",
+          "قرص SSD NVMe 1TB",
+          "لوحة أم Z790",
+          "مزود طاقة 750W Gold",
+          "كيسة ATX RGB",
+          "تبريد سائل AIO 240mm"
+        ],
+        "features": [
+          "أداء متميز للألعاب 4K",
+          "تبريد سائل فعال",
+          "إضاءة RGB كاملة",
+          "ضمان شامل 3 سنوات"
+        ],
+        "benchmarks": {
+          "3DMark": "24500",
+          "Cinebench R23": "28000",
+          "PassMark": "32000"
+        },
+        "powerConsumption": "650W",
+        "warranty": "3 سنوات",
+        "availability": "متوفر",
+        "assemblyTime": "2-3 أيام عمل",
+        "performanceScore": 94,
+        "details": {
+          "manufacturer": "TechLap Custom Builds",
+          "sku": "PCB-GU4070-501",
+          "warrantyYears": 3,
+          "stockStatus": "In Stock",
+          "weight_kg": 14.5,
+          "estimatedPowerW": 650,
+          "psuRecommendation": "750W 80+ Gold",
+          "coolingType": "سائل AIO 240mm",
+          "motherboardFormFactor": "ATX",
+          "rgb": true,
+          "supportsMultiGPU": false,
+          "dimensions_mm": {
+            "height": 480,
+            "width": 210,
+            "depth": 450
+          },
+          "ports": [
+            "USB 3.2 Type-C",
+            "4x USB 3.0",
+            "HDMI",
+            "DisplayPort x3"
+          ],
+          "includedAccessories": [
+            "كابلات SATA إضافية",
+            "براغي احتياطية",
+            "دليل الاستخدام"
+          ],
+          "releaseDate": "2025-09-15",
+          "upgradeNotes": "يدعم ترقية الرام حتى 64GB وقرص تخزين إضافي",
+          "reviewCount": 87
+        }
+      },
+      {
+        "id": 502,
+        "name": "تجميعة Gaming i5-11400F + GTX 1660 مع شاشة هدية",
+        "category": "gaming",
+        "price": 28500,
+        "currency": "ج.م",
+        "originalPrice": 30000,
+        "discount": 5,
+        "rating": 4.5,
+        "reviewsCount": null,
+        "image": "https://images.unsplash.com/photo-1597872200969-2b65d56bd16b?w=400",
+        "badge": "هدية شاشة",
+        "specs": {
+          "processor": "Intel Core i5-11400F",
+          "graphics": "ZOTAC GTX 1660 6GB",
+          "memory": "8GB DDR4 3200MHz",
+          "storage": "256GB NVMe SSD",
+          "motherboard": "H510",
+          "psu": "600W",
+          "case": "Gaming Case 7 FAN",
+          "cooling": "هواء"
+        },
+        "components": [
+          "معالج Intel Core i5-11400F",
+          "كارت رسوميات ZOTAC GTX 1660 6GB",
+          "ذاكرة 8GB DDR4 3200MHz",
+          "قرص SSD NVMe 256GB",
+          "مزود طاقة 600W",
+          "كيسة Gaming Case 7 FAN",
+          "شاشة 22 بوصة FRAMELESS (هدية)"
+        ],
+        "features": [
+          "Power Supply 600W",
+          "Gaming Case 7 FAN",
+          "هدية شاشة 22 بوصة FRAMELESS",
+          "مناسب للجيمينج والتصميم والمونتاج"
+        ],
+        "benchmarks": {
+          "3DMark": "9800",
+          "Cinebench R23": "9500",
+          "PassMark": "14500"
+        },
+        "powerConsumption": "450W",
+        "warranty": "سنة واحدة",
+        "availability": "متوفر",
+        "assemblyTime": "2-3 أيام عمل",
+        "performanceScore": 68,
+        "details": {
+          "manufacturer": "TechLap Custom Builds",
+          "sku": "PC-I5114-GTX1660-130",
+          "warrantyYears": 1,
+          "stockStatus": "In Stock",
+          "weight_kg": 10.5,
+          "estimatedPowerW": 450,
+          "psuRecommendation": "600W 80+",
+          "coolingType": "هواء",
+          "motherboardFormFactor": "ATX",
+          "rgb": false,
+          "supportsMultiGPU": false,
+          "dimensions_mm": {
+            "height": 450,
+            "width": 200,
+            "depth": 420
+          },
+          "ports": [
+            "USB-A",
+            "HDMI",
+            "DisplayPort"
+          ],
+          "includedAccessories": [
+            "كابلات SATA إضافية",
+            "براغي احتياطية",
+            "دليل الاستخدام",
+            "شاشة 22 بوصة FRAMELESS هدية"
+          ],
+          "releaseDate": "2025-01-01",
+          "upgradeNotes": "يدعم ترقية الرام وإضافة قرص تخزين إضافي",
+          "reviewCount": null
+        }
+      },
+      {
+        "id": 503,
+        "name": "تجميعة Gaming Ryzen 5 5500",
+        "category": "budget",
+        "price": 23000,
+        "currency": "ج.م",
+        "originalPrice": 26000,
+        "discount": 12,
+        "rating": 4.5,
+        "reviewsCount": null,
+        "image": "https://images.unsplash.com/photo-1738245494097-9b1e3971c3eb?w=400",
+        "badge": null,
+        "specs": {
+          "processor": "AMD Ryzen 5 5500 (6 Cores/12 Threads)",
+          "graphics": "قابل لإضافة كارت شاشة",
+          "memory": "16GB DDR4",
+          "storage": "256GB NVMe SSD",
+          "motherboard": "A520",
+          "psu": "600W",
+          "case": "Gaming Case RGB 5 FAN",
+          "cooling": "هواء"
+        },
+        "components": [
+          "معالج AMD Ryzen 5 5500 (6 Cores/12 Threads)",
+          "ذاكرة 16GB DDR4",
+          "قرص SSD NVMe 256GB",
+          "لوحة أم A520",
+          "مزود طاقة 600W",
+          "كيسة Gaming RGB بـ 5 مراوح"
+        ],
+        "features": [
+          "Gaming Case RGB بـ 5 مراوح",
+          "Power Supply 600W",
+          "لوحة أم A520",
+          "قابلة للترقية مستقبلًا بسهولة"
+        ],
+        "benchmarks": {
+          "3DMark": "يعتمد على كارت الشاشة المضاف",
+          "Cinebench R23": "9200",
+          "PassMark": "13800"
+        },
+        "powerConsumption": "350W",
+        "warranty": "سنة واحدة",
+        "availability": "متوفر",
+        "assemblyTime": "2-3 أيام عمل",
+        "performanceScore": 50,
+        "details": {
+          "manufacturer": "TechLap Custom Builds",
+          "sku": "PC-RYZEN5500-131",
+          "warrantyYears": 1,
+          "stockStatus": "In Stock",
+          "weight_kg": 9.5,
+          "estimatedPowerW": 350,
+          "psuRecommendation": "600W 80+",
+          "coolingType": "هواء",
+          "motherboardFormFactor": "ATX",
+          "rgb": true,
+          "supportsMultiGPU": false,
+          "dimensions_mm": {
+            "height": 450,
+            "width": 200,
+            "depth": 420
+          },
+          "ports": [
+            "USB-A",
+            "HDMI"
+          ],
+          "includedAccessories": [
+            "كابلات SATA إضافية",
+            "براغي احتياطية",
+            "دليل الاستخدام"
+          ],
+          "releaseDate": "2025-01-01",
+          "upgradeNotes": "قابلة لإضافة كارت شاشة وتطويرها مستقبلًا لتجميعة Gaming قوية",
+          "reviewCount": null
+        }
+      },
+      {
+        "id": 504,
+        "name": "تجميعة Dream Gaming i5-11400F + RTX 2060 مع شاشة هدية",
+        "category": "premium",
+        "price": 29000,
+        "currency": "ج.م",
+        "originalPrice": 31500,
+        "discount": 8,
+        "rating": 4.5,
+        "reviewsCount": null,
+        "image": "https://images.unsplash.com/photo-1597872200969-2b65d56bd16b?w=400",
+        "badge": "هدية شاشة",
+        "specs": {
+          "processor": "Intel Core i5-11400F",
+          "graphics": "NVIDIA RTX 2060 6GB",
+          "memory": "8GB DDR4 3200MHz",
+          "storage": "256GB NVMe SSD",
+          "motherboard": "H510",
+          "psu": "600W",
+          "case": "Gaming Case 7 FAN",
+          "cooling": "هواء"
+        },
+        "components": [
+          "معالج Intel Core i5-11400F",
+          "كارت رسوميات NVIDIA RTX 2060 6GB",
+          "ذاكرة 8GB DDR4 3200MHz",
+          "قرص SSD NVMe 256GB",
+          "مزود طاقة 600W",
+          "كيسة Gaming Case 7 FAN",
+          "شاشة 22 بوصة FRAMELESS (هدية)"
+        ],
+        "features": [
+          "Power Supply 600W",
+          "Gaming Case 7 FAN",
+          "هدية شاشة 22 بوصة FRAMELESS",
+          "مناسب للـ Gaming والتصميم والستريمينج"
+        ],
+        "benchmarks": {
+          "3DMark": "12500",
+          "Cinebench R23": "9500",
+          "PassMark": "14500"
+        },
+        "powerConsumption": "500W",
+        "warranty": "سنة واحدة",
+        "availability": "متوفر",
+        "assemblyTime": "2-3 أيام عمل",
+        "performanceScore": 72,
+        "details": {
+          "manufacturer": "TechLap Custom Builds",
+          "sku": "PC-I5114-RTX2060-132",
+          "warrantyYears": 1,
+          "stockStatus": "In Stock",
+          "weight_kg": 10.8,
+          "estimatedPowerW": 500,
+          "psuRecommendation": "600W 80+",
+          "coolingType": "هواء",
+          "motherboardFormFactor": "ATX",
+          "rgb": false,
+          "supportsMultiGPU": false,
+          "dimensions_mm": {
+            "height": 450,
+            "width": 200,
+            "depth": 420
+          },
+          "ports": [
+            "USB-A",
+            "HDMI",
+            "DisplayPort"
+          ],
+          "includedAccessories": [
+            "كابلات SATA إضافية",
+            "براغي احتياطية",
+            "دليل الاستخدام",
+            "شاشة 22 بوصة FRAMELESS هدية"
+          ],
+          "releaseDate": "2025-01-01",
+          "upgradeNotes": "يدعم ترقية الرام وإضافة قرص تخزين إضافي",
+          "reviewCount": null
+        }
+      },
+      {
+        "id": 505,
+        "name": "تجميعة Gaming i5-9400F + RX 570 مع شاشة هدية",
+        "category": "budget",
+        "price": 17250,
+        "currency": "ج.م",
+        "originalPrice": 19000,
+        "discount": 9,
+        "rating": 4.5,
+        "reviewsCount": null,
+        "image": "https://images.unsplash.com/photo-1738245494097-9b1e3971c3eb?w=400",
+        "badge": "هدية شاشة",
+        "specs": {
+          "processor": "Intel Core i5-9400F",
+          "graphics": "AMD Radeon RX 570 4GB",
+          "memory": "8GB DDR4",
+          "storage": "128GB SSD",
+          "motherboard": "H310",
+          "psu": "600W",
+          "case": "Gaming Case 4 FAN",
+          "cooling": "هواء"
+        },
+        "components": [
+          "معالج Intel Core i5-9400F",
+          "كارت رسوميات AMD Radeon RX 570 4GB",
+          "ذاكرة 8GB DDR4",
+          "قرص SSD 128GB",
+          "مزود طاقة 600W",
+          "كيسة Gaming Case 4 FAN",
+          "شاشة 22 بوصة FRAMELESS (هدية)"
+        ],
+        "features": [
+          "Power Supply 600W",
+          "Gaming Case 4 FAN",
+          "هدية شاشة 22 بوصة FRAMELESS"
+        ],
+        "benchmarks": {
+          "3DMark": "7200",
+          "Cinebench R23": "7800",
+          "PassMark": "11500"
+        },
+        "powerConsumption": "350W",
+        "warranty": "سنة واحدة",
+        "availability": "متوفر",
+        "assemblyTime": "2-3 أيام عمل",
+        "performanceScore": 58,
+        "details": {
+          "manufacturer": "TechLap Custom Builds",
+          "sku": "PC-I59400-RX570-133",
+          "warrantyYears": 1,
+          "stockStatus": "In Stock",
+          "weight_kg": 9.8,
+          "estimatedPowerW": 350,
+          "psuRecommendation": "600W 80+",
+          "coolingType": "هواء",
+          "motherboardFormFactor": "ATX",
+          "rgb": false,
+          "supportsMultiGPU": false,
+          "dimensions_mm": {
+            "height": 450,
+            "width": 200,
+            "depth": 420
+          },
+          "ports": [
+            "USB-A",
+            "HDMI"
+          ],
+          "includedAccessories": [
+            "كابلات SATA إضافية",
+            "براغي احتياطية",
+            "دليل الاستخدام",
+            "شاشة 22 بوصة FRAMELESS هدية"
+          ],
+          "releaseDate": "2025-01-01",
+          "upgradeNotes": "يدعم ترقية الرام وإضافة قرص تخزين إضافي",
+          "reviewCount": null
+        }
+      },
+      {
+        "id": 506,
+        "name": "تجميعة Gaming Ryzen 7 2500 + GTX 1660 مع شاشة هدية",
+        "category": "gaming",
+        "price": 21000,
+        "currency": "ج.م",
+        "originalPrice": 22500,
+        "discount": 7,
+        "rating": 4.5,
+        "reviewsCount": null,
+        "image": "https://images.unsplash.com/photo-1597872200969-2b65d56bd16b?w=400",
+        "badge": "هدية شاشة",
+        "specs": {
+          "processor": "AMD Ryzen 7 2500",
+          "graphics": "NVIDIA GTX 1660 6GB",
+          "memory": "16GB DDR4",
+          "storage": "128GB SSD",
+          "motherboard": "B450",
+          "psu": "600W",
+          "case": "Gaming Case 3 FAN",
+          "cooling": "هواء"
+        },
+        "components": [
+          "معالج AMD Ryzen 7 2500",
+          "كارت رسوميات NVIDIA GTX 1660 6GB",
+          "ذاكرة 16GB DDR4",
+          "قرص SSD 128GB",
+          "مزود طاقة 600W",
+          "كيسة Gaming Case 3 FAN",
+          "شاشة 22 بوصة FRAMELESS (هدية)"
+        ],
+        "features": [
+          "Gaming Case 3 FAN",
+          "Power Supply 600W",
+          "هدية شاشة 22 بوصة FRAMELESS"
+        ],
+        "benchmarks": {
+          "3DMark": "9600",
+          "Cinebench R23": "8200",
+          "PassMark": "12200"
+        },
+        "powerConsumption": "400W",
+        "warranty": "سنة واحدة",
+        "availability": "متوفر",
+        "assemblyTime": "2-3 أيام عمل",
+        "performanceScore": 65,
+        "details": {
+          "manufacturer": "TechLap Custom Builds",
+          "sku": "PC-RYZEN72500-GTX1660-134",
+          "warrantyYears": 1,
+          "stockStatus": "In Stock",
+          "weight_kg": 10.2,
+          "estimatedPowerW": 400,
+          "psuRecommendation": "600W 80+",
+          "coolingType": "هواء",
+          "motherboardFormFactor": "ATX",
+          "rgb": false,
+          "supportsMultiGPU": false,
+          "dimensions_mm": {
+            "height": 450,
+            "width": 200,
+            "depth": 420
+          },
+          "ports": [
+            "USB-A",
+            "HDMI"
+          ],
+          "includedAccessories": [
+            "كابلات SATA إضافية",
+            "براغي احتياطية",
+            "دليل الاستخدام",
+            "شاشة 22 بوصة FRAMELESS هدية"
+          ],
+          "releaseDate": "2025-01-01",
+          "upgradeNotes": "يدعم ترقية الرام وإضافة قرص تخزين إضافي",
+          "reviewCount": null
+        }
+      },
+      {
+        "id": 507,
+        "name": "تجميعة Gaming i5-11400F + GTX 1660 (H410) مع شاشة هدية",
+        "category": "gaming",
+        "price": 26000,
+        "currency": "ج.م",
+        "originalPrice": 27500,
+        "discount": 5,
+        "rating": 4.5,
+        "reviewsCount": null,
+        "image": "https://images.unsplash.com/photo-1738245494097-9b1e3971c3eb?w=400",
+        "badge": "هدية شاشة",
+        "specs": {
+          "processor": "Intel Core i5-11400F",
+          "graphics": "NVIDIA GTX 1660 6GB",
+          "memory": "16GB DDR4",
+          "storage": "128GB SSD + 500GB HDD",
+          "motherboard": "H410",
+          "psu": "550W",
+          "case": "Gaming Case 3 FAN",
+          "cooling": "هواء"
+        },
+        "components": [
+          "معالج Intel Core i5-11400F",
+          "كارت رسوميات NVIDIA GTX 1660 6GB",
+          "ذاكرة 16GB DDR4",
+          "قرص SSD 128GB + هارد 500GB",
+          "لوحة أم H410",
+          "مزود طاقة 550W",
+          "كيسة Gaming Case 3 FAN",
+          "شاشة 22 بوصة FRAMELESS (هدية)"
+        ],
+        "features": [
+          "Gaming Case 3 FAN",
+          "Power Supply 550W",
+          "هدية شاشة 22 بوصة FRAMELESS"
+        ],
+        "benchmarks": {
+          "3DMark": "9700",
+          "Cinebench R23": "9500",
+          "PassMark": "14500"
+        },
+        "powerConsumption": "400W",
+        "warranty": "سنة واحدة",
+        "availability": "متوفر",
+        "assemblyTime": "2-3 أيام عمل",
+        "performanceScore": 66,
+        "details": {
+          "manufacturer": "TechLap Custom Builds",
+          "sku": "PC-I5114-GTX1660B-135",
+          "warrantyYears": 1,
+          "stockStatus": "In Stock",
+          "weight_kg": 10.6,
+          "estimatedPowerW": 400,
+          "psuRecommendation": "550W 80+",
+          "coolingType": "هواء",
+          "motherboardFormFactor": "Micro-ATX",
+          "rgb": false,
+          "supportsMultiGPU": false,
+          "dimensions_mm": {
+            "height": 450,
+            "width": 200,
+            "depth": 420
+          },
+          "ports": [
+            "USB-A",
+            "HDMI"
+          ],
+          "includedAccessories": [
+            "كابلات SATA إضافية",
+            "براغي احتياطية",
+            "دليل الاستخدام",
+            "شاشة 22 بوصة FRAMELESS هدية"
+          ],
+          "releaseDate": "2025-01-01",
+          "upgradeNotes": "يدعم ترقية الرام وإضافة قرص تخزين إضافي",
+          "reviewCount": null
+        }
+      },
+      {
+        "id": 508,
+        "name": "تجميعة Gaming Ryzen 5 3600 - قابلة للترقية",
+        "category": "budget",
+        "price": 18500,
+        "currency": "ج.م",
+        "originalPrice": 19500,
+        "discount": 5,
+        "rating": 4.5,
+        "reviewsCount": null,
+        "image": "https://images.unsplash.com/photo-1597872200969-2b65d56bd16b?w=400",
+        "badge": null,
+        "specs": {
+          "processor": "AMD Ryzen 5 3600",
+          "graphics": "قابل لإضافة كارت شاشة",
+          "memory": "16GB DDR4",
+          "storage": "256GB NVMe SSD",
+          "motherboard": "B450",
+          "psu": "600W",
+          "case": "Gaming Case RGB 5 FAN",
+          "cooling": "هواء"
+        },
+        "components": [
+          "معالج AMD Ryzen 5 3600",
+          "ذاكرة 16GB DDR4",
+          "قرص SSD NVMe 256GB",
+          "مزود طاقة 600W",
+          "كيسة Gaming RGB بـ 5 مراوح"
+        ],
+        "features": [
+          "Gaming Case بـ 5 مراوح RGB",
+          "Power Supply 600W",
+          "قابلة لإضافة كارت شاشة وتطويرها مستقبلًا"
+        ],
+        "benchmarks": {
+          "3DMark": "يعتمد على كارت الشاشة المضاف",
+          "Cinebench R23": "10500",
+          "PassMark": "16000"
+        },
+        "powerConsumption": "300W",
+        "warranty": "سنة واحدة",
+        "availability": "متوفر",
+        "assemblyTime": "2-3 أيام عمل",
+        "performanceScore": 52,
+        "details": {
+          "manufacturer": "TechLap Custom Builds",
+          "sku": "PC-RYZEN3600-136",
+          "warrantyYears": 1,
+          "stockStatus": "In Stock",
+          "weight_kg": 9.3,
+          "estimatedPowerW": 300,
+          "psuRecommendation": "600W 80+",
+          "coolingType": "هواء",
+          "motherboardFormFactor": "ATX",
+          "rgb": true,
+          "supportsMultiGPU": false,
+          "dimensions_mm": {
+            "height": 450,
+            "width": 200,
+            "depth": 420
+          },
+          "ports": [
+            "USB-A",
+            "HDMI"
+          ],
+          "includedAccessories": [
+            "كابلات SATA إضافية",
+            "براغي احتياطية",
+            "دليل الاستخدام"
+          ],
+          "releaseDate": "2025-01-01",
+          "upgradeNotes": "جاهزة لإضافة كارت شاشة مناسب وتحويلها لتجميعة Gaming قوية",
+          "reviewCount": null
+        }
+      },
+      {
+        "id": 509,
+        "name": "تجميعة Gaming i5-9400F + RX 570 (اقتصادية)",
+        "category": "budget",
+        "price": 18500,
+        "currency": "ج.م",
+        "originalPrice": 20000,
+        "discount": 7,
+        "rating": 4.5,
+        "reviewsCount": null,
+        "image": "https://images.unsplash.com/photo-1738245494097-9b1e3971c3eb?w=400",
+        "badge": null,
+        "specs": {
+          "processor": "Intel Core i5-9400F",
+          "graphics": "AMD Radeon RX 570 4GB",
+          "memory": "16GB DDR4",
+          "storage": "128GB SSD + 500GB HDD",
+          "motherboard": "H310",
+          "psu": "500W",
+          "case": "Gaming Case 4 FAN",
+          "cooling": "هواء"
+        },
+        "components": [
+          "معالج Intel Core i5-9400F",
+          "كارت رسوميات AMD Radeon RX 570 4GB",
+          "ذاكرة 16GB DDR4",
+          "قرص SSD 128GB + هارد 500GB",
+          "مزود طاقة 500W",
+          "كيسة Gaming Case 4 FAN"
+        ],
+        "features": [
+          "Gaming Case بـ 4 مراوح",
+          "Power Supply 500W",
+          "مناسبة للألعاب والشغل والتصميم والمونتوج الخفيف"
+        ],
+        "benchmarks": {
+          "3DMark": "7100",
+          "Cinebench R23": "7800",
+          "PassMark": "11500"
+        },
+        "powerConsumption": "350W",
+        "warranty": "سنة واحدة",
+        "availability": "متوفر",
+        "assemblyTime": "2-3 أيام عمل",
+        "performanceScore": 55,
+        "details": {
+          "manufacturer": "TechLap Custom Builds",
+          "sku": "PC-I59400-RX570B-137",
+          "warrantyYears": 1,
+          "stockStatus": "In Stock",
+          "weight_kg": 9.9,
+          "estimatedPowerW": 350,
+          "psuRecommendation": "500W 80+",
+          "coolingType": "هواء",
+          "motherboardFormFactor": "ATX",
+          "rgb": false,
+          "supportsMultiGPU": false,
+          "dimensions_mm": {
+            "height": 450,
+            "width": 200,
+            "depth": 420
+          },
+          "ports": [
+            "USB-A",
+            "HDMI"
+          ],
+          "includedAccessories": [
+            "كابلات SATA إضافية",
+            "براغي احتياطية",
+            "دليل الاستخدام"
+          ],
+          "releaseDate": "2025-01-01",
+          "upgradeNotes": "يدعم ترقية الرام وإضافة قرص تخزين إضافي",
+          "reviewCount": null
+        }
+      }
+    ]
+  }
+]

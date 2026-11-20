@@ -1,0 +1,202 @@
+[
+  {
+    "_id": "6a48e9ac798ed50fc65da407",
+    "pageTitle": "الشاشات",
+    "pageSubtitle": "اكتشف أفضل شاشات العرض للألعاب، العمل، والترفيه بأعلى جودة وأفضل الأسعار",
+    "categories": [
+      {
+        "id": "all",
+        "name": "جميع الشاشات",
+        "icon": "monitor",
+        "color": "from-purple-600 to-blue-600"
+      },
+      {
+        "id": "gaming",
+        "name": "شاشات الألعاب",
+        "icon": "gamepad2",
+        "color": "from-green-500 to-blue-600"
+      },
+      {
+        "id": "professional",
+        "name": "شاشات مهنية",
+        "icon": "monitor",
+        "color": "from-blue-600 to-indigo-600"
+      },
+      {
+        "id": "curved",
+        "name": "شاشات منحنية",
+        "icon": "monitor-speaker",
+        "color": "from-purple-600 to-pink-600"
+      }
+    ],
+    "filters": {
+      "sortOptions": [
+        {
+          "value": "name",
+          "label": "الاسم"
+        },
+        {
+          "value": "price-low",
+          "label": "السعر: من الأقل للأعلى"
+        },
+        {
+          "value": "price-high",
+          "label": "السعر: من الأعلى للأقل"
+        },
+        {
+          "value": "rating",
+          "label": "التقييم"
+        },
+        {
+          "value": "performance",
+          "label": "الأداء"
+        },
+        {
+          "value": "size",
+          "label": "الحجم"
+        },
+        {
+          "value": "refresh-rate",
+          "label": "معدل التحديث"
+        }
+      ]
+    },
+    "products": [
+      {
+        "id": 201,
+        "name": "شاشة ألعاب منحنية 27 بوصة",
+        "category": "gaming",
+        "price": 8990,
+        "currency": "ج.م",
+        "originalPrice": 10500,
+        "discount": 14,
+        "rating": 4.6,
+        "brand": "ViewMax",
+        "model": "VM-C27G",
+        "modelYear": 2025,
+        "sku": "MON-C27G-201",
+        "energyClass": "A+",
+        "stockLevel": "In Stock",
+        "image": "https://images.unsplash.com/photo-1527443224154-c4a3942d3acf?w=400",
+        "detailedImages": [
+          "https://images.unsplash.com/photo-1527443224154-c4a3942d3acf?w=800"
+        ],
+        "badge": "الأعلى مبيعاً",
+        "specs": {
+          "size": "27 بوصة",
+          "resolution": "2560x1440",
+          "refreshRate": "165Hz",
+          "panel": "VA",
+          "responseTime": "1ms",
+          "contrastRatio": "3000:1",
+          "brightness": "350 نيت",
+          "viewingAngle": "178 درجة",
+          "colorGamut": "sRGB 120%",
+          "hdr": "HDR10",
+          "adaptiveSync": "AMD FreeSync Premium",
+          "mountVESA": "100x100mm",
+          "warranty": "3 سنوات",
+          "weight": "5.2 كجم",
+          "curvature": "1500R",
+          "ports": [
+            "HDMI 2.1 x2",
+            "DisplayPort 1.4",
+            "3.5mm Audio"
+          ],
+          "usbC": {
+            "supportsDisplay": true,
+            "pdWatts": 65
+          },
+          "dimensions_mm": {
+            "height": 480,
+            "width": 613,
+            "depth": 220
+          },
+          "releaseDate": "2025-05-01"
+        },
+        "features": [
+          "تصميم منحني غامر",
+          "معدل تحديث 165Hz",
+          "دعم HDR10",
+          "تقنية FreeSync"
+        ],
+        "benchmarks": {
+          "gamingPerformance": "ممتاز - 9.2/10",
+          "colorAccuracy": "دلتا E < 2"
+        },
+        "includedAccessories": [
+          "كابل HDMI",
+          "كابل DisplayPort",
+          "قاعدة تثبيت",
+          "مصدر طاقة"
+        ],
+        "certifications": [
+          "CE",
+          "FCC",
+          "RoHS",
+          "Energy Star"
+        ],
+        "recommendedUse": [
+          "ألعاب تنافسية",
+          "مونتاج فيديو",
+          "تصميم جرافيك"
+        ],
+        "shipping": {
+          "free": true,
+          "cost": 0,
+          "estimatedDelivery": "توصيل خلال 2-4 أيام عمل"
+        },
+        "returnPolicy": "إرجاع مجاني خلال 14 يوم",
+        "detailedDescription": "شاشة ألعاب منحنية بدقة QHD ومعدل تحديث 165Hz توفر تجربة ألعاب غامرة وسلسة.",
+        "seller": {
+          "name": "TechLap Store"
+        },
+        "performanceScore": 92,
+        "details": {
+          "relatedProducts": [
+            202
+          ],
+          "isAvailable": true,
+          "stock": 15
+        }
+      },
+      {
+        "id": 202,
+        "name": "شاشة احترافية 4K",
+        "category": "professional",
+        "price": 12990,
+        "currency": "ج.م",
+        "rating": 4.7,
+        "brand": "ProDisplay",
+        "model": "PD-4K32",
+        "modelYear": 2025,
+        "sku": "MON-4K32-202",
+        "energyClass": "A",
+        "stockLevel": "Limited",
+        "image": "https://images.unsplash.com/photo-1586210579191-33b45e38fa2c?w=400",
+        "specs": {
+          "size": "32 بوصة",
+          "resolution": "3840x2160",
+          "refreshRate": "60Hz",
+          "panel": "IPS",
+          "responseTime": "4ms",
+          "colorGamut": "Adobe RGB 99%",
+          "colorDepth": "10-bit",
+          "warranty": "3 سنوات"
+        },
+        "features": [
+          "دقة 4K فائقة",
+          "دقة ألوان احترافية",
+          "منافذ متعددة"
+        ],
+        "details": {
+          "relatedProducts": [
+            201
+          ],
+          "isAvailable": true,
+          "stock": 5
+        }
+      }
+    ]
+  }
+]

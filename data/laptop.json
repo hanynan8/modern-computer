@@ -1,1 +1,1356 @@
-[]
+[
+  {
+    "_id": "6a48e98e798ed50fc65da404",
+    "pageTitle": "اللابتوبات والملحقات",
+    "pageSubtitle": "اكتشف أحدث اللابتوبات والملحقات التقنية",
+    "categories": [
+      {
+        "id": "all",
+        "name": "جميع اللابتوبات",
+        "icon": "laptop",
+        "color": "from-purple-600 to-blue-600"
+      },
+      {
+        "id": "gaming",
+        "name": "لابتوبات الألعاب",
+        "icon": "gamepad2",
+        "color": "from-red-600 to-pink-600"
+      },
+      {
+        "id": "business",
+        "name": "لابتوبات الأعمال",
+        "icon": "cpu",
+        "color": "from-blue-600 to-cyan-600"
+      },
+      {
+        "id": "ultrabook",
+        "name": "ألترابوك",
+        "icon": "smartphone",
+        "color": "from-green-600 to-emerald-600"
+      }
+    ],
+    "filters": {
+      "sortOptions": [
+        {
+          "value": "name",
+          "label": "الاسم"
+        },
+        {
+          "value": "price-low",
+          "label": "السعر: من الأقل للأعلى"
+        },
+        {
+          "value": "price-high",
+          "label": "السعر: من الأعلى للأقل"
+        },
+        {
+          "value": "rating",
+          "label": "التقييم"
+        }
+      ]
+    },
+    "settings": {
+      "whatsappNumber": "2001201061216"
+    },
+    "products": [
+      {
+        "id": 108,
+        "name": "HP 840 G8",
+        "category": "business",
+        "price": 14500,
+        "currency": "ج.م",
+        "originalPrice": 16000,
+        "discount": 9,
+        "rating": 4.5,
+        "image": "https://i.ebayimg.com/images/g/UBUAAOSwZNplxrLf/s-l500.jpg",
+        "badge": null,
+        "specs": {
+          "processor": "Intel Core i5 11th Gen",
+          "ram": "8GB DDR4",
+          "storage": "256GB NVMe SSD",
+          "graphics": "Intel Iris Xe Graphics"
+        },
+        "features": [
+          "أداء أقوى في التصميم والعمل",
+          "شاشة FHD LED بألوان واضحة",
+          "مناسب للبرمجة والاجتماعات أونلاين"
+        ],
+        "details": {
+          "relatedProducts": [],
+          "detailedSpecs": {
+            "cpu": "Intel Core i5 11th Gen",
+            "gpu": "Intel Iris Xe Graphics",
+            "ram": "8GB DDR4",
+            "storage": "256GB NVMe SSD",
+            "display": "14 بوصة FHD LED",
+            "resolution": "1920x1080",
+            "battery": "-",
+            "os": "Windows 11",
+            "weight": "-",
+            "ports": [
+              "USB-A",
+              "USB-C",
+              "HDMI"
+            ]
+          },
+          "gallery": [],
+          "longDescription": "لابتوب أنيق وخفيف الوزن بأداء يسبق التوقعات، مناسب للدراسة الجامعية والأعمال المكتبية والتصميم والمونتاج الخفيف.",
+          "stock": 5,
+          "sku": "LP-HP840G8-108",
+          "warrantyMonths": 6,
+          "releaseDate": "2025-01-01"
+        }
+      },
+      {
+        "id": 109,
+        "name": "Dell Latitude 5580",
+        "category": "business",
+        "price": 8800,
+        "currency": "ج.م",
+        "originalPrice": 10000,
+        "discount": 12,
+        "rating": 4.5,
+        "image": "https://i.ebayimg.com/images/g/qlEAAeSwTZpo-RYr/s-l500.jpg",
+        "badge": null,
+        "specs": {
+          "processor": "Intel Core i5 HQ 6th Gen",
+          "ram": "8GB",
+          "storage": "256GB SSD",
+          "graphics": "Intel HD Graphics"
+        },
+        "features": [
+          "Full Keyboard مع لوحة أرقام",
+          "اعتمادية Dell المعروفة",
+          "مناسب للمحاسبة وبرامج الأوفيس"
+        ],
+        "details": {
+          "relatedProducts": [],
+          "detailedSpecs": {
+            "cpu": "Intel Core i5 HQ 6th Gen",
+            "gpu": "Intel HD Graphics",
+            "ram": "8GB",
+            "storage": "256GB SSD",
+            "display": "15.6 بوصة",
+            "resolution": "1920x1080",
+            "battery": "-",
+            "os": "Windows 11",
+            "weight": "-",
+            "ports": [
+              "USB-A",
+              "HDMI",
+              "RJ45"
+            ]
+          },
+          "gallery": [],
+          "longDescription": "لابتوب عملي يجمع بين القوة والمتانة وسهولة الاستخدام، مثالي للاستخدام اليومي في الشغل والدراسة وإدارة الأعمال.",
+          "stock": 4,
+          "sku": "LP-DL5580-109",
+          "warrantyMonths": 6,
+          "releaseDate": "2025-01-01"
+        }
+      },
+      {
+        "id": 110,
+        "name": "Dell Latitude 7480 Touch",
+        "category": "ultrabook",
+        "price": 9800,
+        "currency": "ج.م",
+        "originalPrice": 11000,
+        "discount": 11,
+        "rating": 4.5,
+        "image": "https://i.ebayimg.com/images/g/pAkAAeSwnSNp~hq1/s-l500.jpg",
+        "badge": null,
+        "specs": {
+          "processor": "Intel Core i7 7th Gen",
+          "ram": "8GB DDR4",
+          "storage": "256GB NVMe SSD",
+          "graphics": "Intel Graphics"
+        },
+        "features": [
+          "شاشة لمس Touch Screen",
+          "تصميم أنيق وخفيف Frameless",
+          "سرعة فائقة في التشغيل"
+        ],
+        "details": {
+          "relatedProducts": [],
+          "detailedSpecs": {
+            "cpu": "Intel Core i7 7th Gen",
+            "gpu": "Intel Graphics",
+            "ram": "8GB DDR4",
+            "storage": "256GB NVMe SSD",
+            "display": "14.1 بوصة Frameless",
+            "resolution": "1920x1080",
+            "battery": "-",
+            "os": "Windows 11",
+            "weight": "-",
+            "ports": [
+              "USB-A",
+              "USB-C",
+              "HDMI"
+            ]
+          },
+          "gallery": [],
+          "longDescription": "أداء احترافي في حجم عملي مع شاشة لمس تمنحك تجربة استخدام أكثر سهولة، مثالي للشغل والدراسة والاستخدام اليومي.",
+          "stock": 3,
+          "sku": "LP-DL7480T-110",
+          "warrantyMonths": 6,
+          "releaseDate": "2025-01-01"
+        }
+      },
+      {
+        "id": 111,
+        "name": "Dell Precision 7530 Workstation",
+        "category": "business",
+        "price": 20500,
+        "currency": "ج.م",
+        "originalPrice": 22000,
+        "discount": 7,
+        "rating": 4.5,
+        "image": "https://i.ebayimg.com/images/g/ff4AAOSwK-VoL2cs/s-l500.jpg",
+        "badge": "Workstation",
+        "specs": {
+          "processor": "Intel Core i7-8850H",
+          "ram": "16GB DDR4",
+          "storage": "512GB SSD",
+          "graphics": "NVIDIA Quadro P2000 4GB"
+        },
+        "features": [
+          "محطة عمل احترافية للجرافيك ديزاين",
+          "ممتاز لبرامج 3D مثل 3ds Max و AutoCAD",
+          "تبريد ممتاز واستقرار في الأداء"
+        ],
+        "details": {
+          "relatedProducts": [],
+          "detailedSpecs": {
+            "cpu": "Intel Core i7-8850H",
+            "gpu": "NVIDIA Quadro P2000 4GB",
+            "ram": "16GB DDR4",
+            "storage": "512GB SSD",
+            "display": "15.6 بوصة Full HD",
+            "resolution": "1920x1080",
+            "battery": "-",
+            "os": "Windows 11",
+            "weight": "-",
+            "ports": [
+              "USB-A",
+              "USB-C",
+              "HDMI"
+            ]
+          },
+          "gallery": [],
+          "longDescription": "محطة عمل احترافية مناسبة للجرافيك ديزاين والمونتاج والهندسة، بأداء قوي في برامج Adobe و3D.",
+          "stock": 2,
+          "sku": "LP-DLP7530-111",
+          "warrantyMonths": 12,
+          "releaseDate": "2025-01-01"
+        }
+      },
+      {
+        "id": 112,
+        "name": "Dell Inspiron 15 Gaming 7567",
+        "category": "gaming",
+        "price": 20500,
+        "currency": "ج.م",
+        "originalPrice": 22000,
+        "discount": 7,
+        "rating": 4.5,
+        "image": "https://i.ebayimg.com/images/g/kfIAAOSwelpguUH-/s-l500.jpg",
+        "badge": null,
+        "specs": {
+          "processor": "Intel Core i7-7700HQ",
+          "ram": "16GB",
+          "storage": "512GB SSD",
+          "graphics": "NVIDIA GTX 1050 Ti 4GB"
+        },
+        "features": [
+          "يشغل أشهر الألعاب بسلاسة",
+          "أداء ممتاز للمونتاج والجرافيك",
+          "نظام تبريد احترافي مخصص للألعاب"
+        ],
+        "details": {
+          "relatedProducts": [],
+          "detailedSpecs": {
+            "cpu": "Intel Core i7-7700HQ",
+            "gpu": "NVIDIA GTX 1050 Ti 4GB",
+            "ram": "16GB",
+            "storage": "512GB SSD",
+            "display": "15.6 بوصة",
+            "resolution": "1920x1080",
+            "battery": "-",
+            "os": "Windows 11",
+            "weight": "-",
+            "ports": [
+              "USB-A",
+              "HDMI"
+            ]
+          },
+          "gallery": [],
+          "longDescription": "محطة ألعاب حقيقية تجمع بين قوة الأداء في الألعاب والتصميم والمونتاج، مناسب لـ GTA V وPUBG وValorant وCS2.",
+          "stock": 2,
+          "sku": "LP-DLINS7567-112",
+          "warrantyMonths": 6,
+          "releaseDate": "2025-01-01"
+        }
+      },
+      {
+        "id": 113,
+        "name": "Dell Latitude 5420",
+        "category": "business",
+        "price": 12500,
+        "currency": "ج.م",
+        "originalPrice": 14000,
+        "discount": 11,
+        "rating": 4.5,
+        "image": "https://i.ebayimg.com/images/g/VyoAAeSww3lqILMP/s-l500.jpg",
+        "badge": null,
+        "specs": {
+          "processor": "Intel Core i5 11th Gen",
+          "ram": "8GB DDR4",
+          "storage": "256GB NVMe SSD",
+          "graphics": "Intel Iris Xe Graphics"
+        },
+        "features": [
+          "أداء سريع في المهام اليومية",
+          "تصميم احترافي وخفيف",
+          "بطارية تدوم لساعات"
+        ],
+        "details": {
+          "relatedProducts": [],
+          "detailedSpecs": {
+            "cpu": "Intel Core i5 11th Gen",
+            "gpu": "Intel Iris Xe Graphics",
+            "ram": "8GB DDR4",
+            "storage": "256GB NVMe SSD",
+            "display": "14.1 بوصة Full HD",
+            "resolution": "1920x1080",
+            "battery": "-",
+            "os": "Windows 11",
+            "weight": "-",
+            "ports": [
+              "USB-A",
+              "USB-C",
+              "HDMI"
+            ]
+          },
+          "gallery": [],
+          "longDescription": "لابتوب يجمع بين خفة الوزن والسرعة والاعتمادية، مناسب للدراسة والشغل والتصميم والبرامج المكتبية.",
+          "stock": 5,
+          "sku": "LP-DL5420-113",
+          "warrantyMonths": 6,
+          "releaseDate": "2025-01-01"
+        }
+      },
+      {
+        "id": 114,
+        "name": "Dell Latitude 5430 - i5 12th Gen / RAM 16GB",
+        "category": "business",
+        "price": 16500,
+        "currency": "ج.م",
+        "originalPrice": 17500,
+        "discount": 6,
+        "rating": 4.5,
+        "image": "https://i.ebayimg.com/images/g/3zYAAeSwVxhpwWn-/s-l500.jpg",
+        "badge": null,
+        "specs": {
+          "processor": "Intel Core i5 12th Gen",
+          "ram": "16GB DDR4",
+          "storage": "256GB NVMe SSD",
+          "graphics": "Intel Iris Xe Graphics"
+        },
+        "features": [
+          "جيل أحدث وأداء أسرع",
+          "مثالي للشغل والدراسة الاحترافية",
+          "تصميم نحيف وخفيف"
+        ],
+        "details": {
+          "relatedProducts": [],
+          "detailedSpecs": {
+            "cpu": "Intel Core i5 12th Gen",
+            "gpu": "Intel Iris Xe Graphics",
+            "ram": "16GB DDR4",
+            "storage": "256GB NVMe SSD",
+            "display": "14.1 بوصة Full HD",
+            "resolution": "1920x1080",
+            "battery": "-",
+            "os": "Windows 11",
+            "weight": "-",
+            "ports": [
+              "USB-A",
+              "USB-C",
+              "HDMI"
+            ]
+          },
+          "gallery": [],
+          "longDescription": "أداء قوي وسرعة استجابة وخفة وزن، مثالي للشغل والدراسة والتصميم والبرمجة والأعمال المكتبية.",
+          "stock": 4,
+          "sku": "LP-DL5430I5-114",
+          "warrantyMonths": 6,
+          "releaseDate": "2025-01-01"
+        }
+      },
+      {
+        "id": 115,
+        "name": "Dell Latitude 5430 - i7 12th Gen / RAM 16GB",
+        "category": "business",
+        "price": 17500,
+        "currency": "ج.م",
+        "originalPrice": 19000,
+        "discount": 8,
+        "rating": 4.5,
+        "image": "https://i.ebayimg.com/images/g/5~0AAOSwwZBkNZer/s-l500.png",
+        "badge": null,
+        "specs": {
+          "processor": "Intel Core i7 12th Gen",
+          "ram": "16GB DDR4",
+          "storage": "256GB NVMe SSD",
+          "graphics": "Intel Iris Xe Graphics"
+        },
+        "features": [
+          "جيل أحدث وأداء أسرع",
+          "مثالي للشغل والدراسة الاحترافية",
+          "تصميم نحيف وخفيف"
+        ],
+        "details": {
+          "relatedProducts": [],
+          "detailedSpecs": {
+            "cpu": "Intel Core i7 12th Gen",
+            "gpu": "Intel Iris Xe Graphics",
+            "ram": "16GB DDR4",
+            "storage": "256GB NVMe SSD",
+            "display": "14.1 بوصة Full HD",
+            "resolution": "1920x1080",
+            "battery": "-",
+            "os": "Windows 11",
+            "weight": "-",
+            "ports": [
+              "USB-A",
+              "USB-C",
+              "HDMI"
+            ]
+          },
+          "gallery": [],
+          "longDescription": "أداء قوي وسرعة استجابة وخفة وزن، مثالي للشغل والدراسة والتصميم والبرمجة والأعمال المكتبية.",
+          "stock": 3,
+          "sku": "LP-DL5430I7-115",
+          "warrantyMonths": 6,
+          "releaseDate": "2025-01-01"
+        }
+      },
+      {
+        "id": 116,
+        "name": "Dell Latitude 5410",
+        "category": "business",
+        "price": 11500,
+        "currency": "ج.م",
+        "originalPrice": 13000,
+        "discount": 12,
+        "rating": 4.5,
+        "image": "https://i.ebayimg.com/images/g/5qsAAOSwDnRoG3yz/s-l500.jpg",
+        "badge": null,
+        "specs": {
+          "processor": "Intel Core i5 10th Gen",
+          "ram": "8GB DDR4",
+          "storage": "256GB NVMe SSD",
+          "graphics": "Intel Iris Xe Graphics"
+        },
+        "features": [
+          "سرعة في تشغيل الويندوز والبرامج",
+          "مثالي للاجتماعات أونلاين",
+          "تصميم احترافي وخفيف"
+        ],
+        "details": {
+          "relatedProducts": [],
+          "detailedSpecs": {
+            "cpu": "Intel Core i5 10th Gen",
+            "gpu": "Intel Iris Xe Graphics",
+            "ram": "8GB DDR4",
+            "storage": "256GB NVMe SSD",
+            "display": "14.1 بوصة Full HD",
+            "resolution": "1920x1080",
+            "battery": "-",
+            "os": "Windows 11",
+            "weight": "-",
+            "ports": [
+              "USB-A",
+              "USB-C",
+              "HDMI"
+            ]
+          },
+          "gallery": [],
+          "longDescription": "لابتوب يجمع بين السرعة والاعتمادية وسهولة التنقل، مثالي للشغل والدراسة والبرامج المكتبية.",
+          "stock": 5,
+          "sku": "LP-DL5410-116",
+          "warrantyMonths": 6,
+          "releaseDate": "2025-01-01"
+        }
+      },
+      {
+        "id": 103,
+        "name": "HP 745 G6",
+        "category": "business",
+        "price": 10800,
+        "currency": "ج.م",
+        "originalPrice": 11500,
+        "discount": 6,
+        "rating": 4.5,
+        "image": "https://www.bhphotovideo.com/images/fb/hp_7rx05ut_aba_745_g6_ryzen_7_1556484.jpg",
+        "badge": null,
+        "specs": {
+          "processor": "AMD Ryzen 5 3500U",
+          "ram": "8GB DDR4",
+          "storage": "256GB NVMe SSD",
+          "graphics": "AMD Radeon R7 2GB"
+        },
+        "features": [
+          "أداء سريع في الاستخدام اليومي",
+          "خامة Business محترمة",
+          "مناسب للتصميم الخفيف",
+          "سرعة فتح وتنقل بين البرامج"
+        ],
+        "details": {
+          "relatedProducts": [],
+          "detailedSpecs": {
+            "cpu": "AMD Ryzen 5 3500U",
+            "gpu": "AMD Radeon R7 2GB",
+            "ram": "8GB DDR4",
+            "storage": "256GB NVMe SSD",
+            "display": "14 بوصة",
+            "resolution": "1920x1080",
+            "battery": "-",
+            "os": "Windows 11",
+            "weight": "-",
+            "ports": [
+              "USB-A",
+              "HDMI",
+              "USB-C"
+            ]
+          },
+          "gallery": [],
+          "longDescription": "لاب عملي وشيك وسريع في الاستخدام اليومي، مناسب للشغل المكتبي والدراسة والتصفح والتصميم الخفيف.",
+          "stock": 5,
+          "sku": "LP-HP745G6-103",
+          "warrantyMonths": 6,
+          "releaseDate": "2025-01-01"
+        }
+      },
+      {
+        "id": 104,
+        "name": "HP 840 G6 Business",
+        "category": "business",
+        "price": 12000,
+        "currency": "ج.م",
+        "originalPrice": 13000,
+        "discount": 8,
+        "rating": 4.5,
+        "image": "https://www.bhphotovideo.com/images/fb/hp_7wz91ut_aba_840_g6_i5_8365u_1_6ghz_1493868.jpg",
+        "badge": null,
+        "specs": {
+          "processor": "Intel Core i5 8th Gen",
+          "ram": "8GB DDR4",
+          "storage": "512GB NVMe SSD",
+          "graphics": "AMD Radeon R7 2GB + Intel HD"
+        },
+        "features": [
+          "جهاز من فئة الأعمال بخامة قوية",
+          "أداء ثابت وسريع",
+          "مساحة تخزين ممتازة",
+          "أداء رسومي مناسب للتصميم الخفيف"
+        ],
+        "details": {
+          "relatedProducts": [],
+          "detailedSpecs": {
+            "cpu": "Intel Core i5 8th Gen",
+            "gpu": "AMD Radeon R7 2GB + Intel HD",
+            "ram": "8GB DDR4",
+            "storage": "512GB NVMe SSD",
+            "display": "14 بوصة",
+            "resolution": "1920x1080",
+            "battery": "-",
+            "os": "Windows 11",
+            "weight": "-",
+            "ports": [
+              "USB-A",
+              "HDMI",
+              "USB-C"
+            ]
+          },
+          "gallery": [],
+          "longDescription": "جهاز من فئة الأعمال بتصميم شيك جدًا، مناسب للشغل والدراسة والمحاسبة والتصميم الخفيف والاستخدام اليومي.",
+          "stock": 5,
+          "sku": "LP-HP840G6-104",
+          "warrantyMonths": 6,
+          "releaseDate": "2025-01-01"
+        }
+      },
+      {
+        "id": 105,
+        "name": "HP 845 G7",
+        "category": "business",
+        "price": 14500,
+        "currency": "ج.م",
+        "originalPrice": 16000,
+        "discount": 9,
+        "rating": 4.5,
+        "image": "https://www.bhphotovideo.com/images/fb/hp_1w9b3ut_aba_845_g7_ryzen_7_1580075.jpg",
+        "badge": null,
+        "specs": {
+          "processor": "AMD Ryzen 7",
+          "ram": "8GB DDR4",
+          "storage": "256GB NVMe SSD",
+          "graphics": "AMD Radeon Graphics"
+        },
+        "features": [
+          "أحدث برسسور من AMD",
+          "أداء قوي وسريع",
+          "اعتمادية عالية"
+        ],
+        "details": {
+          "relatedProducts": [],
+          "detailedSpecs": {
+            "cpu": "AMD Ryzen 7",
+            "gpu": "AMD Radeon Graphics",
+            "ram": "8GB DDR4",
+            "storage": "256GB NVMe SSD",
+            "display": "14 بوصة",
+            "resolution": "1920x1080",
+            "battery": "-",
+            "os": "Windows 11",
+            "weight": "-",
+            "ports": [
+              "USB-A",
+              "HDMI",
+              "USB-C"
+            ]
+          },
+          "gallery": [],
+          "longDescription": "لابتوب يجمع بين الأداء القوي، السرعة، والاعتمادية بمعالج Ryzen 7 من أحدث أجيال AMD.",
+          "stock": 4,
+          "sku": "LP-HP845G7-105",
+          "warrantyMonths": 6,
+          "releaseDate": "2025-01-01"
+        }
+      },
+      {
+        "id": 106,
+        "name": "Dell Latitude 5400",
+        "category": "business",
+        "price": 9800,
+        "currency": "ج.م",
+        "originalPrice": 10800,
+        "discount": 9,
+        "rating": 4.5,
+        "image": "https://www.bhphotovideo.com/images/fb/dell_1j4rc_latitude_5400_i5_8365u_8gb_1479954.jpg",
+        "badge": null,
+        "specs": {
+          "processor": "Intel Core i5 8th Gen",
+          "ram": "8GB DDR4",
+          "storage": "256GB NVMe SSD",
+          "graphics": "Intel UHD Graphics"
+        },
+        "features": [
+          "مناسب للدراسة والشغل",
+          "أداء ممتاز لبرامج Photoshop و Illustrator",
+          "بطارية جيدة",
+          "تصميم متين وخفيف"
+        ],
+        "details": {
+          "relatedProducts": [],
+          "detailedSpecs": {
+            "cpu": "Intel Core i5 8th Gen",
+            "gpu": "Intel UHD Graphics",
+            "ram": "8GB DDR4",
+            "storage": "256GB NVMe SSD",
+            "display": "14.1 بوصة",
+            "resolution": "1920x1080",
+            "battery": "-",
+            "os": "Windows 11",
+            "weight": "-",
+            "ports": [
+              "USB-A",
+              "HDMI",
+              "RJ45"
+            ]
+          },
+          "gallery": [],
+          "longDescription": "لابتوب اعتمادي بسعر مناسب، يجمع بين الأداء والسرعة والسعر المناسب لأي استخدام يومي.",
+          "stock": 6,
+          "sku": "LP-DL5400-106",
+          "warrantyMonths": 6,
+          "releaseDate": "2025-01-01"
+        }
+      },
+      {
+        "id": 107,
+        "name": "HP ZBook 14 G5",
+        "category": "business",
+        "price": 14000,
+        "currency": "ج.م",
+        "originalPrice": 16000,
+        "discount": 12,
+        "rating": 4.5,
+        "image": "https://www.bhphotovideo.com/images/fb/hp_3ye05ut_aba_zb14u_g5_i5_8350u_16gb_1396381.jpg",
+        "badge": null,
+        "specs": {
+          "processor": "Intel Core i7 8th Gen",
+          "ram": "16GB DDR4",
+          "storage": "256GB NVMe SSD",
+          "graphics": "Intel UHD Graphics"
+        },
+        "features": [
+          "محطة عمل متنقلة",
+          "أداء احترافي للمهندسين والمصممين",
+          "بطارية تدوم لفترات طويلة",
+          "منافذ USB-HDMI-Type C"
+        ],
+        "details": {
+          "relatedProducts": [],
+          "detailedSpecs": {
+            "cpu": "Intel Core i7 8th Gen",
+            "gpu": "Intel UHD Graphics",
+            "ram": "16GB DDR4",
+            "storage": "256GB NVMe SSD",
+            "display": "14.1 بوصة HD",
+            "resolution": "1366x768",
+            "battery": "-",
+            "os": "Windows 11",
+            "weight": "-",
+            "ports": [
+              "USB-A",
+              "USB-C",
+              "HDMI"
+            ]
+          },
+          "gallery": [],
+          "longDescription": "محطة عمل متنقلة (Workstation) مناسبة للمهندسين والمصممين والمبرمجين وكل من يحتاج أداء احترافي.",
+          "stock": 3,
+          "sku": "LP-HPZB14G5-107",
+          "warrantyMonths": 6,
+          "releaseDate": "2025-01-01"
+        }
+      },
+      {
+        "id": 117,
+        "name": "HP ZBook Fury G8",
+        "category": "business",
+        "price": 32500,
+        "currency": "ج.م",
+        "originalPrice": 33000,
+        "discount": 2,
+        "rating": 4.5,
+        "image": "https://www.bhphotovideo.com/images/fb/hp_4u8n8ut_aba_zb_fury_15_g8_1653519.jpg",
+        "badge": "Workstation",
+        "specs": {
+          "processor": "Intel Core i7-11850H",
+          "ram": "16GB DDR4",
+          "storage": "512GB NVMe SSD",
+          "graphics": "NVIDIA RTX A2000"
+        },
+        "features": [
+          "وحش أداء للمحترفين",
+          "شاشة 4K UHD بألوان دقيقة",
+          "مثالي لـ AutoCAD وBlender و3ds Max"
+        ],
+        "details": {
+          "relatedProducts": [],
+          "detailedSpecs": {
+            "cpu": "Intel Core i7-11850H",
+            "gpu": "NVIDIA RTX A2000",
+            "ram": "16GB DDR4",
+            "storage": "512GB NVMe SSD",
+            "display": "15.6 بوصة 4K UHD",
+            "resolution": "3840x2160",
+            "battery": "-",
+            "os": "Windows 11",
+            "weight": "-",
+            "ports": [
+              "USB-A",
+              "USB-C",
+              "HDMI"
+            ]
+          },
+          "gallery": [],
+          "longDescription": "محطة عمل احترافية مصممة للرندر والمونتاج والهندسة والذكاء الاصطناعي بدون أي تنازلات في الأداء.",
+          "stock": 1,
+          "sku": "LP-HPZBFG8-117",
+          "warrantyMonths": 12,
+          "releaseDate": "2025-01-01"
+        }
+      },
+      {
+        "id": 118,
+        "name": "HP ZBook G7 Workstation",
+        "category": "business",
+        "price": 28500,
+        "currency": "ج.م",
+        "originalPrice": 30000,
+        "discount": 5,
+        "rating": 4.5,
+        "image": "https://www.bhphotovideo.com/images/fb/hp_21x80ut_aba_15_6_zbook_studio_g7_1581761.jpg",
+        "badge": "Workstation",
+        "specs": {
+          "processor": "Intel Core i7-10850H",
+          "ram": "16GB DDR4",
+          "storage": "512GB NVMe SSD",
+          "graphics": "NVIDIA Quadro T1200 4GB"
+        },
+        "features": [
+          "كارت شاشة احترافي للتصميم والرندر",
+          "تبريد قوي واستقرار للعمل الشاق",
+          "مثالي لـ AutoCAD وRevit وSolidWorks"
+        ],
+        "details": {
+          "relatedProducts": [],
+          "detailedSpecs": {
+            "cpu": "Intel Core i7-10850H",
+            "gpu": "NVIDIA Quadro T1200 4GB",
+            "ram": "16GB DDR4",
+            "storage": "512GB NVMe SSD",
+            "display": "15.6 بوصة Full HD",
+            "resolution": "1920x1080",
+            "battery": "-",
+            "os": "Windows 11",
+            "weight": "-",
+            "ports": [
+              "USB-A",
+              "USB-C",
+              "HDMI"
+            ]
+          },
+          "gallery": [],
+          "longDescription": "جهاز يعيش معاك سنين، يشغل أصعب البرامج الهندسية والتصميمية بدون تهنيج أو بطء.",
+          "stock": 2,
+          "sku": "LP-HPZBG7-118",
+          "warrantyMonths": 12,
+          "releaseDate": "2025-01-01"
+        }
+      },
+      {
+        "id": 119,
+        "name": "Dell Precision 5530",
+        "category": "business",
+        "price": 21500,
+        "currency": "ج.م",
+        "originalPrice": 22500,
+        "discount": 4,
+        "rating": 4.5,
+        "image": "https://www.bhphotovideo.com/images/fb/dell_sbr28_precision_5530_i7_8850g_16gb_1538048.jpg",
+        "badge": "Workstation",
+        "specs": {
+          "processor": "Intel Core i7",
+          "ram": "16GB DDR4",
+          "storage": "512GB SSD",
+          "graphics": "NVIDIA Quadro Graphics"
+        },
+        "features": [
+          "أخف Workstation بشكل أنيق",
+          "جاهز للتصميم والمونتاج والرندر",
+          "يشغل برامج الهندسة والجرافيك بسلاسة"
+        ],
+        "details": {
+          "relatedProducts": [],
+          "detailedSpecs": {
+            "cpu": "Intel Core i7",
+            "gpu": "NVIDIA Quadro Graphics",
+            "ram": "16GB DDR4",
+            "storage": "512GB SSD",
+            "display": "15.6 بوصة",
+            "resolution": "1920x1080",
+            "battery": "-",
+            "os": "Windows 11",
+            "weight": "-",
+            "ports": [
+              "USB-A",
+              "USB-C",
+              "HDMI"
+            ]
+          },
+          "gallery": [],
+          "longDescription": "Workstation أنيق وخفيف يجمع بين الشكل الاحترافي والأداء العالي، مناسب لـ AutoCAD وRevit و3ds Max وPremiere.",
+          "stock": 2,
+          "sku": "LP-DLP5530-119",
+          "warrantyMonths": 12,
+          "releaseDate": "2025-01-01"
+        }
+      },
+      {
+        "id": 120,
+        "name": "Dell Latitude 7420 x360",
+        "category": "ultrabook",
+        "price": 18500,
+        "currency": "ج.م",
+        "originalPrice": 20000,
+        "discount": 7,
+        "rating": 4.5,
+        "image": "https://www.bhphotovideo.com/images/fb/dell_jkkhm_latitude_7420_i5_1145g7_16_256_1621965.jpg",
+        "badge": "2-in-1",
+        "specs": {
+          "processor": "Intel Core i5 11th Gen",
+          "ram": "16GB DDR4",
+          "storage": "256GB NVMe SSD",
+          "graphics": "Intel Iris Xe Graphics"
+        },
+        "features": [
+          "جهاز 4 في 1 قابل للتحويل",
+          "شاشة لمس Full HD",
+          "استخدمه كلابتوب أو تابلت أو وضع العرض"
+        ],
+        "details": {
+          "relatedProducts": [],
+          "detailedSpecs": {
+            "cpu": "Intel Core i5 11th Gen",
+            "gpu": "Intel Iris Xe Graphics",
+            "ram": "16GB DDR4",
+            "storage": "256GB NVMe SSD",
+            "display": "14.1 بوصة Touch Full HD",
+            "resolution": "1920x1080",
+            "battery": "-",
+            "os": "Windows 11",
+            "weight": "-",
+            "ports": [
+              "USB-A",
+              "USB-C",
+              "HDMI"
+            ]
+          },
+          "gallery": [],
+          "longDescription": "جهاز مرن يواكب شغلك في أي مكان، بمفصلات X360 تحوله من لابتوب إلى تابلت أو وضع الخيمة بسهولة.",
+          "stock": 3,
+          "sku": "LP-DL7420X-120",
+          "warrantyMonths": 6,
+          "releaseDate": "2025-01-01"
+        }
+      },
+      {
+        "id": 121,
+        "name": "HP EliteBook x360 1040 G7",
+        "category": "ultrabook",
+        "price": 22500,
+        "currency": "ج.م",
+        "originalPrice": 24000,
+        "discount": 6,
+        "rating": 4.5,
+        "image": "https://www.bhphotovideo.com/images/fb/hp_1p6s2ut_aba_x360_1040_g7_i7_10810u_1580413.jpg",
+        "badge": "2-in-1",
+        "specs": {
+          "processor": "Intel Core i7 10th Gen",
+          "ram": "16GB",
+          "storage": "512GB NVMe SSD",
+          "graphics": "Intel UHD Graphics"
+        },
+        "features": [
+          "تصميم معدني Premium فائق الأناقة",
+          "مرونة X360 لابتوب أو تابلت",
+          "بطارية تدوم لساعات"
+        ],
+        "details": {
+          "relatedProducts": [],
+          "detailedSpecs": {
+            "cpu": "Intel Core i7 10th Gen",
+            "gpu": "Intel UHD Graphics",
+            "ram": "16GB",
+            "storage": "512GB NVMe SSD",
+            "display": "14.1 بوصة Touch",
+            "resolution": "1920x1080",
+            "battery": "-",
+            "os": "Windows 11",
+            "weight": "-",
+            "ports": [
+              "USB-A",
+              "USB-C",
+              "HDMI"
+            ]
+          },
+          "gallery": [],
+          "longDescription": "تجربة استخدام فاخرة تجمع بين الأداء القوي والفخامة والمرونة، مثالي للمصممين ورجال الأعمال وصناع المحتوى.",
+          "stock": 2,
+          "sku": "LP-HPEB1040-121",
+          "warrantyMonths": 12,
+          "releaseDate": "2025-01-01"
+        }
+      },
+      {
+        "id": 122,
+        "name": "HP EliteBook x360 1030",
+        "category": "ultrabook",
+        "price": 17500,
+        "currency": "ج.م",
+        "originalPrice": 18500,
+        "discount": 5,
+        "rating": 4.5,
+        "image": "https://www.bhphotovideo.com/images/fb/hp_8ms94ut_aba_x360_1030_g4_i5_8265u_1504387.jpg",
+        "badge": "2-in-1",
+        "specs": {
+          "processor": "Intel Core i5 10th Gen",
+          "ram": "16GB",
+          "storage": "256GB NVMe SSD",
+          "graphics": "Intel UHD Graphics"
+        },
+        "features": [
+          "شاشة Touch تدعم اللمس بالكامل",
+          "مفصلات 360° لابتوب أو تابلت",
+          "تعدد مهام بدون أي بطء"
+        ],
+        "details": {
+          "relatedProducts": [],
+          "detailedSpecs": {
+            "cpu": "Intel Core i5 10th Gen",
+            "gpu": "Intel UHD Graphics",
+            "ram": "16GB",
+            "storage": "256GB NVMe SSD",
+            "display": "13.3 بوصة Touch",
+            "resolution": "1920x1080",
+            "battery": "-",
+            "os": "Windows 11",
+            "weight": "-",
+            "ports": [
+              "USB-A",
+              "USB-C",
+              "HDMI"
+            ]
+          },
+          "gallery": [],
+          "longDescription": "لابتوب أنيق يجمع الأداء مع تجربة استخدام مختلفة بفضل شاشة اللمس ومفصلات 360 درجة.",
+          "stock": 3,
+          "sku": "LP-HPEB1030-122",
+          "warrantyMonths": 6,
+          "releaseDate": "2025-01-01"
+        }
+      },
+      {
+        "id": 123,
+        "name": "HP ZBook G8",
+        "category": "business",
+        "price": 31500,
+        "currency": "ج.م",
+        "originalPrice": 33000,
+        "discount": 5,
+        "rating": 4.5,
+        "image": "https://www.bhphotovideo.com/images/fb/hp_4m1l2ut_aba_zbook_studio_g8_i7_11850_1652078.jpg",
+        "badge": "Workstation",
+        "specs": {
+          "processor": "Intel Core i7-11850H",
+          "ram": "16GB DDR4",
+          "storage": "512GB NVMe SSD",
+          "graphics": "NVIDIA RTX A2000 4GB"
+        },
+        "features": [
+          "أعلى أداء في التصميم والمونتوج والرندر",
+          "شاشة 4K UHD دقيقة",
+          "مثالي لـ Blender وDaVinci Resolve"
+        ],
+        "details": {
+          "relatedProducts": [],
+          "detailedSpecs": {
+            "cpu": "Intel Core i7-11850H",
+            "gpu": "NVIDIA RTX A2000 4GB",
+            "ram": "16GB DDR4",
+            "storage": "512GB NVMe SSD",
+            "display": "15.6 بوصة 4K UHD",
+            "resolution": "3840x2160",
+            "battery": "-",
+            "os": "Windows 11",
+            "weight": "-",
+            "ports": [
+              "USB-A",
+              "USB-C",
+              "HDMI"
+            ]
+          },
+          "gallery": [],
+          "longDescription": "وحش الـ Workstation للمحترفين، مصمم للرندر والمونتاج والهندسة والذكاء الاصطناعي بأعلى أداء.",
+          "stock": 2,
+          "sku": "LP-HPZBG8-123",
+          "warrantyMonths": 12,
+          "releaseDate": "2025-01-01"
+        }
+      },
+      {
+        "id": 124,
+        "name": "HP ZBook G3 Workstation",
+        "category": "business",
+        "price": 12999,
+        "currency": "ج.م",
+        "originalPrice": 14500,
+        "discount": 10,
+        "rating": 4.5,
+        "image": "https://www.bhphotovideo.com/images/fb/hp_v2w09ut_aba_15_6_zbook_15_g3_1221189.jpg",
+        "badge": "Workstation",
+        "specs": {
+          "processor": "Intel Core i7-6850HQ",
+          "ram": "8GB DDR4",
+          "storage": "256GB NVMe SSD",
+          "graphics": "NVIDIA Quadro M1000M 2GB"
+        },
+        "features": [
+          "كارت Quadro احترافي للتصميم والهندسة",
+          "Workstation احترافي بسعر اقتصادي",
+          "مناسب لـ AutoCAD و3ds Max وSolidWorks"
+        ],
+        "details": {
+          "relatedProducts": [],
+          "detailedSpecs": {
+            "cpu": "Intel Core i7-6850HQ",
+            "gpu": "NVIDIA Quadro M1000M 2GB",
+            "ram": "8GB DDR4",
+            "storage": "256GB NVMe SSD",
+            "display": "15.6 بوصة Full HD",
+            "resolution": "1920x1080",
+            "battery": "-",
+            "os": "Windows 11",
+            "weight": "-",
+            "ports": [
+              "USB-A",
+              "HDMI"
+            ]
+          },
+          "gallery": [],
+          "longDescription": "Workstation احترافي بسعر اقتصادي، كارت Quadro مصمم خصيصًا لبرامج الهندسة والجرافيك والتصميم ثلاثي الأبعاد.",
+          "stock": 3,
+          "sku": "LP-HPZBG3-124",
+          "warrantyMonths": 6,
+          "releaseDate": "2025-01-01"
+        }
+      },
+      {
+        "id": 125,
+        "name": "HP EliteBook 830 G7",
+        "category": "business",
+        "price": 14000,
+        "currency": "ج.م",
+        "originalPrice": 15000,
+        "discount": 7,
+        "rating": 4.5,
+        "image": "https://www.bhphotovideo.com/images/fb/hp_1c9j0ut_aba_830_g7_i5_10210u_8gb_1570760.jpg",
+        "badge": null,
+        "specs": {
+          "processor": "Intel Core i5 10th Gen",
+          "ram": "8GB DDR4",
+          "storage": "256GB NVMe SSD",
+          "graphics": "Intel UHD Graphics"
+        },
+        "features": [
+          "تصميم Premium خفيف جدًا",
+          "أداء سريع للشغل والدراسة",
+          "جودة تصنيع EliteBook"
+        ],
+        "details": {
+          "relatedProducts": [],
+          "detailedSpecs": {
+            "cpu": "Intel Core i5 10th Gen",
+            "gpu": "Intel UHD Graphics",
+            "ram": "8GB DDR4",
+            "storage": "256GB NVMe SSD",
+            "display": "13.3 بوصة Full HD",
+            "resolution": "1920x1080",
+            "battery": "-",
+            "os": "Windows 11",
+            "weight": "-",
+            "ports": [
+              "USB-A",
+              "USB-C",
+              "HDMI"
+            ]
+          },
+          "gallery": [],
+          "longDescription": "لابتوب صغير الحجم كبير الأداء، يجمع بين السرعة والأناقة وسهولة التنقل.",
+          "stock": 4,
+          "sku": "LP-HPEB830-125",
+          "warrantyMonths": 6,
+          "releaseDate": "2025-01-01"
+        }
+      },
+      {
+        "id": 126,
+        "name": "HP EliteBook 850 G4",
+        "category": "business",
+        "price": 12500,
+        "currency": "ج.م",
+        "originalPrice": 13500,
+        "discount": 7,
+        "rating": 4.5,
+        "image": "https://www.bhphotovideo.com/images/fb/hp_1bs52ut_aba_850_g4_i7_7500u_8gb_1325879.jpg",
+        "badge": null,
+        "specs": {
+          "processor": "Intel Core i7 7th Gen",
+          "ram": "8GB",
+          "storage": "256GB NVMe SSD",
+          "graphics": "Intel HD Graphics"
+        },
+        "features": [
+          "شاشة كبيرة 15.6 بوصة",
+          "Full Keyboard مع لوحة أرقام",
+          "تصميم أنيق وجودة تصنيع قوية"
+        ],
+        "details": {
+          "relatedProducts": [],
+          "detailedSpecs": {
+            "cpu": "Intel Core i7 7th Gen",
+            "gpu": "Intel HD Graphics",
+            "ram": "8GB",
+            "storage": "256GB NVMe SSD",
+            "display": "15.6 بوصة Full HD",
+            "resolution": "1920x1080",
+            "battery": "-",
+            "os": "Windows 11",
+            "weight": "-",
+            "ports": [
+              "USB-A",
+              "HDMI",
+              "RJ45"
+            ]
+          },
+          "gallery": [],
+          "longDescription": "لابتوب عملي بشاشة كبيرة ولوحة مفاتيح كاملة لراحة أكبر في الشغل والدراسة والأعمال المكتبية.",
+          "stock": 4,
+          "sku": "LP-HPEB850-126",
+          "warrantyMonths": 6,
+          "releaseDate": "2025-01-01"
+        }
+      },
+      {
+        "id": 127,
+        "name": "HP ProBook 650 G3",
+        "category": "business",
+        "price": 9000,
+        "currency": "ج.م",
+        "originalPrice": 10500,
+        "discount": 14,
+        "rating": 4.5,
+        "image": "https://www.bhphotovideo.com/images/fb/hp_1bs23ut_aba_650_g3_i5_7200u_8gb_1325885.jpg",
+        "badge": null,
+        "specs": {
+          "processor": "Intel Core i5 7th Gen",
+          "ram": "8GB DDR4",
+          "storage": "256GB NVMe SSD",
+          "graphics": "Intel HD Graphics"
+        },
+        "features": [
+          "Full Keyboard مع لوحة أرقام",
+          "مثالي للمحاسبين والشركات",
+          "أداء سريع في البرامج اليومية"
+        ],
+        "details": {
+          "relatedProducts": [],
+          "detailedSpecs": {
+            "cpu": "Intel Core i5 7th Gen",
+            "gpu": "Intel HD Graphics",
+            "ram": "8GB DDR4",
+            "storage": "256GB NVMe SSD",
+            "display": "15.6 بوصة",
+            "resolution": "1920x1080",
+            "battery": "-",
+            "os": "Windows 11",
+            "weight": "-",
+            "ports": [
+              "USB-A",
+              "HDMI",
+              "RJ45"
+            ]
+          },
+          "gallery": [],
+          "longDescription": "لابتوب عملي بلوحة مفاتيح كاملة، مناسب للمحاسبين والشركات والطلاب وأصحاب الأعمال.",
+          "stock": 5,
+          "sku": "LP-HPPB650-127",
+          "warrantyMonths": 6,
+          "releaseDate": "2025-01-01"
+        }
+      },
+      {
+        "id": 128,
+        "name": "HP ProBook 435 G7 X360",
+        "category": "ultrabook",
+        "price": 17500,
+        "currency": "ج.م",
+        "originalPrice": 18500,
+        "discount": 5,
+        "rating": 4.5,
+        "image": "https://www.bhphotovideo.com/images/fb/hp_17g38ut_aba_x360_435_g7_ryz7_1566218.jpg",
+        "badge": "2-in-1",
+        "specs": {
+          "processor": "AMD Ryzen 7",
+          "ram": "16GB DDR4",
+          "storage": "256GB NVMe SSD",
+          "graphics": "AMD Radeon Graphics"
+        },
+        "features": [
+          "مرونة 360° لابتوب أو تابلت أو خيمة",
+          "أداء قوي في تعدد المهام",
+          "استجابة سريعة"
+        ],
+        "details": {
+          "relatedProducts": [],
+          "detailedSpecs": {
+            "cpu": "AMD Ryzen 7",
+            "gpu": "AMD Radeon Graphics",
+            "ram": "16GB DDR4",
+            "storage": "256GB NVMe SSD",
+            "display": "13.3 بوصة Touch",
+            "resolution": "1920x1080",
+            "battery": "-",
+            "os": "Windows 11",
+            "weight": "-",
+            "ports": [
+              "USB-A",
+              "USB-C",
+              "HDMI"
+            ]
+          },
+          "gallery": [],
+          "longDescription": "جهاز يجمع بين الأداء القوي والتصميم الأنيق ومرونة شاشة اللمس، معالج Ryzen 7 لتعدد المهام والتصميم والبرمجة.",
+          "stock": 3,
+          "sku": "LP-HPPB435X-128",
+          "warrantyMonths": 6,
+          "releaseDate": "2025-01-01"
+        }
+      },
+      {
+        "id": 129,
+        "name": "Dell Latitude 5480",
+        "category": "business",
+        "price": 8500,
+        "currency": "ج.م",
+        "originalPrice": 9500,
+        "discount": 11,
+        "rating": 4.5,
+        "image": "https://www.bhphotovideo.com/images/fb/dell_hg0np_latitude_5480_i5_7300u_8gb_1346957.jpg",
+        "badge": null,
+        "specs": {
+          "processor": "Intel Core i5 7th Gen",
+          "ram": "8GB DDR4",
+          "storage": "256GB NVMe SSD",
+          "graphics": "Intel HD Graphics"
+        },
+        "features": [
+          "اعتمادية Dell المعروفة",
+          "تصميم عملي وخفيف",
+          "تشغيل سريع للويندوز والبرامج"
+        ],
+        "details": {
+          "relatedProducts": [],
+          "detailedSpecs": {
+            "cpu": "Intel Core i5 7th Gen",
+            "gpu": "Intel HD Graphics",
+            "ram": "8GB DDR4",
+            "storage": "256GB NVMe SSD",
+            "display": "14.1 بوصة",
+            "resolution": "1920x1080",
+            "battery": "-",
+            "os": "Windows 11",
+            "weight": "-",
+            "ports": [
+              "USB-A",
+              "HDMI",
+              "RJ45"
+            ]
+          },
+          "gallery": [],
+          "longDescription": "لابتوب يجمع بين الاعتمادية والسرعة وسهولة الاستخدام، مناسب للشغل والدراسة والأعمال المكتبية.",
+          "stock": 5,
+          "sku": "LP-DL5480-129",
+          "warrantyMonths": 6,
+          "releaseDate": "2025-01-01"
+        }
+      }
+    ]
+  }
+]

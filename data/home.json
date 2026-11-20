@@ -1,57 +1,88 @@
 [
   {
-    "_id": "6abafad8451e08178a1b3d72",
-    "createdAt": "2026-09-28T23:40:08.917Z",
-    "updatedAt": "2026-09-28T23:40:08.917Z",
-    "cardIcons": [
-      "shield",
-      "users",
-      "clipboard"
-    ],
-    "i18n": {
-      "en": {
-        "badge": "Mystery Shopping · Auditing · CX",
-        "heroTitle": "See your business the way your customers actually see it.",
-        "heroSummary": "Qualx is a company specialized in evaluating customer experience and quality control (Mystery Shopping & QA) for businesses and branches across Egypt, through confidential evaluation visits and documented reports. We also provide fully equipped quality staff for your location and deliver real, actionable solutions to help your business grow.",
-        "exploreServices": "Explore our services",
-        "joinTeam": "Join our team",
-        "cards": {
-          "shield": "Confidential, structured evaluation visits across Egypt",
-          "users": "A dedicated quality team, embedded in your operation",
-          "clipboard": "Documented findings turned into real, actionable plans"
+    "_id": "6a48e9d1798ed50fc65da40d",
+    "hero": {
+      "slides": [
+        {
+          "id": 1,
+          "title": "TechLap Elite",
+          "subtitle": "أفضل الأجهزة التقنية بأسعار منافسة",
+          "backgroundImage": "https://images.unsplash.com/photo-1587202372775-e229f172b9d7?w=1600"
         },
-        "uspLabel": "USP",
-        "uspText": "Built from a real understanding of the Egyptian market",
-        "whoWeAreTitle": "Who we are",
-        "whatWeDoTitle": "What we do",
-        "viewAllServices": "View all services →",
-        "learnMore": "Learn more →",
-        "ctaTitle": "Ready to see your business through your customers' eyes?",
-        "ctaSubtitle": "Tell us about your branches — we'll put together a plan.",
-        "ctaButton": "Get in touch"
-      },
-      "ar": {
-        "badge": "تسوق سري · تدقيق · تجربة عملاء",
-        "heroTitle": "شوف شركتك بعين عملائك فعليًا.",
-        "heroSummary": "كواليكس شركة متخصصة في تقييم تجربة العملاء وضبط الجودة (Mystery Shopping & QA) للشركات والفروع في مصر، من خلال زيارات تقييم سرية وتقارير موثقة. كمان بنوفر فريق جودة جاهز لموقعك ونقدم حلول عملية فعلية تساعد شركتك تنمو.",
-        "exploreServices": "استكشف خدماتنا",
-        "joinTeam": "انضم لفريقنا",
-        "cards": {
-          "shield": "زيارات تقييم سرية ومنظمة في كل مصر",
-          "users": "فريق جودة مخصص، مندمج في تشغيلك",
-          "clipboard": "نتائج موثقة تتحول لخطط عملية فعلية"
-        },
-        "uspLabel": "ميزتنا",
-        "uspText": "مبني على فهم حقيقي للسوق المصري",
-        "whoWeAreTitle": "مين إحنا",
-        "whatWeDoTitle": "بنعمل إيه",
-        "viewAllServices": "عرض كل الخدمات ←",
-        "learnMore": "اعرف أكتر ←",
-        "ctaTitle": "جاهز تشوف شركتك بعين عملائك؟",
-        "ctaSubtitle": "احكيلنا عن فروعك — هنجهزلك خطة.",
-        "ctaButton": "تواصل معانا"
-      }
+        {
+          "id": 2,
+          "title": "عروض حصرية",
+          "subtitle": "خصومات تصل إلى 30% على اللابتوبات",
+          "backgroundImage": "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=1600"
+        }
+      ],
+      "buttonText": "تسوق الآن"
     },
-    "__v": 0
+    "stats": {
+      "customersCount": "15,000+",
+      "productsCount": "500+",
+      "satisfactionPercentage": "98",
+      "avgShippingHours": "48"
+    },
+    "features": [
+      {
+        "id": 1,
+        "icon": "truck",
+        "title": "توصيل سريع",
+        "description": "توصيل لجميع المحافظات خلال 48 ساعة"
+      },
+      {
+        "id": 2,
+        "icon": "shield",
+        "title": "ضمان موثوق",
+        "description": "ضمان رسمي على جميع المنتجات"
+      },
+      {
+        "id": 3,
+        "icon": "headphones",
+        "title": "دعم فني",
+        "description": "خدمة عملاء على مدار الساعة"
+      },
+      {
+        "id": 4,
+        "icon": "award",
+        "title": "جودة عالية",
+        "description": "منتجات أصلية 100%"
+      }
+    ],
+    "categories": [
+      {
+        "id": 1,
+        "name": "اللابتوبات",
+        "image": "https://images.unsplash.com/photo-1603302576837-37561b2e2302?w=800",
+        "imageAlt": "لابتوبات",
+        "count": 120
+      },
+      {
+        "id": 2,
+        "name": "الشاشات",
+        "image": "https://images.unsplash.com/photo-1527443224154-c4a3942d3acf?w=800",
+        "imageAlt": "شاشات",
+        "count": 80
+      }
+    ],
+    "testimonials": [
+      {
+        "id": 1,
+        "avatar": "https://images.unsplash.com/photo-1633332755192-727a05c4013d?w=200",
+        "name": "أحمد علي",
+        "role": "مصمم جرافيك",
+        "rating": 5,
+        "comment": "خدمة ممتازة وتوصيل سريع جداً، اللابتوب اللي اشتريته فاق توقعاتي"
+      },
+      {
+        "id": 2,
+        "avatar": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=200",
+        "name": "منى حسن",
+        "role": "مبرمجة",
+        "rating": 5,
+        "comment": "أسعار منافسة ومنتجات أصلية، تعاملت معاهم أكتر من مرة"
+      }
+    ]
   }
 ]

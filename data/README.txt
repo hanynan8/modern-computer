@@ -1,1 +1,1 @@
-Put <collection>.json files here (npm run export-db creates them).
+# المتجر بيقرأ من data/*.json (static). السلة/الدخول/الدفع بس بيستخدموا MongoDB.

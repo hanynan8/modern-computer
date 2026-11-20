@@ -1,0 +1,699 @@
+[
+  {
+    "_id": "6a48e9c1798ed50fc65da40a",
+    "pageTitle": "مكونات الكمبيوتر",
+    "pageSubtitle": "اختر أفضل قطع الكمبيوتر لتجميع جهازك المثالي",
+    "categories": [
+      {
+        "id": "all",
+        "name": "جميع المكونات",
+        "icon": "cpu",
+        "color": "from-purple-600 to-blue-600"
+      },
+      {
+        "id": "cpu",
+        "name": "المعالجات",
+        "icon": "cpu",
+        "color": "from-blue-600 to-cyan-600"
+      },
+      {
+        "id": "gpu",
+        "name": "كروت الشاشة",
+        "icon": "monitor-speaker",
+        "color": "from-green-600 to-emerald-600"
+      },
+      {
+        "id": "ram",
+        "name": "الذاكرة",
+        "icon": "memory-stick",
+        "color": "from-orange-600 to-yellow-600"
+      },
+      {
+        "id": "storage",
+        "name": "التخزين",
+        "icon": "hard-drive",
+        "color": "from-red-600 to-pink-600"
+      },
+      {
+        "id": "cooling",
+        "name": "التبريد",
+        "icon": "fan",
+        "color": "from-cyan-600 to-blue-600"
+      },
+      {
+        "id": "motherboard",
+        "name": "اللوحات الأم",
+        "icon": "cpu",
+        "color": "from-indigo-600 to-purple-600"
+      },
+      {
+        "id": "psu",
+        "name": "وحدات الطاقة",
+        "icon": "zap",
+        "color": "from-yellow-600 to-orange-600"
+      }
+    ],
+    "filters": {
+      "sortOptions": [
+        {
+          "value": "name",
+          "label": "الاسم"
+        },
+        {
+          "value": "price-low",
+          "label": "السعر: من الأقل للأعلى"
+        },
+        {
+          "value": "price-high",
+          "label": "السعر: من الأعلى للأقل"
+        },
+        {
+          "value": "rating",
+          "label": "التقييم"
+        }
+      ]
+    },
+    "products": [
+      {
+        "id": 301,
+        "name": "معالج Core i9-14900K",
+        "category": "cpu",
+        "price": 18990,
+        "currency": "ج.م",
+        "rating": 4.9,
+        "image": "https://images.unsplash.com/photo-1555617981-dac3880eac6e?w=400",
+        "badge": "الأقوى",
+        "specs": {
+          "cores": "24 نواة",
+          "threads": "32 خيط",
+          "baseClock": "3.2GHz",
+          "boostClock": "6.0GHz"
+        },
+        "details": {
+          "relatedProducts": [
+            302,
+            310
+          ],
+          "description": "أقوى معالجات إنتل للألعاب والإنتاجية العالية.",
+          "brand": "Intel",
+          "warranty": "3 سنوات",
+          "stock": 8
+        }
+      },
+      {
+        "id": 302,
+        "name": "كارت شاشة RTX 4080",
+        "category": "gpu",
+        "price": 42990,
+        "currency": "ج.م",
+        "rating": 4.8,
+        "image": "https://images.unsplash.com/photo-1591488320449-011701bb6704?w=400",
+        "specs": {
+          "memory": "16GB GDDR6X",
+          "coreClock": "2205MHz",
+          "power": "320W"
+        },
+        "details": {
+          "relatedProducts": [
+            301,
+            320
+          ],
+          "description": "أداء استثنائي لألعاب 4K والرندرينج الاحترافي.",
+          "brand": "NVIDIA",
+          "warranty": "سنتان",
+          "stock": 6
+        }
+      },
+      {
+        "id": 303,
+        "name": "معالج Ryzen 9 7950X",
+        "category": "cpu",
+        "price": 16490,
+        "currency": "ج.م",
+        "rating": 4.8,
+        "image": "https://images.unsplash.com/photo-1591799264318-7e6ef8ddb7ea?w=400",
+        "badge": "أفضل قيمة",
+        "specs": {
+          "cores": "16 نواة",
+          "threads": "32 خيط",
+          "baseClock": "4.5GHz",
+          "boostClock": "5.7GHz"
+        },
+        "details": {
+          "relatedProducts": [
+            311,
+            321
+          ],
+          "description": "أداء متعدد النواة رهيب لمهام المونتاج والتصميم.",
+          "brand": "AMD",
+          "warranty": "3 سنوات",
+          "stock": 11
+        }
+      },
+      {
+        "id": 304,
+        "name": "معالج Core i5-14600K",
+        "category": "cpu",
+        "price": 9990,
+        "currency": "ج.م",
+        "rating": 4.6,
+        "image": "https://images.unsplash.com/photo-1622957461825-3aa4a3f6ba7f?w=400",
+        "specs": {
+          "cores": "14 نواة",
+          "threads": "20 خيط",
+          "baseClock": "3.5GHz",
+          "boostClock": "5.3GHz"
+        },
+        "details": {
+          "relatedProducts": [
+            313,
+            322
+          ],
+          "description": "اختيار ممتاز لأجهزة الألعاب متوسطة الميزانية.",
+          "brand": "Intel",
+          "warranty": "3 سنوات",
+          "stock": 15
+        }
+      },
+      {
+        "id": 305,
+        "name": "معالج Ryzen 5 8600G",
+        "category": "cpu",
+        "price": 6490,
+        "currency": "ج.م",
+        "rating": 4.5,
+        "image": "https://images.unsplash.com/photo-1587202372634-32705e3bf49c?w=400",
+        "badge": "اقتصادي",
+        "specs": {
+          "cores": "6 أنوية",
+          "threads": "12 خيط",
+          "baseClock": "4.3GHz",
+          "boostClock": "5.0GHz"
+        },
+        "details": {
+          "relatedProducts": [
+            312
+          ],
+          "description": "معالج بكارت شاشة مدمج مناسب للاستخدام المكتبي والألعاب الخفيفة.",
+          "brand": "AMD",
+          "warranty": "سنتان",
+          "stock": 20
+        }
+      },
+      {
+        "id": 306,
+        "name": "كارت شاشة RTX 4070 Super",
+        "category": "gpu",
+        "price": 27990,
+        "currency": "ج.م",
+        "rating": 4.7,
+        "image": "https://images.unsplash.com/photo-1587202372775-e229f172b9d7?w=400",
+        "badge": "الأكثر مبيعاً",
+        "specs": {
+          "memory": "12GB GDDR6X",
+          "coreClock": "1980MHz",
+          "power": "220W"
+        },
+        "details": {
+          "relatedProducts": [
+            303
+          ],
+          "description": "توازن ممتاز بين السعر والأداء لألعاب 1440p.",
+          "brand": "NVIDIA",
+          "warranty": "سنتان",
+          "stock": 9
+        }
+      },
+      {
+        "id": 307,
+        "name": "كارت شاشة RX 7800 XT",
+        "category": "gpu",
+        "price": 23990,
+        "currency": "ج.م",
+        "rating": 4.6,
+        "image": "https://images.unsplash.com/photo-1591489378430-ef2f4f43a71a?w=400",
+        "specs": {
+          "memory": "16GB GDDR6",
+          "coreClock": "2124MHz",
+          "power": "263W"
+        },
+        "details": {
+          "relatedProducts": [
+            306
+          ],
+          "description": "ذاكرة كبيرة وأداء قوي لألعاب 1440p و4K المتوسطة.",
+          "brand": "AMD",
+          "warranty": "سنتان",
+          "stock": 7
+        }
+      },
+      {
+        "id": 308,
+        "name": "كارت شاشة RTX 4060",
+        "category": "gpu",
+        "price": 13990,
+        "currency": "ج.م",
+        "rating": 4.4,
+        "image": "https://images.unsplash.com/photo-1600348759672-862db83e4e58?w=400",
+        "badge": "اقتصادي",
+        "specs": {
+          "memory": "8GB GDDR6",
+          "coreClock": "1830MHz",
+          "power": "115W"
+        },
+        "details": {
+          "relatedProducts": [
+            307
+          ],
+          "description": "كفاءة عالية في استهلاك الطاقة ومناسب لألعاب 1080p.",
+          "brand": "NVIDIA",
+          "warranty": "سنتان",
+          "stock": 18
+        }
+      },
+      {
+        "id": 309,
+        "name": "ذاكرة Corsair Dominator 32GB DDR5",
+        "category": "ram",
+        "price": 4290,
+        "currency": "ج.م",
+        "rating": 4.8,
+        "image": "https://images.unsplash.com/photo-1562976540-1502c2145186?w=400",
+        "badge": "أداء عالي",
+        "specs": {
+          "capacity": "32GB (2x16GB)",
+          "speed": "6000MHz",
+          "type": "DDR5",
+          "latency": "CL30"
+        },
+        "details": {
+          "relatedProducts": [
+            310
+          ],
+          "description": "أداء استثنائي مع إضاءة RGB لأجهزة الألعاب الاحترافية.",
+          "brand": "Corsair",
+          "warranty": "مدى الحياة",
+          "stock": 14
+        }
+      },
+      {
+        "id": 310,
+        "name": "ذاكرة Kingston Fury 16GB DDR5",
+        "category": "ram",
+        "price": 1990,
+        "currency": "ج.م",
+        "rating": 4.6,
+        "image": "https://images.unsplash.com/photo-1541029071515-84cc54f84dc5?w=400",
+        "specs": {
+          "capacity": "16GB (2x8GB)",
+          "speed": "5200MHz",
+          "type": "DDR5",
+          "latency": "CL36"
+        },
+        "details": {
+          "relatedProducts": [
+            309
+          ],
+          "description": "خيار موثوق وسريع للاستخدام اليومي والألعاب.",
+          "brand": "Kingston",
+          "warranty": "مدى الحياة",
+          "stock": 25
+        }
+      },
+      {
+        "id": 311,
+        "name": "ذاكرة G.Skill Trident Z5 32GB DDR5",
+        "category": "ram",
+        "price": 3690,
+        "currency": "ج.م",
+        "rating": 4.7,
+        "image": "https://images.unsplash.com/photo-1587202372616-b43abea06b0c?w=400",
+        "badge": "أفضل قيمة",
+        "specs": {
+          "capacity": "32GB (2x16GB)",
+          "speed": "6400MHz",
+          "type": "DDR5",
+          "latency": "CL32"
+        },
+        "details": {
+          "relatedProducts": [
+            303
+          ],
+          "description": "سرعات عالية جدًا مناسبة لأنظمة إنتل وAMD الحديثة.",
+          "brand": "G.Skill",
+          "warranty": "مدى الحياة",
+          "stock": 12
+        }
+      },
+      {
+        "id": 312,
+        "name": "ذاكرة Crucial 8GB DDR4",
+        "category": "ram",
+        "price": 790,
+        "currency": "ج.م",
+        "rating": 4.3,
+        "image": "https://images.unsplash.com/photo-1591488320449-011701bb6704?w=400",
+        "badge": "اقتصادي",
+        "specs": {
+          "capacity": "8GB",
+          "speed": "3200MHz",
+          "type": "DDR4",
+          "latency": "CL22"
+        },
+        "details": {
+          "relatedProducts": [
+            305
+          ],
+          "description": "خيار موفر لترقية الأجهزة القديمة أو الأنظمة المكتبية.",
+          "brand": "Crucial",
+          "warranty": "مدى الحياة",
+          "stock": 30
+        }
+      },
+      {
+        "id": 313,
+        "name": "قرص Samsung 990 Pro 2TB NVMe",
+        "category": "storage",
+        "price": 6990,
+        "currency": "ج.م",
+        "rating": 4.9,
+        "image": "https://images.unsplash.com/photo-1591370874773-6702e8f12fd8?w=400",
+        "badge": "الأسرع",
+        "specs": {
+          "capacity": "2TB",
+          "interface": "PCIe 4.0 NVMe",
+          "readSpeed": "7450MB/s",
+          "writeSpeed": "6900MB/s"
+        },
+        "details": {
+          "relatedProducts": [
+            304
+          ],
+          "description": "أعلى سرعات القراءة والكتابة لتحميل الألعاب والملفات الضخمة فورًا.",
+          "brand": "Samsung",
+          "warranty": "5 سنوات",
+          "stock": 10
+        }
+      },
+      {
+        "id": 314,
+        "name": "قرص WD Black SN850X 1TB NVMe",
+        "category": "storage",
+        "price": 3490,
+        "currency": "ج.م",
+        "rating": 4.7,
+        "image": "https://images.unsplash.com/photo-1597872200969-2b65d56bd16b?w=400",
+        "specs": {
+          "capacity": "1TB",
+          "interface": "PCIe 4.0 NVMe",
+          "readSpeed": "7300MB/s",
+          "writeSpeed": "6300MB/s"
+        },
+        "details": {
+          "relatedProducts": [
+            313
+          ],
+          "description": "أداء ممتاز مصمم خصيصًا لأجهزة الألعاب.",
+          "brand": "Western Digital",
+          "warranty": "5 سنوات",
+          "stock": 16
+        }
+      },
+      {
+        "id": 315,
+        "name": "قرص Seagate Barracuda 4TB HDD",
+        "category": "storage",
+        "price": 2490,
+        "currency": "ج.م",
+        "rating": 4.2,
+        "image": "https://images.unsplash.com/photo-1600348759672-862db83e4e58?w=400",
+        "badge": "سعة كبيرة",
+        "specs": {
+          "capacity": "4TB",
+          "interface": "SATA III",
+          "rpm": "5400 RPM",
+          "cache": "256MB"
+        },
+        "details": {
+          "relatedProducts": [
+            316
+          ],
+          "description": "مساحة تخزين ضخمة وسعر مناسب للأرشفة والنسخ الاحتياطي.",
+          "brand": "Seagate",
+          "warranty": "سنتان",
+          "stock": 22
+        }
+      },
+      {
+        "id": 316,
+        "name": "قرص Crucial MX500 500GB SSD",
+        "category": "storage",
+        "price": 1290,
+        "currency": "ج.م",
+        "rating": 4.5,
+        "image": "https://images.unsplash.com/photo-1531492746076-161ba9bcdc65?w=400",
+        "badge": "اقتصادي",
+        "specs": {
+          "capacity": "500GB",
+          "interface": "SATA III",
+          "readSpeed": "560MB/s",
+          "writeSpeed": "510MB/s"
+        },
+        "details": {
+          "relatedProducts": [
+            315
+          ],
+          "description": "ترقية رائعة من الهارد التقليدي بسعر في متناول اليد.",
+          "brand": "Crucial",
+          "warranty": "5 سنوات",
+          "stock": 28
+        }
+      },
+      {
+        "id": 317,
+        "name": "مبرد مائي NZXT Kraken X73 360mm",
+        "category": "cooling",
+        "price": 5990,
+        "currency": "ج.م",
+        "rating": 4.8,
+        "image": "https://images.unsplash.com/photo-1587202372534-30c1b3d3c4b1?w=400",
+        "badge": "أداء احترافي",
+        "specs": {
+          "radiatorSize": "360mm",
+          "fans": "3x120mm",
+          "pumpSpeed": "2800 RPM",
+          "lighting": "RGB"
+        },
+        "details": {
+          "relatedProducts": [
+            318
+          ],
+          "description": "تبريد سائل قوي للمعالجات عالية الأداء مع شاشة عرض LCD.",
+          "brand": "NZXT",
+          "warranty": "6 سنوات",
+          "stock": 9
+        }
+      },
+      {
+        "id": 318,
+        "name": "مبرد هوائي Noctua NH-D15",
+        "category": "cooling",
+        "price": 2890,
+        "currency": "ج.م",
+        "rating": 4.9,
+        "image": "https://images.unsplash.com/photo-1587202372583-49330a15584d?w=400",
+        "badge": "الأكثر موثوقية",
+        "specs": {
+          "towers": "برجين مزدوجين",
+          "fans": "2x140mm",
+          "height": "165mm",
+          "tdpSupport": "حتى 250W"
+        },
+        "details": {
+          "relatedProducts": [
+            317
+          ],
+          "description": "أفضل مبرد هوائي في السوق من حيث الأداء والهدوء.",
+          "brand": "Noctua",
+          "warranty": "6 سنوات",
+          "stock": 13
+        }
+      },
+      {
+        "id": 319,
+        "name": "مروحة كيس Corsair iCUE SP120 (3 قطع)",
+        "category": "cooling",
+        "price": 1190,
+        "currency": "ج.م",
+        "rating": 4.5,
+        "image": "https://images.unsplash.com/photo-1587202372162-6cbf2f9e6f8a?w=400",
+        "badge": "اقتصادي",
+        "specs": {
+          "size": "120mm",
+          "quantity": "3 مراوح",
+          "speed": "1300 RPM",
+          "lighting": "RGB"
+        },
+        "details": {
+          "relatedProducts": [
+            317
+          ],
+          "description": "مراوح إضافية لتحسين تدفق الهواء داخل الكيس مع إضاءة جذابة.",
+          "brand": "Corsair",
+          "warranty": "سنتان",
+          "stock": 24
+        }
+      },
+      {
+        "id": 320,
+        "name": "لوحة أم ASUS ROG Strix Z790-E",
+        "category": "motherboard",
+        "price": 12990,
+        "currency": "ج.م",
+        "rating": 4.7,
+        "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?w=400",
+        "badge": "للمحترفين",
+        "specs": {
+          "socket": "LGA 1700",
+          "chipset": "Z790",
+          "ramSlots": "4 (DDR5 حتى 128GB)",
+          "wifi": "Wi-Fi 6E مدمج"
+        },
+        "details": {
+          "relatedProducts": [
+            301
+          ],
+          "description": "لوحة أم متطورة بمنافذ PCIe 5.0 وتصميم طاقة قوي للمعالجات الكبيرة.",
+          "brand": "ASUS",
+          "warranty": "3 سنوات",
+          "stock": 7
+        }
+      },
+      {
+        "id": 321,
+        "name": "لوحة أم MSI MAG B650 Tomahawk",
+        "category": "motherboard",
+        "price": 7490,
+        "currency": "ج.م",
+        "rating": 4.6,
+        "image": "https://images.unsplash.com/photo-1591370874773-6702e8f12fd8?w=400",
+        "badge": "أفضل قيمة",
+        "specs": {
+          "socket": "AM5",
+          "chipset": "B650",
+          "ramSlots": "4 (DDR5 حتى 128GB)",
+          "wifi": "Wi-Fi 6 اختياري"
+        },
+        "details": {
+          "relatedProducts": [
+            303
+          ],
+          "description": "توازن ممتاز بين السعر والمميزات لأنظمة AMD الحديثة.",
+          "brand": "MSI",
+          "warranty": "3 سنوات",
+          "stock": 11
+        }
+      },
+      {
+        "id": 322,
+        "name": "لوحة أم Gigabyte B760M DS3H",
+        "category": "motherboard",
+        "price": 4290,
+        "currency": "ج.م",
+        "rating": 4.3,
+        "image": "https://images.unsplash.com/photo-1600348759672-862db83e4e58?w=400",
+        "badge": "اقتصادي",
+        "specs": {
+          "socket": "LGA 1700",
+          "chipset": "B760",
+          "ramSlots": "4 (DDR4 حتى 128GB)",
+          "wifi": "غير مدمج"
+        },
+        "details": {
+          "relatedProducts": [
+            304
+          ],
+          "description": "خيار عملي وموثوق لأنظمة إنتل متوسطة الميزانية.",
+          "brand": "Gigabyte",
+          "warranty": "3 سنوات",
+          "stock": 19
+        }
+      },
+      {
+        "id": 323,
+        "name": "وحدة طاقة Corsair RM850x 850W",
+        "category": "psu",
+        "price": 4990,
+        "currency": "ج.م",
+        "rating": 4.9,
+        "image": "https://images.unsplash.com/photo-1587202372775-e229f172b9d7?w=400",
+        "badge": "80+ Gold",
+        "specs": {
+          "wattage": "850W",
+          "efficiency": "80 Plus Gold",
+          "modular": "Fully Modular",
+          "fan": "135mm صامت"
+        },
+        "details": {
+          "relatedProducts": [
+            302
+          ],
+          "description": "وحدة طاقة موثوقة وهادئة تكفي لأقوى أنظمة الألعاب.",
+          "brand": "Corsair",
+          "warranty": "10 سنوات",
+          "stock": 10
+        }
+      },
+      {
+        "id": 324,
+        "name": "وحدة طاقة MSI MAG A650BN 650W",
+        "category": "psu",
+        "price": 2290,
+        "currency": "ج.م",
+        "rating": 4.4,
+        "image": "https://images.unsplash.com/photo-1522204523234-8729aa6e3d5f?w=400",
+        "badge": "اقتصادي",
+        "specs": {
+          "wattage": "650W",
+          "efficiency": "80 Plus Bronze",
+          "modular": "غير موديولار",
+          "fan": "120mm"
+        },
+        "details": {
+          "relatedProducts": [
+            306
+          ],
+          "description": "خيار موثوق وبسعر مناسب لأنظمة الألعاب متوسطة الاستهلاك.",
+          "brand": "MSI",
+          "warranty": "5 سنوات",
+          "stock": 21
+        }
+      },
+      {
+        "id": 325,
+        "name": "وحدة طاقة be quiet! Straight Power 12 1000W",
+        "category": "psu",
+        "price": 7990,
+        "currency": "ج.م",
+        "rating": 4.8,
+        "image": "https://images.unsplash.com/photo-1591489378430-ef2f4f43a71a?w=400",
+        "badge": "أداء احترافي",
+        "specs": {
+          "wattage": "1000W",
+          "efficiency": "80 Plus Platinum",
+          "modular": "Fully Modular",
+          "fan": "135mm صامت جداً"
+        },
+        "details": {
+          "relatedProducts": [
+            320
+          ],
+          "description": "مناسبة لأنظمة الألعاب الفائقة وإعدادات كروت الشاشة المزدوجة.",
+          "brand": "be quiet!",
+          "warranty": "10 سنوات",
+          "stock": 5
+        }
+      }
+    ]
+  }
+]

@@ -1,0 +1,113 @@
+[
+  {
+    "_id": "6a48ee0b798ed50fc65da419",
+    "pageTitle": "موقعنا",
+    "pageSubtitle": "تعرف على مواقعنا وكيفية الوصول إلينا",
+    "mainLocation": {
+      "title": "الموقع الرئيسي",
+      "details": [
+        {
+          "icon": "MapPin",
+          "color": "from-purple-500 to-blue-500",
+          "title": "العنوان",
+          "description": "أسوان، مصر"
+        },
+        {
+          "icon": "Phone",
+          "color": "from-green-500 to-emerald-500",
+          "title": "الهاتف",
+          "description": "+20 120 106 1216"
+        },
+        {
+          "icon": "Mail",
+          "color": "from-blue-500 to-cyan-500",
+          "title": "البريد الإلكتروني",
+          "description": "support@techlap.com"
+        }
+      ]
+    },
+    "workingHours": {
+      "title": "ساعات العمل",
+      "schedule": [
+        {
+          "day": "السبت - الأربعاء",
+          "hours": "9:00 ص - 9:00 م"
+        },
+        {
+          "day": "الخميس",
+          "hours": "9:00 ص - 6:00 م"
+        },
+        {
+          "day": "الجمعة",
+          "hours": "مغلق"
+        }
+      ]
+    },
+    "mapSection": {
+      "title": "موقعنا على الخريطة",
+      "placeholder": {
+        "title": "TechLap",
+        "address": "أسوان، مصر"
+      },
+      "buttons": {
+        "directions": "اتجاهات",
+        "share": "مشاركة"
+      }
+    },
+    "quickContact": {
+      "title": "تواصل سريع",
+      "methods": [
+        {
+          "icon": "Phone",
+          "label": "اتصل بنا",
+          "value": "+20 120 106 1216"
+        },
+        {
+          "icon": "Mail",
+          "label": "راسلنا",
+          "value": "support@techlap.com"
+        }
+      ]
+    },
+    "branches": {
+      "title": "فروعنا",
+      "subtitle": "تفضل بزيارة أقرب فرع لك",
+      "viewButton": "عرض التفاصيل",
+      "locations": [
+        {
+          "name": "فرع أسوان الرئيسي",
+          "color": "from-purple-500 to-blue-500",
+          "address": "شارع كورنيش النيل، أسوان",
+          "phone": "+20 120 106 1216",
+          "hours": "9ص - 9م يومياً"
+        }
+      ]
+    },
+    "features": {
+      "title": "لماذا تزورنا؟",
+      "subtitle": "تجربة تسوق مميزة تنتظرك",
+      "items": [
+        {
+          "icon": "Coffee",
+          "color": "from-orange-500 to-red-500",
+          "title": "بيئة مريحة",
+          "description": "صالة عرض مكيفة ومريحة لتجربة المنتجات قبل الشراء"
+        },
+        {
+          "icon": "Wifi",
+          "color": "from-blue-500 to-cyan-500",
+          "title": "واي فاي مجاني",
+          "description": "استمتع بإنترنت سريع أثناء زيارتك"
+        }
+      ]
+    },
+    "visitSection": {
+      "title": "زرنا اليوم",
+      "subtitle": "فريقنا في انتظارك لمساعدتك في اختيار الجهاز المثالي",
+      "buttons": {
+        "visit": "زيارة الموقع",
+        "call": "الاتصال بنا"
+      }
+    }
+  }
+]

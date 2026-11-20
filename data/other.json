@@ -1,0 +1,208 @@
+[
+  {
+    "_id": "6a48ee74798ed50fc65da430",
+    "pageTitle": "منتجات أخرى",
+    "pageSubtitle": "اكتشف مجموعة واسعة من المنتجات التقنية والإلكترونية المختارة بعناية لتلبية جميع احتياجاتك",
+    "categories": [
+      {
+        "id": "all",
+        "name": "جميع المنتجات",
+        "icon": "cpu",
+        "color": "from-purple-600 to-blue-600"
+      },
+      {
+        "id": "accessories",
+        "name": "الإكسسوارات",
+        "icon": "headphones",
+        "color": "from-green-500 to-blue-600"
+      },
+      {
+        "id": "storage",
+        "name": "وحدات التخزين",
+        "icon": "hard-drive",
+        "color": "from-blue-600 to-indigo-600"
+      },
+      {
+        "id": "networking",
+        "name": "الشبكات",
+        "icon": "wifi",
+        "color": "from-orange-500 to-red-600"
+      },
+      {
+        "id": "peripherals",
+        "name": "الطرفيات",
+        "icon": "gamepad2",
+        "color": "from-pink-500 to-purple-600"
+      },
+      {
+        "id": "cables",
+        "name": "الكابلات",
+        "icon": "zap",
+        "color": "from-yellow-500 to-orange-600"
+      }
+    ],
+    "filters": {
+      "sortOptions": [
+        {
+          "value": "name",
+          "label": "الاسم"
+        },
+        {
+          "value": "price-low",
+          "label": "السعر: من الأقل للأعلى"
+        },
+        {
+          "value": "price-high",
+          "label": "السعر: من الأعلى للأقل"
+        },
+        {
+          "value": "rating",
+          "label": "التقييم"
+        },
+        {
+          "value": "performance",
+          "label": "الأداء"
+        },
+        {
+          "value": "brand",
+          "label": "العلامة التجارية"
+        },
+        {
+          "value": "popularity",
+          "label": "الأكثر شعبية"
+        }
+      ]
+    },
+    "products": [
+      {
+        "id": 401,
+        "name": "راوتر واي فاي 6",
+        "category": "networking",
+        "price": 3490,
+        "currency": "ج.م",
+        "rating": 4.4,
+        "brand": "NetSpeed",
+        "image": "https://images.unsplash.com/photo-1606904825846-647eb07f5be2?w=400",
+        "badge": "جديد",
+        "discount": null,
+        "description": "راوتر واي فاي 6 بسرعات عالية وتغطية واسعة مناسب للمنازل والمكاتب.",
+        "specs": {
+          "standard": "Wi-Fi 6 (802.11ax)",
+          "speed": "3000 Mbps",
+          "antennas": "4 هوائيات خارجية",
+          "range": "تغطية حتى 250 م²"
+        },
+        "features": [
+          "تحكم عبر التطبيق",
+          "شبكة ضيوف منفصلة",
+          "دعم Mesh"
+        ],
+        "benchmarks": {
+          "throughputTest": "2800 Mbps فعلي"
+        },
+        "performanceScore": 88,
+        "details": {
+          "relatedProducts": [
+            402
+          ],
+          "isAvailable": true,
+          "stock": 25,
+          "sku": "NET-WR6-401",
+          "manufacturer": "NetSpeed Inc.",
+          "warranty": "سنتان",
+          "originCountry": "الصين",
+          "releaseDate": "2025-09-01",
+          "dimensions": "25 × 18 × 5 سم",
+          "weight": "450 جرام",
+          "colors": [
+            "أسود",
+            "أبيض"
+          ],
+          "ports": [
+            "4x Gigabit LAN",
+            "1x WAN",
+            "USB 3.0"
+          ],
+          "energyConsumption": "12 واط",
+          "packaging": {
+            "boxType": "علبة كرتون فاخرة",
+            "recyclable": true
+          },
+          "shippingInfo": {
+            "shipsFrom": "القاهرة",
+            "deliveryEstimation": "2-4 أيام عمل",
+            "internationalShipping": false
+          },
+          "returnPolicy": {
+            "period": "14 يوم"
+          },
+          "promotions": {
+            "bundleOffer": "خصم 10% عند الشراء مع كابل شبكة"
+          },
+          "customerReviews": [
+            {
+              "user": "كريم فتحي",
+              "rating": 5,
+              "title": "تغطية ممتازة",
+              "comment": "الراوتر غطى شقتي بالكامل بدون أي انقطاع",
+              "date": "2025-11-20"
+            }
+          ],
+          "support": {
+            "hotline": "19000",
+            "email": "support@techlap.com"
+          },
+          "tags": [
+            "واي فاي",
+            "شبكات",
+            "منزلي"
+          ],
+          "availabilityLocations": [
+            "القاهرة",
+            "الجيزة",
+            "الإسكندرية"
+          ]
+        }
+      },
+      {
+        "id": 402,
+        "name": "هب USB-C متعدد المنافذ",
+        "category": "cables",
+        "price": 890,
+        "currency": "ج.م",
+        "rating": 4.2,
+        "brand": "ConnectPro",
+        "image": "https://images.unsplash.com/photo-1625948515291-69613efd103f?w=400",
+        "description": "هب USB-C بمنافذ متعددة لتوصيل الشاشات والأجهزة الطرفية بسهولة.",
+        "specs": {
+          "ports": "7 في 1",
+          "connectivity": "USB-C",
+          "hdmiOutput": "4K@60Hz"
+        },
+        "features": [
+          "تصميم مدمج",
+          "نقل بيانات سريع"
+        ],
+        "details": {
+          "relatedProducts": [
+            401
+          ],
+          "isAvailable": true,
+          "stock": 40,
+          "manufacturer": "ConnectPro",
+          "warranty": "سنة واحدة",
+          "weight": "80 جرام",
+          "colors": [
+            "رمادي فضائي"
+          ],
+          "ports": [
+            "HDMI",
+            "3x USB-A",
+            "SD Card",
+            "USB-C PD"
+          ]
+        }
+      }
+    ]
+  }
+]

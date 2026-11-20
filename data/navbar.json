@@ -1,43 +1,31 @@
 [
   {
-    "_id": "6abafada451e08178a1b3d7b",
-    "createdAt": "2026-09-28T23:40:10.860Z",
-    "updatedAt": "2026-09-28T23:40:10.860Z",
-    "brandLetter": "Q",
-    "links": [
+    "_id": "6a7fec5616382474fd74ad2b",
+    "company": {
+      "name": "المهندس لينك",
+      "logoGradient": "from-purple-600 to-blue-600"
+    },
+    "navLinks": [
       {
-        "id": "home",
+        "text": "الرئيسية",
         "href": "/"
       },
       {
-        "id": "services",
-        "href": "/services"
+        "text": "المنتجات",
+        "href": "#"
       },
       {
-        "id": "careers",
-        "href": "/careers"
-      }
-    ],
-    "i18n": {
-      "en": {
-        "brand": "Qualx",
-        "links": {
-          "home": "Home",
-          "services": "Services",
-          "careers": "Careers"
-        },
-        "quote": "Get a quote"
+        "text": "من نحن",
+        "href": "/aboutus"
       },
-      "ar": {
-        "brand": "Qualx",
-        "links": {
-          "home": "الرئيسية",
-          "services": "خدماتنا",
-          "careers": "وظائف"
-        },
-        "quote": "اطلب عرض سعر"
+      {
+        "text": "موقعنا",
+        "href": "/location"
+      },
+      {
+        "text": "اتصل بنا",
+        "href": "/contact"
       }
-    },
-    "__v": 0
+    ]
   }
 ]

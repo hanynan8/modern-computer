@@ -1,0 +1,144 @@
+[
+  {
+    "_id": "6a48ee5b798ed50fc65da42a",
+    "pageTitle": "أنظمة نقاط البيع",
+    "pageSubtitle": "اكتشف أفضل أنظمة نقاط البيع والحاسبات المكتبية لنشاطك التجاري",
+    "categories": [
+      {
+        "id": "all",
+        "name": "جميع المنتجات",
+        "icon": "cpu",
+        "color": "from-purple-600 to-blue-600"
+      },
+      {
+        "id": "desktop-pos",
+        "name": "أنظمة مكتبية",
+        "icon": "monitor",
+        "color": "from-blue-600 to-cyan-600"
+      },
+      {
+        "id": "tablet-pos",
+        "name": "أنظمة لوحية",
+        "icon": "monitor-speaker",
+        "color": "from-green-600 to-emerald-600"
+      },
+      {
+        "id": "mobile-pos",
+        "name": "أنظمة محمولة",
+        "icon": "smartphone",
+        "color": "from-orange-600 to-red-600"
+      },
+      {
+        "id": "accessories",
+        "name": "الاكسسوارات",
+        "icon": "gamepad2",
+        "color": "from-purple-600 to-pink-600"
+      }
+    ],
+    "filters": {
+      "sortOptions": [
+        {
+          "value": "name",
+          "label": "الاسم"
+        },
+        {
+          "value": "price-low",
+          "label": "السعر: من الأقل للأعلى"
+        },
+        {
+          "value": "price-high",
+          "label": "السعر: من الأعلى للأقل"
+        },
+        {
+          "value": "rating",
+          "label": "التقييم"
+        },
+        {
+          "value": "performance",
+          "label": "الأداء"
+        },
+        {
+          "value": "newest",
+          "label": "الأحدث"
+        },
+        {
+          "value": "popular",
+          "label": "الأكثر شهرة"
+        }
+      ],
+      "brands": [
+        "HP",
+        "Dell",
+        "Lenovo",
+        "ASUS",
+        "Acer",
+        "MSI",
+        "Samsung",
+        "LG"
+      ],
+      "features": [
+        "شاشة لمس",
+        "واي فاي",
+        "بلوتوث",
+        "كاميرا",
+        "طابعة حرارية",
+        "قارئ باركود"
+      ]
+    },
+    "products": [
+      {
+        "id": 601,
+        "name": "نظام نقاط بيع مكتبي شاشة لمس 15 بوصة",
+        "category": "desktop-pos",
+        "price": 15990,
+        "currency": "EGP",
+        "rating": 4.6,
+        "image": "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=400",
+        "badge": "الأكثر طلباً",
+        "manufacturer": "PosTech",
+        "model": "PT-1500",
+        "sku": "POS-DT15-601",
+        "isActive": true,
+        "stock": 18,
+        "description": "نظام نقاط بيع متكامل بشاشة لمس عالية الدقة، مناسب للمطاعم والمحلات التجارية.",
+        "specs": {
+          "processor": "Intel Celeron J4125",
+          "ram": "8GB",
+          "storage": "128GB SSD",
+          "display": "15.6 بوصة لمس",
+          "os": "Windows 10 IoT"
+        },
+        "features": [
+          "شاشة لمس متعددة اللمسات",
+          "دعم طابعة إيصالات",
+          "قارئ بطاقات مدمج",
+          "اتصال واي فاي وإيثرنت"
+        ],
+        "benchmarks": {
+          "bootTime": "8 ثواني",
+          "transactionSpeed": "أقل من ثانية"
+        },
+        "usageScenarios": [
+          "مطاعم",
+          "كافيهات",
+          "محلات بيع بالتجزئة",
+          "صيدليات"
+        ],
+        "warrantyMonths": 24,
+        "weightKg": 3.2,
+        "modelNumber": "PT-1500-2025",
+        "ean": "6221234567890",
+        "releaseDate": "2025-07-01",
+        "performanceScore": 82,
+        "supportedLanguages": [
+          "العربية",
+          "الإنجليزية"
+        ],
+        "certifications": [
+          "CE",
+          "FCC"
+        ]
+      }
+    ]
+  }
+]

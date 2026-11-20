@@ -1,0 +1,260 @@
+[
+  {
+    "_id": "6a48e9df798ed50fc65da410",
+    "aboutus": [
+      {
+        "aboutus": [
+          {
+            "aboutus": [
+              {
+                "hero": {
+                  "backgroundImage": "https://images.unsplash.com/photo-1497366216548-37526070297c?w=1600",
+                  "title": "TechLap",
+                  "subtitle": "شريكك التقني الموثوق منذ 2015",
+                  "description": "نقدم أفضل أجهزة الكمبيوتر والاكسسوارات التقنية بجودة عالمية وأسعار منافسة",
+                  "additionalContent": {
+                    "welcomeMessage": "مرحباً بك في عالم التقنية",
+                    "primaryButton": {
+                      "text": "قصتنا"
+                    },
+                    "secondaryButton": {
+                      "text": "تسوق الآن"
+                    }
+                  }
+                },
+                "story": {
+                  "title": "قصتنا",
+                  "image": "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800",
+                  "tabs": [
+                    {
+                      "id": "history",
+                      "title": "بداية الحلم",
+                      "content": {
+                        "title": "كيف بدأنا",
+                        "description": "بدأنا كمتجر صغير عام 2015 بحلم تقديم أفضل الأجهزة التقنية لعملائنا.",
+                        "milestones": [
+                          {
+                            "color": "purple",
+                            "text": "2015 - تأسيس الشركة"
+                          },
+                          {
+                            "color": "blue",
+                            "text": "2018 - افتتاح أول فرع"
+                          },
+                          {
+                            "color": "green",
+                            "text": "2022 - إطلاق المتجر الإلكتروني"
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "id": "milestones",
+                      "title": "إنجازاتنا",
+                      "content": {
+                        "title": "محطات مهمة",
+                        "timeline": [
+                          {
+                            "color": "purple",
+                            "year": "2020",
+                            "title": "10 آلاف عميل",
+                            "description": "تجاوزنا 10 آلاف عميل راضٍ"
+                          },
+                          {
+                            "color": "blue",
+                            "year": "2023",
+                            "title": "توسع الفروع",
+                            "description": "افتتحنا 5 فروع جديدة"
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "id": "future",
+                      "title": "رؤية المستقبل",
+                      "content": {
+                        "title": "إلى أين نتجه",
+                        "description": "نطمح للتوسع في جميع أنحاء المنطقة وتقديم أحدث التقنيات.",
+                        "features": [
+                          {
+                            "icon": "rocket",
+                            "gradient": "from-purple-100 to-blue-100",
+                            "title": "توسع إقليمي"
+                          },
+                          {
+                            "icon": "zap",
+                            "gradient": "from-blue-100 to-cyan-100",
+                            "title": "تقنيات حديثة"
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                },
+                "mission": {
+                  "title": "مهمتنا",
+                  "content": "تقديم أفضل الأجهزة التقنية بجودة عالية وأسعار منافسة مع خدمة عملاء استثنائية."
+                },
+                "vision": {
+                  "title": "رؤيتنا",
+                  "content": "أن نكون الوجهة الأولى للتسوق التقني في المنطقة."
+                },
+                "sections": {
+                  "valuesSection": {
+                    "title": "قيمنا الأساسية",
+                    "subtitle": "المبادئ التي تقودنا نحو التميز"
+                  },
+                  "whyChooseUsSection": {
+                    "title": "لماذا تختارنا؟",
+                    "subtitle": "نتميز بما يلي"
+                  },
+                  "brandsSection": {
+                    "title": "نتعامل مع أفضل الماركات",
+                    "subtitle": "شركاء نجاحنا"
+                  },
+                  "achievementsSection": {
+                    "title": "إنجازاتنا بالأرقام",
+                    "subtitle": "أرقام تتحدث عن نفسها"
+                  },
+                  "reviewsSection": {
+                    "title": "آراء عملائنا",
+                    "subtitle": "قالوا عنا"
+                  },
+                  "ctaSection": {
+                    "title": "ابدأ رحلتك التقنية",
+                    "subtitle": "اكتشف أفضل العروض الآن",
+                    "buttons": {
+                      "primary": {
+                        "text": "تصفح اللابتوبات"
+                      },
+                      "secondary": {
+                        "text": "تواصل معنا"
+                      }
+                    }
+                  }
+                },
+                "values": [
+                  {
+                    "id": 1,
+                    "icon": "shield",
+                    "title": "الجودة",
+                    "description": "نضمن أعلى معايير الجودة في جميع منتجاتنا"
+                  },
+                  {
+                    "id": 2,
+                    "icon": "heart",
+                    "title": "رضا العملاء",
+                    "description": "رضاكم هو هدفنا الأول"
+                  },
+                  {
+                    "id": 3,
+                    "icon": "zap",
+                    "title": "السرعة",
+                    "description": "توصيل سريع وخدمة فورية"
+                  },
+                  {
+                    "id": 4,
+                    "icon": "award",
+                    "title": "التميز",
+                    "description": "نسعى دائماً للتميز والإبداع"
+                  }
+                ],
+                "whyChooseUs": [
+                  {
+                    "id": 1,
+                    "icon": "truck",
+                    "gradient": "from-purple-500 to-pink-500",
+                    "title": "توصيل سريع",
+                    "description": "لجميع المحافظات خلال 48 ساعة"
+                  },
+                  {
+                    "id": 2,
+                    "icon": "shield",
+                    "gradient": "from-blue-500 to-cyan-500",
+                    "title": "ضمان شامل",
+                    "description": "ضمان رسمي على كل المنتجات"
+                  },
+                  {
+                    "id": 3,
+                    "icon": "messageCircle",
+                    "gradient": "from-green-500 to-emerald-500",
+                    "title": "دعم فني",
+                    "description": "متواجدون على مدار الساعة"
+                  }
+                ],
+                "brands": [
+                  {
+                    "name": "Intel",
+                    "logo": null
+                  },
+                  {
+                    "name": "AMD",
+                    "logo": null
+                  },
+                  {
+                    "name": "NVIDIA",
+                    "logo": null
+                  },
+                  {
+                    "name": "ASUS",
+                    "logo": null
+                  }
+                ],
+                "achievements": [
+                  {
+                    "id": 1,
+                    "icon": "users",
+                    "number": "15K+",
+                    "label": "عميل سعيد"
+                  },
+                  {
+                    "id": 2,
+                    "icon": "package",
+                    "number": "500+",
+                    "label": "منتج"
+                  },
+                  {
+                    "id": 3,
+                    "icon": "award",
+                    "number": "9",
+                    "label": "سنوات خبرة"
+                  },
+                  {
+                    "id": 4,
+                    "icon": "trending-up",
+                    "number": "98%",
+                    "label": "رضا العملاء"
+                  }
+                ],
+                "reviews": [
+                  {
+                    "id": 1,
+                    "image": "https://images.unsplash.com/photo-1633332755192-727a05c4013d?w=200",
+                    "name": "أحمد علي",
+                    "role": "مصمم جرافيك",
+                    "rating": 5,
+                    "comment": "أفضل متجر تقني تعاملت معه، خدمة ممتازة"
+                  }
+                ],
+                "trustIndicators": [
+                  {
+                    "number": "9+",
+                    "label": "سنوات"
+                  },
+                  {
+                    "number": "15K+",
+                    "label": "عميل"
+                  },
+                  {
+                    "number": "24/7",
+                    "label": "دعم"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]

@@ -1,0 +1,131 @@
+[
+  {
+    "_id": "6a48ee1a798ed50fc65da41c",
+    "pageTitle": "اتصل بنا",
+    "pageSubtitle": "نحن هنا لمساعدتك في أي وقت",
+    "contactInfo": [
+      {
+        "icon": "Phone",
+        "color": "from-purple-500 to-blue-500",
+        "title": "الهاتف",
+        "details": [
+          "+20 120 106 1216",
+          "+20 100 000 0000"
+        ]
+      },
+      {
+        "icon": "Mail",
+        "color": "from-blue-500 to-cyan-500",
+        "title": "البريد الإلكتروني",
+        "details": [
+          "support@techlap.com",
+          "sales@techlap.com"
+        ]
+      },
+      {
+        "icon": "MapPin",
+        "color": "from-green-500 to-emerald-500",
+        "title": "العنوان",
+        "details": [
+          "أسوان، مصر"
+        ]
+      },
+      {
+        "icon": "Clock",
+        "color": "from-orange-500 to-red-500",
+        "title": "ساعات العمل",
+        "details": [
+          "السبت - الخميس: 9ص - 9م",
+          "الجمعة: مغلق"
+        ]
+      }
+    ],
+    "formLabels": {
+      "formTitle": "أرسل لنا رسالة",
+      "formSubtitle": "سنقوم بالرد عليك في أقرب وقت ممكن",
+      "successMessage": "تم إرسال رسالتك بنجاح! سنتواصل معك قريباً.",
+      "fields": {
+        "name": {
+          "label": "الاسم الكامل",
+          "placeholder": "أدخل اسمك"
+        },
+        "email": {
+          "label": "البريد الإلكتروني",
+          "placeholder": "example@email.com"
+        },
+        "phone": {
+          "label": "رقم الهاتف",
+          "placeholder": "01xxxxxxxxx"
+        },
+        "subject": {
+          "label": "الموضوع",
+          "placeholder": "موضوع الرسالة"
+        },
+        "message": {
+          "label": "الرسالة",
+          "placeholder": "اكتب رسالتك هنا..."
+        },
+        "type": {
+          "label": "نوع الاستفسار",
+          "options": [
+            {
+              "value": "general",
+              "label": "استفسار عام"
+            },
+            {
+              "value": "support",
+              "label": "دعم فني"
+            },
+            {
+              "value": "sales",
+              "label": "مبيعات"
+            },
+            {
+              "value": "partnership",
+              "label": "شراكة"
+            }
+          ]
+        }
+      },
+      "submitButton": {
+        "default": "إرسال الرسالة",
+        "loading": "جاري الإرسال..."
+      }
+    },
+    "contactMethods": [
+      {
+        "icon": "MessageCircle",
+        "color": "from-green-500 to-emerald-500",
+        "title": "واتساب",
+        "description": "تواصل معنا مباشرة عبر واتساب للرد السريع",
+        "buttonText": "ابدأ المحادثة"
+      },
+      {
+        "icon": "Headphones",
+        "color": "from-blue-500 to-cyan-500",
+        "title": "الدعم الفني",
+        "description": "فريق الدعم الفني جاهز لمساعدتك على مدار الساعة",
+        "buttonText": "تواصل مع الدعم"
+      }
+    ],
+    "faqSection": {
+      "title": "الأسئلة الشائعة",
+      "subtitle": "إجابات على أكثر الأسئلة شيوعاً",
+      "items": [
+        {
+          "question": "ما هي مدة التوصيل؟",
+          "answer": "يستغرق التوصيل عادة من 2 إلى 5 أيام عمل حسب المحافظة."
+        },
+        {
+          "question": "هل يوجد ضمان على المنتجات؟",
+          "answer": "نعم، جميع منتجاتنا أصلية وتأتي مع ضمان الوكيل المعتمد."
+        }
+      ]
+    },
+    "socialSection": {
+      "title": "تابعنا على وسائل التواصل",
+      "subtitle": "كن أول من يعرف عن أحدث العروض والمنتجات",
+      "storeButton": "تصفح المتجر"
+    }
+  }
+]

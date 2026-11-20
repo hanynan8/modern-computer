@@ -1,0 +1,206 @@
+[
+  {
+    "_id": "6a48e970798ed50fc65da400",
+    "pageTitle": "عالم الاكسسوارات التقنية",
+    "pageSubtitle": "اكتشف أحدث الاكسسوارات التقنية لتعزيز تجربتك الرقمية",
+    "categories": [
+      {
+        "id": "all",
+        "name": "جميع الاكسسوارات",
+        "icon": "smartphone",
+        "color": "from-purple-600 to-blue-600"
+      },
+      {
+        "id": "headphones",
+        "name": "سماعات",
+        "icon": "headphones",
+        "color": "from-blue-600 to-cyan-600"
+      },
+      {
+        "id": "mouse",
+        "name": "فأرة الكمبيوتر",
+        "icon": "mouse",
+        "color": "from-green-600 to-emerald-600"
+      },
+      {
+        "id": "keyboard",
+        "name": "لوحة المفاتيح",
+        "icon": "keyboard",
+        "color": "from-red-600 to-pink-600"
+      },
+      {
+        "id": "cables",
+        "name": "كابلات وشواحن",
+        "icon": "cable",
+        "color": "from-orange-600 to-yellow-600"
+      },
+      {
+        "id": "gaming",
+        "name": "اكسسوارات الألعاب",
+        "icon": "gamepad2",
+        "color": "from-pink-600 to-rose-600"
+      }
+    ],
+    "filters": {
+      "sortOptions": [
+        {
+          "value": "name",
+          "label": "الاسم"
+        },
+        {
+          "value": "price-low",
+          "label": "السعر: من الأقل للأعلى"
+        },
+        {
+          "value": "price-high",
+          "label": "السعر: من الأعلى للأقل"
+        },
+        {
+          "value": "rating",
+          "label": "التقييم"
+        }
+      ]
+    },
+    "products": [
+      {
+        "id": 1,
+        "name": "سماعة بلوتوث لاسلكية",
+        "category": "headphones",
+        "price": 2990,
+        "currency": "جنية مصري",
+        "originalPrice": 3500,
+        "discount": 15,
+        "rating": 4.5,
+        "image": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=400",
+        "badge": "جديد",
+        "specs": {
+          "connectivity": "Bluetooth 5.0",
+          "battery": "20 ساعة",
+          "features": "إلغاء الضوضاء"
+        },
+        "details": {
+          "relatedProducts": [
+            2,
+            3
+          ],
+          "detailedSpecs": {
+            "connectivity": "Bluetooth 5.0",
+            "battery": "20 ساعة",
+            "noiseCancellation": "نعم - إلغاء ضوضاء نشط",
+            "microphone": "مدمج بجودة عالية",
+            "bluetoothRange": "10 متر",
+            "chargingTime": "1.5 ساعة",
+            "standbyTime": "300 ساعة",
+            "warranty": "سنة واحدة",
+            "weight": "250 جرام",
+            "color": "أسود"
+          },
+          "description": "سماعة بلوتوث لاسلكية بجودة صوت عالية وإلغاء ضوضاء نشط، مثالية للاستخدام اليومي والرياضة.",
+          "additionalImages": [
+            "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=800",
+            "https://images.unsplash.com/photo-1484704849700-f032a568e944?w=800"
+          ],
+          "inTheBox": "سماعة، كابل شحن USB-C، حقيبة حمل، دليل استخدام",
+          "brand": "TechSound",
+          "model": "TS-BT200",
+          "weight": "250 جرام",
+          "color": "أسود",
+          "warranty": "سنة واحدة",
+          "dimensions": "18 × 16 × 8 سم",
+          "reviews": {
+            "count": 24,
+            "avgRating": 4.5,
+            "items": [
+              {
+                "user": "أحمد محمد",
+                "rating": 5,
+                "comment": "جودة صوت ممتازة وبطارية تدوم طويل",
+                "date": "2025-11-10"
+              },
+              {
+                "user": "سارة علي",
+                "rating": 4,
+                "comment": "منتج جيد بس التصميم ممكن يكون أفضل",
+                "date": "2025-10-22"
+              }
+            ]
+          }
+        }
+      },
+      {
+        "id": 2,
+        "name": "فأرة ألعاب احترافية",
+        "category": "mouse",
+        "price": 1990,
+        "currency": "جنية مصري",
+        "originalPrice": null,
+        "discount": null,
+        "rating": 4.7,
+        "image": "https://images.unsplash.com/photo-1527814050087-3793815479db?w=400",
+        "badge": null,
+        "specs": {
+          "dpi": "16000 DPI",
+          "buttons": "8 أزرار",
+          "connectivity": "سلكي/لاسلكي"
+        },
+        "details": {
+          "relatedProducts": [
+            1,
+            3
+          ],
+          "detailedSpecs": {
+            "dpi": "16000 DPI",
+            "buttons": "8 أزرار قابلة للبرمجة",
+            "sensor": "PixArt PMW3389",
+            "pollingRate": "1000Hz",
+            "lighting": "RGB قابل للتخصيص",
+            "batteryLife": "70 ساعة",
+            "weight": "85 جرام"
+          },
+          "description": "فأرة ألعاب احترافية بدقة استشعار عالية ووزن خفيف مناسبة للاعبين المحترفين.",
+          "additionalImages": [],
+          "brand": "GamePro",
+          "model": "GP-M900",
+          "weight": "85 جرام",
+          "color": "أسود مع RGB",
+          "warranty": "سنتان"
+        }
+      },
+      {
+        "id": 3,
+        "name": "لوحة مفاتيح ميكانيكية",
+        "category": "keyboard",
+        "price": 3990,
+        "currency": "جنية مصري",
+        "originalPrice": 4500,
+        "discount": 11,
+        "rating": 4.6,
+        "image": "https://images.unsplash.com/photo-1587829741301-dc798b83add3?w=400",
+        "badge": "الأكثر مبيعاً",
+        "specs": {
+          "switches": "Cherry MX Blue",
+          "backlight": "RGB",
+          "connectivity": "USB"
+        },
+        "details": {
+          "relatedProducts": [
+            1,
+            2
+          ],
+          "detailedSpecs": {
+            "switches": "Cherry MX Blue",
+            "backlight": "RGB متعدد الألوان",
+            "layout": "عربي/إنجليزي",
+            "keycaps": "PBT مقاومة للتآكل",
+            "connectivity": "USB-C قابل للفصل"
+          },
+          "description": "لوحة مفاتيح ميكانيكية بمفاتيح Cherry MX الأصلية وإضاءة RGB كاملة.",
+          "brand": "MechKing",
+          "model": "MK-K87",
+          "weight": "950 جرام",
+          "warranty": "سنتان"
+        }
+      }
+    ]
+  }
+]

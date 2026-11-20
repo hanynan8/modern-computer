@@ -1,0 +1,106 @@
+[
+  {
+    "_id": "6a48ee4d798ed50fc65da427",
+    "pageTitle": "الطابعات المتقدمة",
+    "pageSubtitle": "اكتشف أفضل الطابعات المكتبية والتجارية لجميع احتياجاتك مع ضمان الجودة والأداء العالي",
+    "categories": [
+      {
+        "id": "all",
+        "name": "جميع المنتجات",
+        "icon": "printer",
+        "color": "from-purple-600 to-blue-600"
+      },
+      {
+        "id": "laser",
+        "name": "طابعات ليزر",
+        "icon": "zap",
+        "color": "from-blue-600 to-cyan-600"
+      },
+      {
+        "id": "inkjet",
+        "name": "طابعات حبر",
+        "icon": "printer",
+        "color": "from-green-600 to-teal-600"
+      },
+      {
+        "id": "thermal",
+        "name": "طابعات حرارية",
+        "icon": "monitor",
+        "color": "from-orange-600 to-red-600"
+      }
+    ],
+    "filters": {
+      "sortOptions": [
+        {
+          "value": "name",
+          "label": "الاسم (أ-ي)"
+        },
+        {
+          "value": "price-low",
+          "label": "السعر: من الأقل للأعلى"
+        },
+        {
+          "value": "price-high",
+          "label": "السعر: من الأعلى للأقل"
+        },
+        {
+          "value": "rating",
+          "label": "الأعلى تقييماً"
+        },
+        {
+          "value": "performance",
+          "label": "الأفضل أداءً"
+        }
+      ]
+    },
+    "products": [
+      {
+        "id": 701,
+        "name": "طابعة ليزر متعددة الوظائف",
+        "category": "laser",
+        "price": 6990,
+        "currency": "ج.م",
+        "rating": 4.5,
+        "image": "https://images.unsplash.com/photo-1612815154858-60aa4c59eabd?w=400",
+        "badge": "الأكثر توفيراً",
+        "model": "LJ-M425",
+        "manufacturer": "PrintMax",
+        "isActive": true,
+        "stock": 22,
+        "description": "طابعة ليزر متعددة الوظائف (طباعة، نسخ، مسح ضوئي) مناسبة للمكاتب الصغيرة والمتوسطة.",
+        "specs": {
+          "printSpeed": "38 صفحة/دقيقة",
+          "resolution": "1200x1200 dpi",
+          "connectivity": "USB, Wi-Fi, Ethernet",
+          "paperCapacity": "250 ورقة"
+        },
+        "features": [
+          "طباعة تلقائية على الوجهين",
+          "شاشة لمس ملونة",
+          "دعم الطباعة عبر الجوال"
+        ],
+        "ports": [
+          "USB 2.0",
+          "Ethernet",
+          "Wi-Fi Direct"
+        ],
+        "supportedOS": [
+          "Windows",
+          "macOS",
+          "Linux"
+        ],
+        "consumables": [
+          "خرطوشة حبر أسود",
+          "خرطوشة حبر ملون",
+          "أسطوانة تصوير"
+        ],
+        "weightKg": 9.8,
+        "dimensionsCm": "42 × 40 × 32",
+        "powerConsumptionW": "450 واط (أثناء الطباعة)",
+        "warrantyMonths": 12,
+        "performanceScore": 79,
+        "availability": "متوفر"
+      }
+    ]
+  }
+]
