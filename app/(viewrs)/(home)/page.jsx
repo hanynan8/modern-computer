@@ -10,8 +10,6 @@ import { Loader } from 'lucide-react';
 // البيانات مباشرة (ومن نفس الكاش المشترك اللي صفحات الفئات نفسها بتستخدمه).
 import { getCollectionData } from '@/lib/serverData';
 
-// ISR Configuration - revalidate every hour (3600 seconds)
-export const revalidate = 60;
 
 // Metadata for SEO
 export const metadata = {
@@ -46,10 +44,7 @@ async function getHomeData() {
       homeData = data[0];
     }
 
-    return {
-      homeData,
-      timestamp: new Date().toISOString()
-    };
+    return { homeData };
 
   } catch (error) {
     console.error('Server fetch error:', error);
@@ -57,53 +52,25 @@ async function getHomeData() {
   }
 }
 
-// Server function to fetch featured products from all categories
-async function getFeaturedProducts() {
-  const categories = [
-    'accessories', 'laptop', 'monitors', 'component',
-    'other', 'pc-build', 'pos', 'printers', 'storage-devices'
-  ];
+// كل الفئات (كلها بتتقرأ من data/*.json وقت الـ build)
+const CATEGORIES = [
+  'laptop', 'accessories', 'monitors', 'component', 'other',
+  'pc-build', 'pos', 'printers', 'storage-devices',
+];
 
-  try {
-    // Fetch featured products from multiple categories in parallel - كلهم
-    // بيقروا من نفس الكاش المشترك في lib/serverData.js بدل ما كل واحد
-    // يعمل رحلة HTTP منفصلة لنفس السيرفر.
-    const promises = categories.slice(0, 4).map(async (category) => {
-      try {
-        const result = await getCollectionData(category);
-        if (!result.success) return { category, products: [] };
-
-        const data = result.data;
-        let products = [];
-        if (Array.isArray(data) && data.length > 0 && data[0].products) {
-          products = data[0].products;
-        }
-
-        // Filter available products and get top 4
-        const availableProducts = products
-          .filter(product => 
-            product.details?.isAvailable !== false && 
-            product.details?.stock !== 0
-          )
-          .slice(0, 4);
-
-        return {
-          category,
-          products: availableProducts
-        };
-      } catch (err) {
-        console.error(`Error fetching ${category}:`, err);
-        return { category, products: [] };
-      }
-    });
-
-    const results = await Promise.all(promises);
-    return results;
-
-  } catch (error) {
-    console.error('Server featured products fetch error:', error);
-    return [];
+async function getProductsByCategory() {
+  const out = {};
+  for (const category of CATEGORIES) {
+    const result = await getCollectionData(category);
+    const products =
+      result.success && Array.isArray(result.data) ? result.data[0]?.products || [] : [];
+    out[category] = products
+      .filter(
+        (p) => p.details?.isAvailable !== false && p.details?.stock !== 0
+      )
+      .slice(0, 4);
   }
+  return out;
 }
 
 // Loading component
@@ -118,52 +85,21 @@ function LoadingFallback() {
   );
 }
 
-// Main Server Component
+// Main Server Component - ستاتيك بالكامل
 export default async function Home() {
-  // Fetch data on server
-  const [homeResult, featuredProducts] = await Promise.all([
+  const [homeResult, productsByCategory] = await Promise.all([
     getHomeData(),
-    getFeaturedProducts()
+    getProductsByCategory(),
   ]);
 
   const serverData = {
     homeData: homeResult?.homeData || null,
-    featuredProducts: featuredProducts || [],
-    timestamp: homeResult?.timestamp || new Date().toISOString(),
-    // ده بيتبعت للـ Client Component عشان يكمل يجيب باقي الفئات في
-    // المتصفح (اللي مش اتجابت هنا على السيرفر) - مسار نسبي كافي وآمن
-    // لطلبات نفس الأصل (same-origin) من المتصفح.
-    apiUrl: process.env.NEXT_PUBLIC_API_URL || '/api/data'
+    productsByCategory,
   };
 
   return (
     <Suspense fallback={<LoadingFallback />}>
-      <HomePage 
-        initialData={serverData}
-        apiUrl={serverData.apiUrl}
-      />
+      <HomePage initialData={serverData} />
     </Suspense>
-  );
-}
-
-// Generate static params for ISR (if needed for dynamic routes)
-export async function generateStaticParams() {
-  return [];
-}
-
-// Error boundary component
-export function ErrorBoundary({ error, reset }) {
-  return (
-    <div className="min-h-screen flex flex-col items-center justify-center bg-gray-100 p-4" dir="rtl">
-      <div className="text-red-500 text-xl mb-4">
-        خطأ في تحميل الصفحة: {error.message}
-      </div>
-      <button
-        onClick={reset}
-        className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-6 py-3 rounded-full hover:shadow-lg transform hover:scale-105 transition-all duration-300"
-      >
-        إعادة المحاولة
-      </button>
-    </div>
   );
 }

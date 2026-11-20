@@ -10,7 +10,7 @@ import { getCollectionData } from '@/lib/serverData';
 
 const COLLECTION = 'monitors';
 
-export const dynamicParams = true;
+export const dynamicParams = false;
 
 
 

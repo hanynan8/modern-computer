@@ -34,7 +34,6 @@ import {
 } from 'lucide-react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { useSession } from 'next-auth/react';
 
 // Mobile Navigation Bar Component مع السلة
 const MobileNavBar = ({ onMenuToggle, isMenuOpen, isVisible, cartCount }) => {
@@ -156,7 +155,6 @@ const ComponentCard = React.memo(
     const [isVisible, setIsVisible] = useState(false);
     const [imageLoaded, setImageLoaded] = useState(false);
     const cardRef = useRef();
-    const { data: session } = useSession(); // إضافة هذا السطر
     const fallback =
       'https://images.unsplash.com/photo-1591799264318-7e6ef8ddb7ea?w=400';
     const [currentSrc, setCurrentSrc] = useState(product.image || fallback);
@@ -436,27 +434,14 @@ const ComputerComponentsClient = ({ initialData, error }) => {
   // الحصول على رقم الواتساب من البيانات
   const whatsappNumber = data?.settings?.whatsappNumber || '201222812404';
 
-  const { data: session } = useSession();
-
   const fetchCartCount = async () => {
     try {
-      if (session) {
-        // بدل ما نجيب كل الكارتس بتاعة كل المستخدمين ونفلتر في المتصفح،
-        // بنستخدم endpoint خفيف بيرجع عدد المنتجات بتاع اليوزر الحالي بس
-        // (السيرفر بيحدد الإيميل من الـ session، مش من الطلب).
-        const res = await fetch('/api/cart-count');
-        if (res.ok) {
-          const { count } = await res.json();
-          setCartCount(count || 0);
-        }
-      } else {
-        const localCart = JSON.parse(localStorage.getItem('cart')) || [];
-        const count = localCart.reduce(
-          (sum, item) => sum + (item.quantity || 1),
-          0
-        );
-        setCartCount(count);
-      }
+      const localCart = JSON.parse(localStorage.getItem('cart')) || [];
+      const count = localCart.reduce(
+        (sum, item) => sum + (item.quantity || 1),
+        0
+      );
+      setCartCount(count);
     } catch (err) {
       console.error('Error fetching cart count:', err);
     }
@@ -485,7 +470,7 @@ const ComputerComponentsClient = ({ initialData, error }) => {
 
     // استماع لتغييرات localStorage للمستخدمين غير المسجلين
     const handleStorageChange = (e) => {
-      if (e.key === 'cart' && !session) {
+      if (e.key === 'cart') {
         fetchCartCount();
       }
     };
@@ -500,7 +485,7 @@ const ComputerComponentsClient = ({ initialData, error }) => {
       );
       window.removeEventListener('storage', handleStorageChange);
     };
-  }, [session]);
+  }, []);
 
   // تتبع التمرير لإظهار/إخفاء الـ mobile nav
   useEffect(() => {

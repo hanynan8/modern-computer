@@ -11,7 +11,7 @@ import { getCollectionData } from '@/lib/serverData';
 
 const COLLECTION = 'accessories';
 
-export const dynamicParams = true;
+export const dynamicParams = false;
 
 // دالة إنشاء الصفحات الثابتة للمنتجات
 export async function generateStaticParams() {

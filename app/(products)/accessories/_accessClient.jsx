@@ -1,7 +1,6 @@
 'use client';
 
 import AddToCartButton from '../../(products)/_addToTheCart'; // Adjust the path based on your project structure
-import { useSession } from 'next-auth/react';
 import React, {
   useState,
   useEffect,
@@ -74,8 +73,6 @@ const MobileNavBar = ({
   isMenuOpen,
   isVisible,
   cartCount,
-  session,
-  status,
 }) => {
   const [mounted, setMounted] = useState(false);
 
@@ -83,37 +80,8 @@ const MobileNavBar = ({
     setMounted(true);
   }, []);
 
-  const profilePart = mounted ? (
-    status === 'loading' ? (
-      <div className="p-2 rounded-lg bg-gray-100 animate-pulse w-6 h-6" />
-    ) : session ? (
-      <Link
-        href="/profile"
-        className="p-2 rounded-lg text-gray-700 hover:bg-gray-100 transition-colors"
-      >
-        {session.user?.image ? (
-          <img
-            src={session.user.image}
-            alt="user"
-            className="w-6 h-6 rounded-full object-cover border border-purple-200"
-          />
-        ) : (
-          <div className="w-6 h-6 rounded-full bg-gradient-to-r from-purple-600 to-blue-600 text-white text-xs font-bold flex items-center justify-center">
-            {session.user?.name?.charAt(0).toUpperCase() || 'U'}
-          </div>
-        )}
-      </Link>
-    ) : (
-      <button
-        onClick={() => (window.location.href = '/api/auth/signin')}
-        className="p-2 rounded-lg text-gray-700 hover:bg-gray-100 transition-colors"
-      >
-        {/* يمكن استبدال بـ signIn إذا كان متاحاً */}
-      </button>
-    )
-  ) : (
-    <div className="p-2 rounded-lg bg-gray-100 animate-pulse w-6 h-6" />
-  );
+  // موقع ستاتيك: مفيش حسابات مستخدمين
+  const profilePart = null;
 
   return (
     <div
@@ -238,7 +206,6 @@ const ComponentCard = React.memo(
     const [isVisible, setIsVisible] = useState(false);
     const [imageLoaded, setImageLoaded] = useState(false);
     const cardRef = useRef();
-    const { data: session } = useSession(); // إضافة هذا السطر
 
     // باقي الكود كما هو...
     useEffect(() => {
@@ -510,8 +477,6 @@ const ComputerComponentsClient = ({ initialData, error }) => {
   const [showMobileNav, setShowMobileNav] = useState(false);
   const [cartCount, setCartCount] = useState(0); // إضافة state لعداد السلة
 
-  const { data: session, status } = useSession(); // إضافة useSession
-
   // Pagination states
   const [currentPage, setCurrentPage] = useState(1);
   const [itemsPerPage] = useState(20); // مناسب للموبايل
@@ -522,23 +487,12 @@ const ComputerComponentsClient = ({ initialData, error }) => {
   // جلب عدد المنتجات (مأخوذة من Navbar)
   const fetchCartCount = async () => {
     try {
-      if (session) {
-        // بدل ما نجيب كل الكارتس بتاعة كل المستخدمين ونفلتر في المتصفح،
-        // بنستخدم endpoint خفيف بيرجع عدد المنتجات بتاع اليوزر الحالي بس
-        // (السيرفر بيحدد الإيميل من الـ session، مش من الطلب).
-        const res = await fetch('/api/cart-count');
-        if (res.ok) {
-          const { count } = await res.json();
-          setCartCount(count || 0);
-        }
-      } else {
-        const localCart = JSON.parse(localStorage.getItem('cart')) || [];
-        const count = localCart.reduce(
-          (sum, item) => sum + (item.quantity || 1),
-          0
-        );
-        setCartCount(count);
-      }
+      const localCart = JSON.parse(localStorage.getItem('cart')) || [];
+      const count = localCart.reduce(
+        (sum, item) => sum + (item.quantity || 1),
+        0
+      );
+      setCartCount(count);
     } catch (err) {
       console.error('Error fetching cart count:', err);
     }
@@ -551,7 +505,7 @@ const ComputerComponentsClient = ({ initialData, error }) => {
 
     // استماع لتغييرات localStorage للمستخدمين غير المسجلين
     const handleStorageChange = (e) => {
-      if (e.key === 'cart' && !session) {
+      if (e.key === 'cart') {
         fetchCartCount();
       }
     };
@@ -597,7 +551,7 @@ const ComputerComponentsClient = ({ initialData, error }) => {
         handleProductUpdated
       );
     };
-  }, [session]);
+  }, []);
 
   // تتبع التمرير لإظهار/إخفاء الـ mobile nav
   useEffect(() => {
@@ -849,8 +803,6 @@ const ComputerComponentsClient = ({ initialData, error }) => {
         isMenuOpen={isMobileMenuOpen}
         isVisible={showMobileNav}
         cartCount={cartCount}
-        session={session}
-        status={status}
       />
 
       {/* Mobile Menu */}

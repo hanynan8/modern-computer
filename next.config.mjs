@@ -1,34 +1,17 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  // يضمن إن فولدر data/ (ملفات JSON) يتحزم مع الـ serverless functions على Vercel
-  outputFileTracingIncludes: {
-    '/**': ['./data/**/*'],
-  },
+  // موقع ستاتيك 100%: next build بيطلّع فولدر out/ فيه HTML/CSS/JS جاهز
+  // يترفع على أي استضافة ستاتيك (GitHub Pages / Netlify / Vercel / Nginx).
+  output: 'export',
+  trailingSlash: true,
 
   images: {
-    remotePatterns: [
-      { protocol: 'https', hostname: '**.fbcdn.net' },
-      { protocol: 'https', hostname: '**.wikimedia.org' },
-      { protocol: 'https', hostname: '**.unsplash.com' },
-      { protocol: 'https', hostname: 'images.unsplash.com' },
-      { protocol: 'https', hostname: '**.googleusercontent.com' },
-      { protocol: 'https', hostname: '**.cloudfront.net' },
-      { protocol: 'https', hostname: '**.pravatar.cc' },
-      { protocol: 'https', hostname: 'via.placeholder.com' },
-      { protocol: 'https', hostname: 'www.bhphotovideo.com' },
-      { protocol: 'https', hostname: '**.ebayimg.com' },
-    ],
+    // مفيش سيرفر لتحسين الصور في الـ static export
+    unoptimized: true,
   },
 
   typescript: {
     ignoreBuildErrors: true,
-  },
-
-  turbopack: {},
-
-  // 🔹 تعطيل الكاش بتاع turbopack عشان مشكلة lockfile على ويندوز (bug معروف حاليًا)
-  experimental: {
-    turbopackFileSystemCacheForDev: false,
   },
 };
 

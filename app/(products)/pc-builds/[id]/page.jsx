@@ -10,7 +10,7 @@ import { getCollectionData } from '@/lib/serverData';
 
 const COLLECTION = 'pc-build';
 
-export const dynamicParams = true;
+export const dynamicParams = false;
 
 // دالة إنشاء الصفحات الثابتة للمنتجات
 export async function generateStaticParams() {

@@ -1,11 +1,9 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { useSession } from 'next-auth/react';
 import { ShoppingCart, Loader } from 'lucide-react';
 
 export default function AddToCartButton({ product, className = '', children }) {
-  const { data: session } = useSession();
   const [adding, setAdding] = useState(false);
   const [showSuccess, setShowSuccess] = useState(false);
 
@@ -77,58 +75,17 @@ export default function AddToCartButton({ product, className = '', children }) {
 
     optimisticAdd();
 
-    if (session) {
-      try {
-        const response = await fetch(
-          '/api/data?collection=carts',
-          {
-            method: 'POST',
-            headers: {
-              'Content-Type': 'application/json',
-            },
-            body: JSON.stringify({
-              ...item,
-              email: session.user.email,
-            }),
-          }
-        );
-
-        if (!response.ok) {
-          throw new Error(`HTTP error! status: ${response.status}`);
-        }
-
-        const result = await response.json();
-        console.log('تم إضافة المنتج للكارت:', result);
-        notifyCartUpdated();
-      } catch (error) {
-        console.error('خطأ عند إضافة المنتج:', error);
-        optimisticRemove();
-        alert('حدث خطأ، حاول مرة أخرى.');
-        setShowSuccess(false); // Hide success message on error
-      } finally {
-        setAdding(false);
-      }
-    } else {
-      try {
-        let cart = JSON.parse(localStorage.getItem('cart')) || [];
-        const existingIndex = cart.findIndex((p) => p.productId === item.productId);
-
-        if (existingIndex !== -1) {
-          cart[existingIndex].quantity += 1;
-        } else {
-          cart.push(item);
-        }
-
-        localStorage.setItem('cart', JSON.stringify(cart));
-        notifyCartUpdated();
-      } catch (err) {
-        console.error('خطأ في localStorage:', err);
-        optimisticRemove();
-        alert('حدث خطأ، حاول مرة أخرى.');
-        setShowSuccess(false); // Hide success message on error
-      } finally {
-        setAdding(false);
-      }
+    // السلة محفوظة في localStorage بس (موقع ستاتيك)
+    try {
+      addToLocalCart(item);
+      notifyCartUpdated();
+    } catch (err) {
+      console.error('خطأ في localStorage:', err);
+      optimisticRemove();
+      alert('حدث خطأ، حاول مرة أخرى.');
+      setShowSuccess(false);
+    } finally {
+      setAdding(false);
     }
   };
 

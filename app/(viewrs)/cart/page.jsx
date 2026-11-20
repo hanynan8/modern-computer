@@ -1,326 +1,93 @@
 'use client';
 
-import { useSession } from 'next-auth/react';
 import React, { useState, useEffect, useCallback } from 'react';
 import {
   Trash2,
   Plus,
   Minus,
   ShoppingCart,
-  CreditCard,
-  LogIn,
+  MessageCircle,
   Loader2,
 } from 'lucide-react';
 import Link from 'next/link';
-import { useRouter } from 'next/navigation';
 
-const API_URL =
-  '/api/data?collection=carts';
+const WHATSAPP_NUMBER = '201222812404';
+
+// السلة ستاتيك بالكامل: محفوظة في localStorage على جهاز الزائر، ومفيش
+// حسابات ولا قاعدة بيانات. إتمام الطلب بيتم برسالة واتساب جاهزة.
+const readCart = () => {
+  try {
+    const cart = JSON.parse(localStorage.getItem('cart')) || [];
+    return Array.isArray(cart) ? cart : [];
+  } catch {
+    return [];
+  }
+};
+
+const writeCart = (cart) => {
+  localStorage.setItem('cart', JSON.stringify(cart));
+  window.dispatchEvent(new CustomEvent('cartUpdated'));
+};
 
 const CartPage = () => {
-  const { data: session } = useSession();
   const [cartItems, setCartItems] = useState([]);
   const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
-  const [updatingItems, setUpdatingItems] = useState(new Set());
-  const [removingItems, setRemovingItems] = useState(new Set());
-  const router = useRouter();
+  const [updatingItems] = useState(new Set());
+  const [removingItems] = useState(new Set());
 
-  // دالة مخصصة لجلب بيانات السلة مع إعادة استخدام
-  const fetchCart = useCallback(async () => {
-    setLoading(true);
-    setError(null);
-
-    try {
-      if (session) {
-        const response = await fetch(API_URL);
-        if (!response.ok) {
-          throw new Error('Failed to fetch cart items');
-        }
-        const data = await response.json();
-        const userCart = data.filter(
-          (item) => item.email === session.user.email
-        );
-        
-        // تجميع العناصر بنفس المعرّف ولكن الحفاظ على العناصر المختلفة منفصلة
-        const groupedCart = userCart.reduce((acc, item) => {
-          const existingIndex = acc.findIndex(i => 
-            i.productId === item.productId && 
-            i.name === item.name && 
-            i.price === item.price
-          );
-          
-          if (existingIndex > -1) {
-            // زيادة الكمية فقط إذا كان المنتج مطابق تماماً
-            acc[existingIndex].quantity += item.quantity;
-            acc[existingIndex]._ids.push(item._id);
-          } else {
-            // إضافة عنصر جديد إذا كان مختلفاً
-            acc.push({ ...item, _ids: [item._id] });
-          }
-          return acc;
-        }, []);
-        
-        const validCart = groupedCart.filter(item => typeof item.price === 'number' && item.price > 0);
-        setCartItems(validCart);
-      } else {
-        const localCart = JSON.parse(localStorage.getItem('cart')) || [];
-        
-        // نفس المنطق للتجميع للبيانات المحلية
-        const groupedLocal = localCart.reduce((acc, item) => {
-          const existingIndex = acc.findIndex(i => 
-            i.productId === item.productId && 
-            i.name === item.name && 
-            i.price === item.price
-          );
-          
-          if (existingIndex > -1) {
-            acc[existingIndex].quantity += item.quantity || 1;
-          } else {
-            acc.push({ ...item });
-          }
-          return acc;
-        }, []);
-        
-        const validCart = groupedLocal.filter(item => typeof item.price === 'number' && item.price > 0);
-        setCartItems(validCart);
-      }
-    } catch (err) {
-      setError(err.message);
-    } finally {
-      setLoading(false);
-    }
-  }, [session]);
+  const fetchCart = useCallback(() => {
+    setCartItems(readCart());
+    setLoading(false);
+  }, []);
 
   useEffect(() => {
     fetchCart();
+    window.addEventListener('storage', fetchCart);
+    return () => window.removeEventListener('storage', fetchCart);
   }, [fetchCart]);
 
-  // دالة محسنة لتحديث الكمية
-  const updateQuantity = async (item, delta) => {
-    const oldQuantity = item.quantity;
-    const newQuantity = item.quantity + delta;
-
-    if (newQuantity < 1) {
-      removeItem(item);
-      return;
-    }
-
-    // تحديث واجهة المستخدم فورياً
-    setUpdatingItems(prev => new Set([...prev, item.productId]));
-    
-    setCartItems(prev =>
-      prev.map(i =>
-        i.productId === item.productId && i.name === item.name ? { ...i, quantity: newQuantity } : i
-      )
-    );
-
-    // تحديث عداد السلة
-    window.dispatchEvent(
-      new CustomEvent('productQuantityUpdated', {
-        detail: { oldQuantity, newQuantity },
-      })
-    );
-
-    try {
-      if (session) {
-        // استخدام Promise.all لجعل طلبات الحذف متوازية
-        await Promise.all(
-          item._ids.map(id => 
-            fetch(`${API_URL}&id=${id}`, { method: 'DELETE' })
-          )
-        );
-
-        const postResponse = await fetch(API_URL, {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({
-            productId: item.productId,
-            name: item.name,
-            price: item.price,
-            currency: item.currency || 'ج.م',
-            image: item.image,
-            quantity: newQuantity,
-            email: session.user.email,
-          }),
-        });
-
-        if (!postResponse.ok) throw new Error('Failed to add updated item');
-
-        const result = await postResponse.json();
-        
-        // تحديث الحالة بالمعلومات الجديدة من الخادم
-        setCartItems(prev =>
-          prev.map(i =>
-            i.productId === item.productId && i.name === item.name
-              ? { ...i, quantity: newQuantity, _ids: [result._id] }
-              : i
-          )
-        );
-      } else {
-        // تحديث localStorage
-        let localCart = JSON.parse(localStorage.getItem('cart')) || [];
-        localCart = localCart.map(i =>
-          i.productId === item.productId && i.name === item.name ? { ...i, quantity: newQuantity } : i
-        );
-        localStorage.setItem('cart', JSON.stringify(localCart));
-      }
-      
-      // إشعار بالتحديث
-      window.dispatchEvent(new CustomEvent('cartUpdated'));
-    } catch (err) {
-      console.error(err);
-      
-      // التراجع عن التغيير في حالة الخطأ
-      setCartItems(prev =>
-        prev.map(i =>
-          i.productId === item.productId && i.name === item.name ? { ...i, quantity: oldQuantity } : i
-        )
+  const updateQuantity = (item, delta) => {
+    const next = readCart()
+      .map((p) =>
+        String(p.productId) === String(item.productId)
+          ? { ...p, quantity: Math.max(1, (p.quantity || 1) + delta) }
+          : p
       );
-      
-      window.dispatchEvent(
-        new CustomEvent('productQuantityUpdated', {
-          detail: { oldQuantity: newQuantity, newQuantity: oldQuantity },
-        })
-      );
-      
-      alert('فشل في تحديث الكمية. يرجى المحاولة مرة أخرى.');
-    } finally {
-      setUpdatingItems(prev => {
-        const newSet = new Set(prev);
-        newSet.delete(item.productId);
-        return newSet;
-      });
-    }
+    writeCart(next);
+    setCartItems(next);
   };
 
-  // دالة محسنة لحذف العناصر
-  const removeItem = async (item) => {
-    setRemovingItems(prev => new Set([...prev, item.productId]));
-    
-    // التحديث الفوري للواجهة
-    setCartItems(prev => prev.filter(i => !(i.productId === item.productId && i.name === item.name)));
-    
-    window.dispatchEvent(
-      new CustomEvent('productRemovedFromCart', {
-        detail: { quantity: item.quantity },
-      })
+  const removeItem = (item) => {
+    const next = readCart().filter(
+      (p) => String(p.productId) !== String(item.productId)
     );
-
-    try {
-      if (session) {
-        // حذف متوازي لجميع عناصر المنتج
-        await Promise.all(
-          item._ids.map(id => 
-            fetch(`${API_URL}&id=${id}`, { method: 'DELETE' })
-          )
-        );
-      } else {
-        const localCart = JSON.parse(localStorage.getItem('cart')) || [];
-        const updatedCart = localCart.filter(i => !(i.productId === item.productId && i.name === item.name));
-        localStorage.setItem('cart', JSON.stringify(updatedCart));
-      }
-      
-      window.dispatchEvent(new CustomEvent('cartUpdated'));
-    } catch (err) {
-      console.error(err);
-      
-      // استعادة العنصر في حالة الخطأ
-      setCartItems(prev => [...prev, item]);
-      
-      window.dispatchEvent(
-        new CustomEvent('productAddedToCart', {
-          detail: { quantity: item.quantity },
-        })
-      );
-      
-      alert('فشل في حذف العنصر. يرجى المحاولة مرة أخرى.');
-    } finally {
-      setRemovingItems(prev => {
-        const newSet = new Set(prev);
-        newSet.delete(item.productId);
-        return newSet;
-      });
-    }
+    writeCart(next);
+    setCartItems(next);
   };
 
-  // دالة محسنة لتفريغ السلة
-  const clearCart = async () => {
-    if (!confirm('هل أنت متأكد من حذف جميع العناصر من السلة؟')) return;
-    
-    const totalItems = cartItems.reduce((sum, item) => sum + item.quantity, 0);
-    const originalItems = [...cartItems];
-    
-    // التحديث الفوري للواجهة
+  const clearCart = () => {
+    writeCart([]);
     setCartItems([]);
-    
-    window.dispatchEvent(
-      new CustomEvent('productRemovedFromCart', {
-        detail: { quantity: totalItems },
-      })
-    );
-
-    try {
-      if (session) {
-        const response = await fetch(API_URL);
-        if (!response.ok) throw new Error('Failed to fetch cart items for deletion');
-        
-        const data = await response.json();
-        const userItems = data.filter(
-          (item) => item.email === session.user.email
-        );
-        
-        // حذف متوازي لجميع العناصر
-        await Promise.all(
-          userItems.map(item => 
-            fetch(`${API_URL}&id=${item._id}`, { method: 'DELETE' })
-          )
-        );
-      } else {
-        localStorage.removeItem('cart');
-      }
-      
-      window.dispatchEvent(new CustomEvent('cartUpdated'));
-    } catch (err) {
-      console.error(err);
-      
-      // استعادة السلة في حالة الخطأ
-      setCartItems(originalItems);
-      
-      window.dispatchEvent(
-        new CustomEvent('productAddedToCart', {
-          detail: { quantity: totalItems },
-        })
-      );
-      
-      alert('فشل في تفريغ السلة. يرجى المحاولة مرة أخرى.');
-    }
   };
 
-  const calculateTotal = () => {
-    return cartItems
-      .reduce((total, item) => total + (item.price ?? 0) * (item.quantity ?? 0), 0)
+  const calculateTotal = () =>
+    cartItems
+      .reduce((t, item) => t + (item.price ?? 0) * (item.quantity ?? 0), 0)
       .toLocaleString();
-  };
 
-  const getTotalNumber = () => {
-    return cartItems.reduce(
-      (total, item) => total + (item.price ?? 0) * (item.quantity ?? 0),
-      0
+  const handleOrder = () => {
+    const lines = cartItems.map(
+      (item, i) =>
+        `${i + 1}. ${item.name} × ${item.quantity} = ${(
+          (item.price ?? 0) * (item.quantity ?? 0)
+        ).toLocaleString()} ${item.currency ?? 'ج.م'}`
     );
-  };
-
-  const handlePayNow = () => {
-    const totalAmount = getTotalNumber();
-    const cartData = {
-      total: totalAmount,
-      items: cartItems,
-      currency: 'EGP',
-      timestamp: Date.now(),
-    };
-
-    localStorage.setItem('paymentData', JSON.stringify(cartData));
-    router.push('/pay');
+    const text = `مرحبًا، عايز أطلب:\n${lines.join('\n')}\n\nالإجمالي: ${calculateTotal()} ج.م`;
+    window.open(
+      `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(text)}`,
+      '_blank',
+      'noopener'
+    );
   };
 
   if (loading) {
@@ -328,20 +95,6 @@ const CartPage = () => {
       <div className="flex justify-center items-center py-20">
         <Loader2 className="w-8 h-8 animate-spin text-purple-600" />
         <span className="mr-2 text-gray-600">جاري تحميل السلة...</span>
-      </div>
-    );
-  }
-
-  if (error) {
-    return (
-      <div className="text-center py-10 text-red-500">
-        <p>خطأ: {error}</p>
-        <button 
-          onClick={fetchCart}
-          className="mt-4 px-4 py-2 bg-purple-600 text-white rounded-lg hover:bg-purple-700"
-        >
-          إعادة المحاولة
-        </button>
       </div>
     );
   }
@@ -465,34 +218,17 @@ const CartPage = () => {
           </div>
         </div>
 
-        <div className="mt-6">
-          {session ? (
-            <div className="space-y-3">
-              <div className="text-center text-sm text-gray-600 flex items-center justify-center gap-2">
-                <CreditCard className="w-4 h-4" />
-                <span>وسيلة الدفع: PayPal</span>
-              </div>
-              <button
-                onClick={handlePayNow}
-                className="w-full bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white py-3 rounded-lg font-bold hover:shadow-lg transition-all duration-300 text-base sm:text-lg flex items-center justify-center gap-2"
-              >
-                <CreditCard className="w-5 h-5" />
-                شراء الآن
-              </button>
-            </div>
-          ) : (
-            <div className="space-y-3">
-              <div className="text-center text-sm text-gray-600">
-                يجب تسجيل الدخول لإكمال عملية الشراء
-              </div>
-              <Link href="/login">
-                <button className="w-full bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white py-3 rounded-lg font-bold hover:shadow-lg transition-all duration-300 text-base sm:text-lg flex items-center justify-center gap-2">
-                  <LogIn className="w-5 h-5" />
-                  سجل الدخول لإكمال الطلب
-                </button>
-              </Link>
-            </div>
-          )}
+        <div className="mt-6 space-y-3">
+          <div className="text-center text-sm text-gray-600">
+            هيتم إرسال طلبك على واتساب لإتمام الشراء مع فريق المبيعات
+          </div>
+          <button
+            onClick={handleOrder}
+            className="w-full bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white py-3 rounded-lg font-bold hover:shadow-lg transition-all duration-300 text-base sm:text-lg flex items-center justify-center gap-2"
+          >
+            <MessageCircle className="w-5 h-5" />
+            اطلب عبر واتساب
+          </button>
         </div>
       </div>
     </div>

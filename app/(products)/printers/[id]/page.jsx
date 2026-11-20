@@ -12,7 +12,7 @@ import { getCollectionData } from '@/lib/serverData';
 
 const COLLECTION = 'printers';
 
-export const dynamicParams = true;
+export const dynamicParams = false;
 
 // دالة إنشاء الصفحات الثابتة للمنتجات
 export async function generateStaticParams() {

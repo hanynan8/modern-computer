@@ -1,7 +1,6 @@
 'use client';
 
 import AddToCartButton from '../../(products)/_addToTheCart'; // Adjust the path based on your project structure
-import { fetchData } from "@/lib/fetchData";
 
 import React, {
   useState,
@@ -250,7 +249,7 @@ const ProductCard = ({ product, categoryKey }) => {
 };
 
 // Enhanced Category Section Component with better error handling
-const CategorySection = ({ endpoint, apiUrl, initialProducts = [] }) => {
+const CategorySection = ({ endpoint, initialProducts = [] }) => {
   const [categoryData, setCategoryData] = useState(
     initialProducts.length > 0
       ? {
@@ -264,85 +263,11 @@ const CategorySection = ({ endpoint, apiUrl, initialProducts = [] }) => {
   const sectionRef = useRef(null);
   const hasLoadedRef = useRef(initialProducts.length > 0);
 
-  const fetchCategoryData = useCallback(async () => {
-    if (hasLoadedRef.current || loading) return;
-
-    setLoading(true);
-    setError(null);
-    hasLoadedRef.current = true;
-
-    try {
-      const controller = new AbortController();
-      const timeoutId = setTimeout(() => controller.abort(), 10000);
-
-      const response = await fetchData(`${apiUrl}?collection=${endpoint.key}`, {
-        signal: controller.signal,
-        headers: {
-          Accept: 'application/json',
-        },
-      });
-      clearTimeout(timeoutId);
-
-      if (response.ok) {
-        const result = await response.json();
-
-        let products = [];
-        if (Array.isArray(result) && result.length > 0) {
-          if (result[0].products) {
-            products = result[0].products;
-          } else if (result[0].data?.products) {
-            products = result[0].data.products;
-          }
-        }
-
-        const availableProducts = products.filter(
-          (product) =>
-            product.details?.isAvailable !== false &&
-            product.details?.stock !== 0
-        );
-
-        setCategoryData({
-          ...endpoint,
-          products: availableProducts.slice(0, 4),
-        });
-      } else {
-        throw new Error(`خطأ في الخادم: ${response.status}`);
-      }
-    } catch (err) {
-      console.error(`Error fetching ${endpoint.key}:`, err);
-      if (err.name === 'AbortError') {
-        setError('انتهت مهلة الطلب، حاول مرة أخرى');
-      } else {
-        setError(err.message);
-      }
-    } finally {
-      setLoading(false);
-    }
-  }, [endpoint.key, apiUrl, endpoint]);
+  // ستاتيك: المنتجات بتيجي جاهزة من السيرفر وقت الـ build، مفيش جلب وقت التشغيل
+  const fetchCategoryData = useCallback(async () => {}, []);
 
 const cachedData = categoryData;
 
-
-  useEffect(() => {
-    if (initialProducts.length > 0) return;
-
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting && !hasLoadedRef.current) {
-            fetchCategoryData();
-          }
-        });
-      },
-      { rootMargin: '200px', threshold: 0.1 }
-    );
-
-    if (sectionRef.current) {
-      observer.observe(sectionRef.current);
-    }
-
-    return () => observer.disconnect();
-  }, [fetchCategoryData, initialProducts.length]);
 
   const IconComponent = endpoint.icon;
 
@@ -817,7 +742,7 @@ const CategoryIconRail = () => {
 };
 
 // Main HomePage Component
-const HomePage = ({ initialData, apiUrl }) => {
+const HomePage = ({ initialData }) => {
 const [homeData] = useState(initialData?.homeData);
 
   const [featuredProducts] = useState(initialData?.featuredProducts || []);
@@ -919,7 +844,7 @@ const [homeData] = useState(initialData?.homeData);
             <CategorySection
               key={endpoint.key}
               endpoint={endpoint}
-              apiUrl={apiUrl}
+              initialProducts={initialData?.productsByCategory?.[endpoint.key] || []}
             />
           ))}
         </div>
